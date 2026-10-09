@@ -1,14 +1,15 @@
 /* ============================================================
-   Reading passage with tap-to-translate glossary, then
-   comprehension questions.
+   Reading passage with tap-to-translate glossary.
+   Split into a passage screen and a questions stage so a refresh
+   during the questions does not send you back to the text.
    ============================================================ */
 
 const Reading = {
-  render(host, reading, onDone) {
+  /** Runner "screen" stage: the passage itself. */
+  renderPassage(host, reading, done) {
     const glossary = reading.glossary || {};
     const terms = Object.keys(glossary).sort((a, b) => b.length - a.length);
 
-    // Mark glossary terms without letting user content reach innerHTML raw.
     const paragraphs = reading.text.split("\n").filter(Boolean).map((line) => {
       let html = UI.esc(line);
       terms.forEach((t) => {
@@ -35,7 +36,7 @@ const Reading = {
           <span class="spacer"></span>
           <button class="speak speak-sm" data-say="${UI.esc(reading.text.slice(0, 400))}" title="Read aloud">🔊</button>
         </div>
-        <div class="read-body" id="read-body">${paragraphs}</div>
+        <div class="read-body">${paragraphs}</div>
       </div>
       <div style="margin-top:var(--s6);text-align:center">
         <button class="btn btn-primary btn-lg" id="read-go">I've read it — questions →</button>
@@ -43,7 +44,6 @@ const Reading = {
 
     Speech.bind(host);
 
-    // Glossary popover
     let pop = null;
     const close = () => { if (pop) { pop.remove(); pop = null; } };
     host.querySelectorAll(".gloss").forEach((el) => {
@@ -66,9 +66,6 @@ const Reading = {
     document.addEventListener("click", close);
     document.addEventListener("scroll", close, true);
 
-    host.querySelector("#read-go").onclick = () => {
-      close();
-      Exercises.run(host, reading.questions, onDone);
-    };
+    host.querySelector("#read-go").onclick = () => { close(); done(); };
   }
 };

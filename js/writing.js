@@ -2,68 +2,59 @@
    Writing session = translation drills (active recall) followed
    by a guided composition. Translation first is deliberate: it
    warms up the exact structures the composition then asks for.
+
+   Both stages checkpoint — the drills by position, the
+   composition by draft text — so a refresh never costs you work.
    ============================================================ */
 
 const Translation = {
-  run(host, items, onDone) {
-    if (!items.length) { onDone(100); return; }
-    let i = 0, correct = 0;
+  /** Runner-compatible: one drill. */
+  renderItem(host, t, done) {
+    host.innerHTML = `
+      <div class="ex-card">
+        <div class="eyebrow">Translate into French</div>
+        <div class="ex-prompt" style="font-size:var(--fs-lg);margin-top:var(--s2)">${UI.esc(t.en)}</div>
+        <textarea class="compose" id="tr-in" rows="2" style="min-height:72px"
+          placeholder="Écrivez en français…" autocapitalize="sentences" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:var(--s4)">
+          <button class="btn btn-primary" id="tr-go">Check</button>
+          <button class="btn btn-subtle btn-sm" id="tr-skip">Show answer</button>
+        </div>
+        <div id="tr-out"></div>
+      </div>`;
 
-    const draw = () => {
-      if (i >= items.length) {
-        const score = Math.round((correct / items.length) * 100);
-        host.innerHTML = UI.result({
-          score, correct, total: items.length,
-          actions: `<button class="btn btn-primary" id="tr-next">Continue →</button>`
-        });
-        host.querySelector("#tr-next").onclick = () => onDone(score);
-        return;
-      }
+    const input = host.querySelector("#tr-in");
+    const go = host.querySelector("#tr-go");
+    const skip = host.querySelector("#tr-skip");
+    input.focus();
 
-      const t = items[i];
-      host.innerHTML = `
-        ${UI.topline(i + 1, items.length)}
-        <div class="ex-card">
-          <div class="eyebrow">Translate into French</div>
-          <div class="ex-prompt" style="font-size:var(--fs-lg);margin-top:var(--s2)">${UI.esc(t.en)}</div>
-          <textarea class="compose" id="tr-in" rows="2" style="min-height:72px"
-            placeholder="Écrivez en français…" autocapitalize="sentences" spellcheck="false"></textarea>
-          <div class="row" style="margin-top:var(--s4)">
-            <button class="btn btn-primary" id="tr-go">Check</button>
-            <button class="btn btn-subtle btn-sm" id="tr-skip">Show answer</button>
-          </div>
-          <div id="tr-out"></div>
-        </div>`;
-
-      const input = host.querySelector("#tr-in");
-      const go = host.querySelector("#tr-go");
-      const skip = host.querySelector("#tr-skip");
-      input.focus();
-
-      const finish = (ok) => {
-        input.disabled = true; go.disabled = true; skip.disabled = true;
-        host.querySelector("#tr-out").innerHTML = UI.feedback(ok, {
-          answer: ok ? null : t.accept[0],
-          why: t.note
-        });
-        if (ok) correct++;
-        Speech.say(t.accept[0]);
-        i++;
-        setTimeout(draw, ok ? 1300 : 2400);
-      };
-
-      go.onclick = () => finish(UI.matches(input.value, t.accept));
-      skip.onclick = () => finish(false);
-      input.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); go.click(); }
+    const finish = (ok) => {
+      input.disabled = true; go.disabled = true; skip.disabled = true;
+      host.querySelector("#tr-out").innerHTML = UI.feedback(ok, {
+        answer: ok ? null : t.accept[0],
+        why: t.note
       });
+      Speech.say(t.accept[0]);
+      done(ok);
     };
-    draw();
+
+    go.onclick = () => finish(UI.matches(input.value, t.accept));
+    skip.onclick = () => finish(false);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); go.click(); }
+    });
   }
 };
 
 const Composition = {
-  render(host, writing, onDone) {
+  /**
+   * Custom runner stage. `cp.draft` holds the in-progress essay and is
+   * written back on every keystroke (debounced by the runner's save),
+   * so refreshing mid-sentence keeps what you wrote.
+   */
+  render(host, cp, done, save) {
+    const writing = CourseData.getWeek(cp.week).writing;
+
     host.innerHTML = `
       <div class="ex-card">
         <div class="eyebrow">Composition</div>
@@ -86,6 +77,7 @@ const Composition = {
         <div class="meter" id="meter">
           <span id="meter-text">0 / ${writing.minimumWords} mots</span>
           <div class="meter-track"><div class="meter-fill" id="meter-fill" style="width:0%"></div></div>
+          <span class="small muted" id="saved-note"></span>
         </div>
 
         <button class="btn btn-primary" id="comp-go" disabled>Submit</button>
@@ -97,30 +89,44 @@ const Composition = {
     const meterText = host.querySelector("#meter-text");
     const fill = host.querySelector("#meter-fill");
     const go = host.querySelector("#comp-go");
+    const savedNote = host.querySelector("#saved-note");
+
+    ta.value = cp.draft || "";
 
     const count = () => ta.value.trim().split(/\s+/).filter(Boolean).length;
     const update = () => {
       const n = count();
-      const pct = Math.min(100, (n / writing.minimumWords) * 100);
       meterText.textContent = `${n} / ${writing.minimumWords} mots`;
-      fill.style.width = pct + "%";
+      fill.style.width = Math.min(100, (n / writing.minimumWords) * 100) + "%";
       meter.classList.toggle("ok", n >= writing.minimumWords);
       go.disabled = n < writing.minimumWords;
     };
-    ta.addEventListener("input", update);
+
+    let saveTimer;
+    ta.addEventListener("input", () => {
+      update();
+      cp.draft = ta.value;
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(() => {
+        save();
+        savedNote.textContent = "draft saved";
+        setTimeout(() => (savedNote.textContent = ""), 1500);
+      }, 600);
+    });
 
     host.querySelectorAll(".bank-chip").forEach((chip) => {
       chip.onclick = () => {
         const sep = ta.value && !/\s$/.test(ta.value) ? " " : "";
         ta.value += sep + chip.dataset.w + " ";
         ta.focus();
-        update();
+        ta.dispatchEvent(new Event("input"));
       };
     });
 
     go.onclick = () => {
       const text = ta.value;
       ta.disabled = true; go.disabled = true;
+      clearTimeout(saveTimer);
 
       const checks = (writing.checkpoints || []).map((c) => ({
         pass: new RegExp(c.regex, "i").test(text),
@@ -150,7 +156,7 @@ const Composition = {
         </div>`;
 
       Speech.bind(host);
-      host.querySelector("#comp-next").onclick = () => onDone(score);
+      host.querySelector("#comp-next").onclick = () => done(score);
       host.querySelector("#comp-out").scrollIntoView({ behavior: "smooth", block: "nearest" });
     };
 

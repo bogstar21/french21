@@ -6,3 +6,6 @@
 
 # Local planning notes
 COURSE_SPEC.md
+
+# Local progress data when running outside Railway
+.data/

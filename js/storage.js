@@ -8,8 +8,9 @@
    voice speed stay per-device instead of fighting across phones.
    ============================================================ */
 
-const STORAGE_KEY  = "french_course_progress_v2";
-const SETTINGS_KEY = "french_course_settings_v2";
+const STORAGE_KEY   = "french_course_progress_v2";
+const SETTINGS_KEY  = "french_course_settings_v2";
+const CHECKPOINT_KEY = "french_course_checkpoints_v1";
 
 const COURSE_START = "2026-10-09";
 const COURSE_END   = "2026-12-31";
@@ -306,6 +307,49 @@ class ProgressStore {
     });
   }
 
+  /* ---------------- Session checkpoints ----------------
+     Saved after every single answer so closing the tab mid-session
+     never costs you the session.
+
+     Deliberately device-local and never synced: a cursor position is
+     only meaningful on the device you left it on, and syncing it would
+     make two devices fight over where you are. Keyed by week:type so a
+     half-finished session in one week survives starting another.      */
+
+  _allCheckpoints() {
+    try { return JSON.parse(localStorage.getItem(CHECKPOINT_KEY)) || {}; }
+    catch { return {}; }
+  }
+
+  checkpointFor(week, type) {
+    const cp = this._allCheckpoints()[`${week}:${type}`];
+    return cp && cp.version === 1 ? cp : null;
+  }
+
+  saveCheckpoint(cp) {
+    try {
+      const all = this._allCheckpoints();
+      all[`${cp.week}:${cp.type}`] = { ...cp, version: 1, savedAt: Date.now() };
+      localStorage.setItem(CHECKPOINT_KEY, JSON.stringify(all));
+    } catch (e) {
+      console.warn("Could not save session checkpoint", e);
+    }
+  }
+
+  clearCheckpoint(week, type) {
+    try {
+      const all = this._allCheckpoints();
+      delete all[`${week}:${type}`];
+      localStorage.setItem(CHECKPOINT_KEY, JSON.stringify(all));
+    } catch { /* nothing to clear */ }
+  }
+
+  /** True if a session has been started but not finished. */
+  hasUnfinished(week, type) {
+    const cp = this.checkpointFor(week, type);
+    return Boolean(cp && (cp.stage > 0 || cp.index > 0 || cp.draft));
+  }
+
   /* ---------------- Achievements ---------------- */
 
   unlockAchievement(id) {
@@ -320,6 +364,7 @@ class ProgressStore {
     const settings = this.data.user.settings;
     this.data = defaultProgress();
     this.data.user.settings = settings;
+    try { localStorage.removeItem(CHECKPOINT_KEY); } catch { /* already gone */ }
     this._save();
   }
 }

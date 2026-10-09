@@ -8,14 +8,12 @@ No framework, no build step — plain HTML, CSS and JavaScript.
 
 ## Run it
 
-The app fetches its content as JSON, so it needs to be served over HTTP; opening
-`index.html` directly from disk will not work.
-
 ```bash
-python3 -m http.server 8765
+node server.js
 ```
 
-Then open <http://localhost:8765>.
+Then open <http://localhost:3000>. No dependencies to install — the server uses only
+Node built-ins.
 
 ## What's in it
 
@@ -32,27 +30,33 @@ Then open <http://localhost:8765>.
 Progress is tracked with SM-2 spaced repetition, a daily streak, XP levels and pace
 tracking against the course end date.
 
+## Never lose your place
+
+Every answer writes a checkpoint. Refresh the page, close the tab, or drop off the
+network mid-session and you come back to the next unanswered item — including your
+half-written composition, and including a 40-question exam. Unfinished sessions show a
+**Resume** badge, and **Start over** is always one click away.
+
 ## Cross-device sync
 
-Progress is saved locally by default, which works offline and needs no setup.
+Set one password and your progress follows you. Progress uploads a second or two after
+each answer and pulls in changes when you focus the tab.
 
-To carry it between devices, add a free Firebase project — **[SETUP.md](SETUP.md)** has
-the steps, the security rules and the hosting notes.
+Conflicts are merged field by field rather than last-write-wins, so studying on a
+laptop and a phone on the same day never discards either device's work.
 
-Sync is local-first: writes hit `localStorage` immediately and upload on a debounce,
-while a snapshot listener pulls in changes from other devices. Conflicts are resolved
-field by field rather than last-write-wins, so studying on a laptop and a phone on the
-same day never discards either device's work.
+**[SETUP.md](SETUP.md)** has the Railway steps — one variable and one volume.
 
 ## Layout
 
 ```
+server.js              zero-dependency server: static + auth + storage
 index.html
 css/style.css          design tokens and every component
 js/
-  firebase-config.js   the only file you need to edit
-  firebase-sync.js     auth, Firestore, merge logic
-  storage.js           local-first store, SM-2, pace tracking
+  storage.js           local-first store, SM-2, pace tracking, checkpoints
+  sync.js              login, upload/download, field-level merge
+  runner.js            session cursor + per-answer checkpointing
   data.js              content loader
   app.js               router and views
   …                    one module per exercise type

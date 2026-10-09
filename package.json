@@ -1,0 +1,13 @@
+{
+  "name": "mon-francais",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A 12-week French course to A2, with password-protected cross-device progress sync.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

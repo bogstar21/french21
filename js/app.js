@@ -86,8 +86,8 @@ const App = {
 
   syncModal() {
     if (!Sync.available) return this.setupModal();
-    if (Sync.user) return this.accountModal();
-    this.authModal();
+    if (Sync.state === "signed-out") return this.authModal();
+    this.accountModal();
   },
 
   _modal(html) {
@@ -104,68 +104,64 @@ const App = {
   setupModal() {
     this._modal(`
       <h2>Cross-device sync</h2>
-      <p class="modal-sub">Right now your progress lives in this browser only. Fifteen minutes of setup makes it follow you everywhere.</p>
+      <p class="modal-sub">Progress is saved in this browser only. To carry it between your laptop and your phone, the app needs to be running on the server with a password set.</p>
       <ol class="setup-steps">
-        <li>Create a free project at <strong>console.firebase.google.com</strong></li>
-        <li>Build → <strong>Firestore Database</strong> → Create → production mode</li>
-        <li>Build → <strong>Authentication</strong> → enable <strong>Email/Password</strong></li>
-        <li>Project settings → Your apps → Web <code>&lt;/&gt;</code> → copy the config</li>
-        <li>Paste it into <code>js/firebase-config.js</code> and reload</li>
+        <li>Railway → your service → <strong>Variables</strong> → add <code>APP_PASSWORD</code></li>
+        <li>Railway → <strong>Settings → Volumes</strong> → add a volume, so progress survives redeploys</li>
+        <li>Reload this page and sign in with that password</li>
       </ol>
-      <p class="small muted" style="margin-top:var(--s4)">Full instructions, including the security rules, are in <code>SETUP.md</code>.</p>
+      <p class="small muted" style="margin-top:var(--s4)">Full details are in <code>SETUP.md</code>.</p>
       <div class="modal-foot">
         <button class="btn btn-primary btn-block" onclick="this.closest('.overlay').remove()">Got it</button>
       </div>`);
   },
 
-  authModal(mode = "in") {
-    const isIn = mode === "in";
+  authModal() {
     const o = this._modal(`
-      <h2>${isIn ? "Sign in" : "Create an account"}</h2>
-      <p class="modal-sub">One account keeps your streak, vocabulary and scores identical on every device.</p>
+      <h2>Sign in</h2>
+      <p class="modal-sub">One password keeps your streak, vocabulary and scores identical on every device. You stay signed in for 90 days.</p>
       <div id="auth-err"></div>
-      <div class="field"><label>Email</label><input type="email" id="au-mail" autocomplete="email"></div>
-      <div class="field"><label>Password</label><input type="password" id="au-pass" autocomplete="${isIn ? "current" : "new"}-password"></div>
+      <div class="field">
+        <label for="au-pass">Password</label>
+        <input type="password" id="au-pass" autocomplete="current-password" autofocus>
+      </div>
       <div class="modal-foot">
         <button class="btn btn-ghost" id="au-cancel">Cancel</button>
-        <button class="btn btn-primary" style="flex:1" id="au-go">${isIn ? "Sign in" : "Create account"}</button>
-      </div>
-      <p class="small center" style="margin-top:var(--s4)">
-        ${isIn ? "No account yet?" : "Already registered?"}
-        <button class="link-btn" id="au-swap">${isIn ? "Create one" : "Sign in"}</button>
-      </p>`);
+        <button class="btn btn-primary" style="flex:1" id="au-go">Sign in</button>
+      </div>`);
 
     const err = o.querySelector("#auth-err");
     const go = o.querySelector("#au-go");
+    const input = o.querySelector("#au-pass");
+    input.focus();
 
-    o.querySelector("#au-cancel").onclick = () => o.remove();
-    o.querySelector("#au-swap").onclick = () => this.authModal(isIn ? "up" : "in");
-
-    go.onclick = async () => {
-      const email = o.querySelector("#au-mail").value.trim();
-      const pass = o.querySelector("#au-pass").value;
-      if (!email || pass.length < 6) {
-        err.innerHTML = `<div class="modal-error">Enter an email and a password of at least 6 characters.</div>`;
+    const submit = async () => {
+      if (!input.value) {
+        err.innerHTML = `<div class="modal-error">Enter your password.</div>`;
         return;
       }
-      go.disabled = true; go.textContent = "Working…";
+      go.disabled = true; go.textContent = "Signing in…";
       try {
-        if (isIn) await Sync.signIn(email, pass);
-        else await Sync.signUp(email, pass);
+        await Sync.signIn(input.value);
         o.remove();
-        UI.toast("Signed in — syncing your progress", "ok");
+        UI.toast("Signed in — progress is syncing", "ok");
       } catch (e) {
         err.innerHTML = `<div class="modal-error">${UI.esc(e.message)}</div>`;
-        go.disabled = false; go.textContent = isIn ? "Sign in" : "Create account";
+        go.disabled = false; go.textContent = "Sign in";
+        input.select();
       }
     };
+    go.onclick = submit;
+    o.querySelector("#au-cancel").onclick = () => o.remove();
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
   },
 
   accountModal() {
     const o = this._modal(`
       <h2>Synced</h2>
-      <p class="modal-sub">Signed in as <strong>${UI.esc(Sync.user.email)}</strong>. Progress saves automatically within a couple of seconds of each answer.</p>
-      ${Sync.lastError ? `<div class="modal-error">${UI.esc(Sync.lastError)}</div>` : ""}
+      <p class="modal-sub">Progress uploads a second or two after each answer, and pulls in changes from your other devices when you open the tab.</p>
+      ${!Sync.persistent ? `<div class="modal-error">No volume is attached on Railway — progress will be erased on the next redeploy. Add one under Settings → Volumes.</div>` : ""}
+      ${Sync.lastError && Sync.state === "error" ? `<div class="modal-error">${UI.esc(Sync.lastError)}</div>` : ""}
       <div class="modal-foot">
         <button class="btn btn-ghost" id="ac-out">Sign out</button>
         <button class="btn btn-primary" style="flex:1" id="ac-close">Done</button>
@@ -338,16 +334,18 @@ const App = {
       <div class="session-list">
         ${Object.entries(SESSIONS).map(([key, meta]) => {
           const s = wp.sessions[key];
+          const unfinished = !s?.completed && store.hasUnfinished(n, key);
           return `
-            <button class="session-card ${s?.completed ? "done" : ""}" onclick="UI.go('session/${n}/${key}')">
+            <button class="session-card ${s?.completed ? "done" : ""} ${unfinished ? "resumable" : ""}" onclick="UI.go('session/${n}/${key}')">
               <div class="session-ico">${meta.icon}</div>
               <div class="session-body">
                 <div class="session-day">${meta.day}</div>
                 <div class="session-name">${meta.name}</div>
-                <div class="session-desc">${meta.desc}</div>
+                <div class="session-desc">${unfinished ? "In progress — picks up where you stopped" : meta.desc}</div>
               </div>
               <div class="session-end">
-                ${s?.completed ? `<span class="score-chip">${s.score}%</span>` : ""}
+                ${s?.completed ? `<span class="score-chip">${s.score}%</span>`
+                  : unfinished ? `<span class="score-chip resume-chip">Resume</span>` : ""}
                 <span class="chev">→</span>
               </div>
             </button>`;
@@ -382,54 +380,77 @@ const App = {
     const w = CourseData.getWeek(n);
     if (!w || !SESSIONS[type]) return UI.go("dashboard");
 
-    const started = Date.now();
+    const resuming = store.hasUnfinished(n, type);
+
     this.root.innerHTML = `
-      <button class="btn-back" onclick="UI.go('week/${n}')">← Semaine ${n}</button>
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <button class="btn-back" onclick="UI.go('week/${n}')">← Semaine ${n}</button>
+        <button class="btn-back" id="sess-restart" title="Discard progress in this session and begin again">↺ Start over</button>
+      </div>
       <div class="ex-shell"><div id="stage"></div></div>`;
+
+    document.getElementById("sess-restart").onclick = () => {
+      if (confirm("Start this session over from the beginning?")) Runner.restart();
+    };
+
     const stage = document.getElementById("stage");
 
-    const finish = (score) => {
-      const minutes = Math.min(90, Math.max(1, Math.round((Date.now() - started) / 60000)));
-      store.completeSession(n, type, score);
-      store.recordActivity(minutes, [`${type}_w${n}`]);
-      UI.toast(`${SESSIONS[type].name} — ${score}%`, score >= 60 ? "ok" : "warn");
-      UI.go(`week/${n}`);
+    // Stage lists. Screens and question sets are separate stages so a
+    // refresh during the questions does not replay the video or passage.
+    const chains = {
+      grammar: [
+        { kind: "items",
+          build: () => Flashcards.items(CourseData.reviewPool(n)),
+          render: (h, item, done) => Flashcards.renderCard(h, item, done) },
+        { kind: "items",
+          build: () => w.grammar,
+          render: (h, ex, done) => Exercises.renderItem(h, ex, done) }
+      ],
+      listening: [
+        { kind: "screen", render: (h, done) => Listening.renderMedia(h, w, w.listening, done) },
+        { kind: "items",
+          build: () => w.listening.questions,
+          render: (h, q, done) => Exercises.renderItem(h, q, done) },
+        { kind: "screen", render: (h, done) => Reading.renderPassage(h, w.reading, done) },
+        { kind: "items",
+          build: () => w.reading.questions,
+          render: (h, q, done) => Exercises.renderItem(h, q, done) }
+      ],
+      writing: [
+        { kind: "items",
+          build: () => CourseData.translationsFor(n),
+          render: (h, t, done) => Translation.renderItem(h, t, done) },
+        { kind: "custom",
+          render: (h, cp, done, save) => Composition.render(h, cp, done, save) }
+      ],
+      review: [
+        { kind: "items",
+          build: () => {
+            const due = store.getDueVocab(CourseData.weekVocabIds(n));
+            return Flashcards.items(due.length ? due : CourseData.weekVocabIds(n).slice(0, 10));
+          },
+          render: (h, item, done) => Flashcards.renderCard(h, item, done) },
+        { kind: "items",
+          build: () => Quiz.weekly(n),
+          render: (h, q, done) => Exercises.renderItem(h, q, done),
+          onScore: (s) => store.recordQuizScore(n, s) }
+      ]
     };
 
-    // Each session chains two or three stages and averages the scores.
-    const chain = (steps) => {
-      const scores = [];
-      const next = () => {
-        if (!steps.length) return finish(Math.round(scores.reduce((a, b) => a + b, 0) / scores.length));
-        const step = steps.shift();
-        step((s) => { scores.push(s); next(); });
-      };
-      next();
-    };
+    const stages = chains[type];
 
-    if (type === "grammar") {
-      chain([
-        (done) => Flashcards.render(stage, CourseData.reviewPool(n), done),
-        (done) => Exercises.run(stage, w.grammar, done)
-      ]);
-    } else if (type === "listening") {
-      chain([
-        (done) => Listening.render(stage, w, w.listening, done),
-        (done) => Reading.render(stage, w.reading, done)
-      ]);
-    } else if (type === "writing") {
-      chain([
-        (done) => Translation.run(stage, CourseData.translationsFor(n), done),
-        (done) => Composition.render(stage, w.writing, done)
-      ]);
-    } else {
-      chain([
-        (done) => Flashcards.render(stage, store.getDueVocab(CourseData.weekVocabIds(n)).length
-          ? store.getDueVocab(CourseData.weekVocabIds(n))
-          : CourseData.weekVocabIds(n).slice(0, 10), done),
-        (done) => Exercises.run(stage, Quiz.weekly(n), (s) => { store.recordQuizScore(n, s); done(s); })
-      ]);
-    }
+    Runner.start(stage, {
+      week: n, type, stages,
+      onFinish: (score, minutes) => {
+        if (type === "review") store.recordQuizScore(n, score);
+        store.completeSession(n, type, score);
+        store.recordActivity(minutes, [`${type}_w${n}`]);
+        UI.toast(`${SESSIONS[type].name} — ${score}%`, score >= 60 ? "ok" : "warn");
+        UI.go(`week/${n}`);
+      }
+    });
+
+    if (resuming) document.getElementById("sess-restart").classList.add("is-visible");
   },
 
   /* ============================================================
@@ -449,19 +470,23 @@ const App = {
         <div id="stage"></div>
       </div>`;
 
-    document.getElementById("exam-start").onclick = () => {
-      document.getElementById("exam-intro").remove();
-      Quiz.runExam(
-        document.getElementById("stage"),
-        Quiz.phaseExam(phase),
-        (score) => {
+    const begin = () => {
+      const intro = document.getElementById("exam-intro");
+      if (intro) intro.remove();
+      Runner.start(document.getElementById("stage"), {
+        week: `exam${phase}`, type: "exam",
+        stages: [Quiz.examStage(phase, `Phase ${phase} — ${PHASES[phase].name}`)],
+        onFinish: (score, minutes) => {
           store.recordPhaseExam(phase, score);
-          store.recordActivity(30, [`exam_p${phase}`]);
+          store.recordActivity(minutes, [`exam_p${phase}`]);
           UI.go("dashboard");
-        },
-        `Phase ${phase} — ${PHASES[phase].name}`
-      );
+        }
+      });
     };
+
+    // An exam already underway resumes straight into the questions.
+    if (store.hasUnfinished(`exam${phase}`, "exam")) begin();
+    else document.getElementById("exam-start").onclick = begin;
   },
 
   /* ============================================================
@@ -618,14 +643,21 @@ const App = {
       <div class="card card-pad" style="margin-bottom:var(--s6)">
         <div class="setting" style="border:none;padding:0">
           <div>
-            <div class="setting-label">${Sync.user ? UI.esc(Sync.user.email) : Sync.available ? "Not signed in" : "Local only"}</div>
+            <div class="setting-label">${
+              !Sync.available ? "Local only"
+              : Sync.state === "signed-out" ? "Not signed in"
+              : "Signed in"
+            }</div>
             <div class="setting-desc">${
-              Sync.user ? "Progress syncs automatically across your devices."
-              : Sync.available ? "Sign in to carry your progress between devices."
-              : "Add a Firebase config to enable cross-device sync."
+              !Sync.available ? "Set APP_PASSWORD on the server to enable cross-device sync."
+              : Sync.state === "signed-out" ? "Sign in with your password to carry progress between devices."
+              : Sync.persistent ? "Progress syncs automatically across your devices."
+              : "Syncing, but no volume is attached — progress resets on redeploy."
             }</div>
           </div>
-          <button class="btn btn-ghost btn-sm" onclick="App.syncModal()">${Sync.user ? "Manage" : Sync.available ? "Sign in" : "Set up"}</button>
+          <button class="btn btn-ghost btn-sm" onclick="App.syncModal()">${
+            !Sync.available ? "Set up" : Sync.state === "signed-out" ? "Sign in" : "Manage"
+          }</button>
         </div>
       </div>
 
@@ -659,7 +691,7 @@ const App = {
           </div>
         </div>
         <div class="setting">
-          <div><div class="setting-label">Reset progress</div><div class="setting-desc">Clears this device${Sync.user ? " and your synced account" : ""}</div></div>
+          <div><div class="setting-label">Reset progress</div><div class="setting-desc">Clears this device${Sync.available && Sync.state !== "signed-out" ? " and the synced copy on the server" : ""}</div></div>
           <button class="btn btn-danger btn-sm" id="s-reset">Reset</button>
         </div>
       </div>`;

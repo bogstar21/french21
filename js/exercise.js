@@ -12,28 +12,10 @@ const Exercises = {
     return this.choice(card, ex, done);
   },
 
-  run(host, items, onDone, { xpPerItem = 0 } = {}) {
-    let i = 0, correct = 0;
-
-    const draw = () => {
-      if (i >= items.length) {
-        const score = Math.round((correct / items.length) * 100);
-        host.innerHTML = UI.result({
-          score, correct, total: items.length,
-          xp: xpPerItem ? correct * xpPerItem : 0,
-          actions: `<button class="btn btn-primary" id="ex-next">Continue →</button>`
-        });
-        host.querySelector("#ex-next").onclick = () => onDone(score);
-        return;
-      }
-      host.innerHTML = UI.topline(i + 1, items.length) + `<div class="ex-card" id="ex-card"></div>`;
-      this.one(host.querySelector("#ex-card"), items[i], (ok) => {
-        if (ok) correct++;
-        i++;
-        setTimeout(draw, ok ? 1100 : 2100); // longer pause when wrong, to read the explanation
-      });
-    };
-    draw();
+  /** Runner-compatible: render one exercise into its own card. */
+  renderItem(host, ex, done) {
+    host.innerHTML = `<div class="ex-card" id="ex-card"></div>`;
+    this.one(host.querySelector("#ex-card"), ex, done);
   },
 
   /* ---------------- Fill in the blank ---------------- */

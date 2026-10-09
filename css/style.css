@@ -381,6 +381,8 @@ main { max-width: 1080px; margin: 0 auto; padding: var(--s8) var(--s6) var(--s12
   padding: 3px var(--s3); border-radius: var(--r-full);
   background: var(--success-soft); color: var(--success);
 }
+.resume-chip { background: var(--accent-soft); color: var(--accent); }
+.session-card.resumable { border-color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
 .chev { color: var(--text-muted); font-size: 18px; }
 
 /* ============================================================

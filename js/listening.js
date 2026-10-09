@@ -7,7 +7,8 @@
    ============================================================ */
 
 const Listening = {
-  render(host, week, listening, onDone) {
+  /** Runner "screen" stage: the sources for this week. */
+  renderMedia(host, week, listening, done) {
     const res = CourseData.resourcesFor(week.week);
     const icon = { youtube: "▶", podcast: "🎧", article: "📰" };
 
@@ -60,8 +61,6 @@ const Listening = {
         </div>
       </div>`;
 
-    host.querySelector("#ls-go").onclick = () => {
-      Exercises.run(host, listening.questions, onDone);
-    };
+    host.querySelector("#ls-go").onclick = () => done();
   }
 };
