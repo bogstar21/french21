@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Local editor / agent tooling
+.claude/
+
+# Local planning notes
+COURSE_SPEC.md

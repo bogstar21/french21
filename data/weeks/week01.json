@@ -1,0 +1,447 @@
+{
+  "week": 1,
+  "phase": 1,
+  "title": "Bonjour ! — First Contact",
+  "theme": "Greetings & Introductions",
+  "grammarPoint": "Subject pronouns, être (to be), basic pronunciation",
+  "vocab": [
+    {
+      "id": "w01_01",
+      "word": "bonjour",
+      "translation": "hello / good morning",
+      "example": "Bonjour, comment allez-vous ?",
+      "exampleTranslation": "Hello, how are you?"
+    },
+    {
+      "id": "w01_02",
+      "word": "bonsoir",
+      "translation": "good evening",
+      "example": "Bonsoir, Madame.",
+      "exampleTranslation": "Good evening, Madam."
+    },
+    {
+      "id": "w01_03",
+      "word": "salut",
+      "translation": "hi / bye (informal)",
+      "example": "Salut, ça va ?",
+      "exampleTranslation": "Hi, how's it going?"
+    },
+    {
+      "id": "w01_04",
+      "word": "au revoir",
+      "translation": "goodbye",
+      "example": "Au revoir, à demain !",
+      "exampleTranslation": "Goodbye, see you tomorrow!"
+    },
+    {
+      "id": "w01_05",
+      "word": "merci",
+      "translation": "thank you",
+      "example": "Merci beaucoup !",
+      "exampleTranslation": "Thank you very much!"
+    },
+    {
+      "id": "w01_06",
+      "word": "s'il vous plaît",
+      "translation": "please (formal)",
+      "example": "Un café, s'il vous plaît.",
+      "exampleTranslation": "A coffee, please."
+    },
+    {
+      "id": "w01_07",
+      "word": "comment",
+      "translation": "how",
+      "example": "Comment vous appelez-vous ?",
+      "exampleTranslation": "What is your name?"
+    },
+    {
+      "id": "w01_08",
+      "word": "ça va",
+      "translation": "how's it going / it's fine",
+      "example": "Ça va bien, merci.",
+      "exampleTranslation": "I'm fine, thanks."
+    },
+    {
+      "id": "w01_09",
+      "word": "bien",
+      "translation": "well / good",
+      "example": "Je vais bien.",
+      "exampleTranslation": "I am well."
+    },
+    {
+      "id": "w01_10",
+      "word": "mal",
+      "translation": "badly / poorly",
+      "example": "Je vais mal aujourd'hui.",
+      "exampleTranslation": "I'm not doing well today."
+    },
+    {
+      "id": "w01_11",
+      "word": "je m'appelle",
+      "translation": "my name is",
+      "example": "Je m'appelle Bohdan.",
+      "exampleTranslation": "My name is Bohdan."
+    },
+    {
+      "id": "w01_12",
+      "word": "enchanté(e)",
+      "translation": "nice to meet you",
+      "example": "Enchanté de vous rencontrer.",
+      "exampleTranslation": "Nice to meet you."
+    },
+    {
+      "id": "w01_13",
+      "word": "oui",
+      "translation": "yes",
+      "example": "Oui, bien sûr.",
+      "exampleTranslation": "Yes, of course."
+    },
+    {
+      "id": "w01_14",
+      "word": "non",
+      "translation": "no",
+      "example": "Non, pas aujourd'hui.",
+      "exampleTranslation": "No, not today."
+    },
+    {
+      "id": "w01_15",
+      "word": "pardon",
+      "translation": "sorry / excuse me",
+      "example": "Pardon, je ne comprends pas.",
+      "exampleTranslation": "Sorry, I don't understand."
+    },
+    {
+      "id": "w01_16",
+      "word": "excusez-moi",
+      "translation": "excuse me (formal)",
+      "example": "Excusez-moi, où sont les toilettes ?",
+      "exampleTranslation": "Excuse me, where is the bathroom?"
+    },
+    {
+      "id": "w01_17",
+      "word": "monsieur",
+      "translation": "sir / mister",
+      "example": "Bonjour, monsieur.",
+      "exampleTranslation": "Hello, sir."
+    },
+    {
+      "id": "w01_18",
+      "word": "madame",
+      "translation": "madam / Mrs.",
+      "example": "Merci, madame.",
+      "exampleTranslation": "Thank you, madam."
+    },
+    {
+      "id": "w01_19",
+      "word": "et",
+      "translation": "and",
+      "example": "Toi et moi.",
+      "exampleTranslation": "You and me."
+    },
+    {
+      "id": "w01_20",
+      "word": "ou",
+      "translation": "or",
+      "example": "Thé ou café ?",
+      "exampleTranslation": "Tea or coffee?"
+    },
+    {
+      "id": "w01_21",
+      "word": "aussi",
+      "translation": "also / too",
+      "example": "Moi aussi.",
+      "exampleTranslation": "Me too."
+    },
+    {
+      "id": "w01_22",
+      "word": "très",
+      "translation": "very",
+      "example": "Très bien, merci.",
+      "exampleTranslation": "Very well, thank you."
+    },
+    {
+      "id": "w01_23",
+      "word": "un peu",
+      "translation": "a little",
+      "example": "Je parle un peu français.",
+      "exampleTranslation": "I speak a little French."
+    },
+    {
+      "id": "w01_24",
+      "word": "à bientôt",
+      "translation": "see you soon",
+      "example": "À bientôt, j'espère !",
+      "exampleTranslation": "See you soon, I hope!"
+    },
+    {
+      "id": "w01_25",
+      "word": "le travail",
+      "translation": "work / job",
+      "example": "Je travaille dans le support technique.",
+      "exampleTranslation": "I work in tech support."
+    }
+  ],
+  "grammar": [
+    {
+      "id": "w01_g01",
+      "type": "multiple_choice",
+      "question": "Which pronoun means 'you' (formal/plural)?",
+      "options": [
+        "tu",
+        "vous",
+        "il",
+        "nous"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Vous' is used for formal 'you' or plural 'you all'. 'Tu' is informal singular."
+    },
+    {
+      "id": "w01_g02",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'être' (to be)",
+      "sentence": "Je ___ français.",
+      "answer": "suis",
+      "hint": "First person singular of 'être'",
+      "explanation": "Être: je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont"
+    },
+    {
+      "id": "w01_g03",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'être'",
+      "sentence": "Vous ___ très sympathique.",
+      "answer": "êtes",
+      "hint": "Second person formal/plural of 'être'",
+      "explanation": "Être: je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont"
+    },
+    {
+      "id": "w01_g04",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'être'",
+      "sentence": "Nous ___ collègues.",
+      "answer": "sommes",
+      "hint": "First person plural of 'être'",
+      "explanation": "Être: je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont"
+    },
+    {
+      "id": "w01_g05",
+      "type": "multiple_choice",
+      "question": "How do you say 'She is tired' in French?",
+      "options": [
+        "Elle es fatiguée",
+        "Elle est fatiguée",
+        "Elle être fatiguée",
+        "Elle sont fatiguée"
+      ],
+      "correctIndex": 1,
+      "explanation": "Third person singular of être is 'est': il/elle est."
+    },
+    {
+      "id": "w01_g06",
+      "type": "reorder",
+      "instruction": "Put the words in the correct order",
+      "words": [
+        "m'appelle",
+        "Bohdan",
+        "Je"
+      ],
+      "correctOrder": [
+        2,
+        0,
+        1
+      ],
+      "translation": "My name is Bohdan"
+    },
+    {
+      "id": "w01_g07",
+      "type": "reorder",
+      "instruction": "Put the words in the correct order",
+      "words": [
+        "bien",
+        "vous",
+        "Comment",
+        "allez",
+        "?"
+      ],
+      "correctOrder": [
+        2,
+        1,
+        3,
+        0,
+        4
+      ],
+      "translation": "How are you?"
+    },
+    {
+      "id": "w01_g08",
+      "type": "multiple_choice",
+      "question": "Which greeting is appropriate in the evening?",
+      "options": [
+        "Bonjour",
+        "Bonsoir",
+        "Bonne nuit",
+        "Salut tout le monde"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Bonsoir' is used from late afternoon/evening onward; 'bonjour' is used during the day."
+    },
+    {
+      "id": "w01_g09",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'être'",
+      "sentence": "Ils ___ ingénieurs.",
+      "answer": "sont",
+      "hint": "Third person plural of 'être'",
+      "explanation": "Être: je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont"
+    },
+    {
+      "id": "w01_g10",
+      "type": "multiple_choice",
+      "question": "Which is the informal way to say 'hi'?",
+      "options": [
+        "Bonjour",
+        "Salut",
+        "Madame",
+        "Enchanté"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Salut' is casual, used with friends or peers — not with clients or superiors."
+    }
+  ],
+  "reading": {
+    "id": "w01_r01",
+    "title": "Premier jour au bureau",
+    "text": "Bonjour ! Je m'appelle Léa. Je suis française et je travaille dans une entreprise de technologie à Lyon. Aujourd'hui, c'est mon premier jour. Je suis un peu nerveuse mais très contente. Mon collègue s'appelle Marc. Il est sympathique et il parle anglais et français. Nous sommes dans la même équipe de support technique. Marc me dit : « Bienvenue ! Bonjour et bienvenue dans l'équipe. » Je réponds : « Merci beaucoup, enchantée ! »",
+    "glossary": {
+      "entreprise": "company",
+      "travaille": "works",
+      "premier jour": "first day",
+      "nerveuse": "nervous",
+      "contente": "happy/glad",
+      "sympathique": "nice/friendly",
+      "équipe": "team",
+      "bienvenue": "welcome"
+    },
+    "questions": [
+      {
+        "type": "true_false",
+        "statement": "Léa travaille dans un restaurant.",
+        "answer": false,
+        "explanation": "Léa travaille dans une entreprise de technologie."
+      },
+      {
+        "type": "true_false",
+        "statement": "C'est le premier jour de Léa.",
+        "answer": true,
+        "explanation": "Le texte dit : 'Aujourd'hui, c'est mon premier jour.'"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Where does Léa work?",
+        "options": [
+          "In a restaurant",
+          "In a tech company in Lyon",
+          "In a school",
+          "In a hospital"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "How does Léa feel?",
+        "options": [
+          "Angry",
+          "Bored",
+          "A little nervous but happy",
+          "Sad"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What languages does Marc speak?",
+        "options": [
+          "Only French",
+          "Only English",
+          "English and French",
+          "Spanish and French"
+        ],
+        "correctIndex": 2
+      }
+    ]
+  },
+  "writing": {
+    "id": "w01_wr01",
+    "type": "guided",
+    "prompt": "Introduce yourself in French. Include: your name, where you live, your job, one thing you like.",
+    "hints": [
+      "Je m'appelle...",
+      "J'habite à...",
+      "Je travaille comme...",
+      "J'aime..."
+    ],
+    "wordBank": [
+      "m'appelle",
+      "habite",
+      "travaille",
+      "aime",
+      "suis",
+      "dans",
+      "comme",
+      "à",
+      "technique",
+      "support"
+    ],
+    "minimumWords": 20,
+    "modelAnswer": "Je m'appelle Bohdan. J'habite à Barcelone. Je travaille comme analyste de support technique chez Odoo. J'aime la technologie et l'économie.",
+    "checkpoints": [
+      {
+        "required": "name_mention",
+        "regex": "m'appelle|je suis",
+        "feedback": "Don't forget to mention your name!"
+      },
+      {
+        "required": "verb_usage",
+        "regex": "travaille|habite|aime",
+        "feedback": "Try to use at least one verb we learned."
+      }
+    ]
+  },
+  "listening": {
+    "id": "w01_l01",
+    "type": "video",
+    "title": "Learn French With Alexa — Greetings & the alphabet",
+    "searchHint": "Learn French With Alexa French greetings alphabet beginner",
+    "videoId": "",
+    "description": "Structured beginner lesson on how French greetings are pronounced, and when each one is used.",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What is the most common way to greet someone during the day?",
+        "options": [
+          "Bonsoir",
+          "Bonjour",
+          "Salut tout le monde",
+          "Au revoir"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which greeting is informal, used with friends?",
+        "options": [
+          "Bonjour",
+          "Madame",
+          "Salut",
+          "Enchanté"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "type": "true_false",
+        "statement": "The French always shake hands when greeting close friends.",
+        "answer": false,
+        "explanation": "Close friends often greet with 'la bise' (cheek kisses), not handshakes."
+      }
+    ]
+  }
+}

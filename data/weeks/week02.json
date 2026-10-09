@@ -1,0 +1,436 @@
+{
+  "week": 2,
+  "phase": 1,
+  "title": "Au bureau — At the Office",
+  "theme": "Office & Tech vocabulary",
+  "grammarPoint": "avoir (to have), gender of nouns, indefinite articles, negation (ne...pas)",
+  "vocab": [
+    {
+      "id": "w02_01",
+      "word": "un ordinateur",
+      "translation": "a computer",
+      "example": "Mon ordinateur est lent.",
+      "exampleTranslation": "My computer is slow."
+    },
+    {
+      "id": "w02_02",
+      "word": "un écran",
+      "translation": "a screen",
+      "example": "L'écran est cassé.",
+      "exampleTranslation": "The screen is broken."
+    },
+    {
+      "id": "w02_03",
+      "word": "un clavier",
+      "translation": "a keyboard",
+      "example": "J'ai un nouveau clavier.",
+      "exampleTranslation": "I have a new keyboard."
+    },
+    {
+      "id": "w02_04",
+      "word": "une souris",
+      "translation": "a mouse",
+      "example": "La souris ne fonctionne pas.",
+      "exampleTranslation": "The mouse doesn't work."
+    },
+    {
+      "id": "w02_05",
+      "word": "un bureau",
+      "translation": "a desk / office",
+      "example": "Je suis à mon bureau.",
+      "exampleTranslation": "I am at my desk."
+    },
+    {
+      "id": "w02_06",
+      "word": "un courriel",
+      "translation": "an email",
+      "example": "J'ai envoyé un courriel.",
+      "exampleTranslation": "I sent an email."
+    },
+    {
+      "id": "w02_07",
+      "word": "un ticket",
+      "translation": "a (support) ticket",
+      "example": "Le ticket est ouvert.",
+      "exampleTranslation": "The ticket is open."
+    },
+    {
+      "id": "w02_08",
+      "word": "un problème",
+      "translation": "a problem",
+      "example": "Il y a un problème.",
+      "exampleTranslation": "There is a problem."
+    },
+    {
+      "id": "w02_09",
+      "word": "une solution",
+      "translation": "a solution",
+      "example": "J'ai trouvé une solution.",
+      "exampleTranslation": "I found a solution."
+    },
+    {
+      "id": "w02_10",
+      "word": "un client",
+      "translation": "a client/customer",
+      "example": "Le client attend une réponse.",
+      "exampleTranslation": "The client is waiting for a response."
+    },
+    {
+      "id": "w02_11",
+      "word": "un collègue",
+      "translation": "a colleague",
+      "example": "Mon collègue m'aide.",
+      "exampleTranslation": "My colleague is helping me."
+    },
+    {
+      "id": "w02_12",
+      "word": "une réunion",
+      "translation": "a meeting",
+      "example": "La réunion commence à 10h.",
+      "exampleTranslation": "The meeting starts at 10am."
+    },
+    {
+      "id": "w02_13",
+      "word": "une équipe",
+      "translation": "a team",
+      "example": "Notre équipe est petite.",
+      "exampleTranslation": "Our team is small."
+    },
+    {
+      "id": "w02_14",
+      "word": "un logiciel",
+      "translation": "software",
+      "example": "Le logiciel est gratuit.",
+      "exampleTranslation": "The software is free."
+    },
+    {
+      "id": "w02_15",
+      "word": "un serveur",
+      "translation": "a server",
+      "example": "Le serveur est en panne.",
+      "exampleTranslation": "The server is down."
+    },
+    {
+      "id": "w02_16",
+      "word": "une base de données",
+      "translation": "a database",
+      "example": "La base de données est grande.",
+      "exampleTranslation": "The database is large."
+    },
+    {
+      "id": "w02_17",
+      "word": "une mise à jour",
+      "translation": "an update",
+      "example": "Il y a une mise à jour.",
+      "exampleTranslation": "There is an update."
+    },
+    {
+      "id": "w02_18",
+      "word": "un mot de passe",
+      "translation": "a password",
+      "example": "J'ai oublié mon mot de passe.",
+      "exampleTranslation": "I forgot my password."
+    },
+    {
+      "id": "w02_19",
+      "word": "un compte",
+      "translation": "an account",
+      "example": "Mon compte est bloqué.",
+      "exampleTranslation": "My account is blocked."
+    },
+    {
+      "id": "w02_20",
+      "word": "une erreur",
+      "translation": "an error",
+      "example": "Il y a une erreur dans le code.",
+      "exampleTranslation": "There is an error in the code."
+    },
+    {
+      "id": "w02_21",
+      "word": "envoyer",
+      "translation": "to send",
+      "example": "Je vais envoyer le fichier.",
+      "exampleTranslation": "I'm going to send the file."
+    },
+    {
+      "id": "w02_22",
+      "word": "recevoir",
+      "translation": "to receive",
+      "example": "J'ai reçu votre message.",
+      "exampleTranslation": "I received your message."
+    },
+    {
+      "id": "w02_23",
+      "word": "résoudre",
+      "translation": "to resolve/solve",
+      "example": "Nous devons résoudre ce problème.",
+      "exampleTranslation": "We must resolve this problem."
+    },
+    {
+      "id": "w02_24",
+      "word": "aider",
+      "translation": "to help",
+      "example": "Je peux vous aider.",
+      "exampleTranslation": "I can help you."
+    },
+    {
+      "id": "w02_25",
+      "word": "un module",
+      "translation": "a module (software)",
+      "example": "Installez le module.",
+      "exampleTranslation": "Install the module."
+    }
+  ],
+  "grammar": [
+    {
+      "id": "w02_g01",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'avoir' (to have)",
+      "sentence": "J' ___ un problème.",
+      "answer": "ai",
+      "hint": "First person singular of 'avoir'",
+      "explanation": "Avoir: j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont"
+    },
+    {
+      "id": "w02_g02",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'avoir'",
+      "sentence": "Vous ___ un nouveau collègue.",
+      "answer": "avez",
+      "hint": "Second person formal/plural of 'avoir'",
+      "explanation": "Avoir: j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont"
+    },
+    {
+      "id": "w02_g03",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'avoir'",
+      "sentence": "Nous ___ une réunion à 14h.",
+      "answer": "avons",
+      "hint": "First person plural of 'avoir'",
+      "explanation": "Avoir: j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont"
+    },
+    {
+      "id": "w02_g04",
+      "type": "multiple_choice",
+      "question": "Which article is correct: '___ ordinateur' (a computer, masculine)?",
+      "options": [
+        "une",
+        "un",
+        "des",
+        "le"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Ordinateur' is masculine, so the indefinite article is 'un'."
+    },
+    {
+      "id": "w02_g05",
+      "type": "multiple_choice",
+      "question": "Which article is correct: '___ souris' (a mouse, feminine)?",
+      "options": [
+        "un",
+        "une",
+        "des",
+        "la"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Souris' is feminine, so the indefinite article is 'une'."
+    },
+    {
+      "id": "w02_g06",
+      "type": "fill_blank",
+      "instruction": "Make this sentence negative using ne...pas",
+      "sentence": "Je ___ comprends ___ le problème.",
+      "answer": "ne / pas",
+      "hint": "Negation wraps around the verb: ne + verb + pas",
+      "explanation": "'Ne...pas' surrounds the conjugated verb: Je ne comprends pas."
+    },
+    {
+      "id": "w02_g07",
+      "type": "multiple_choice",
+      "question": "How do you say 'The server is not working' correctly?",
+      "options": [
+        "Le serveur fonctionne ne pas",
+        "Le serveur ne fonctionne pas",
+        "Le serveur pas ne fonctionne",
+        "Ne le serveur fonctionne pas"
+      ],
+      "correctIndex": 1,
+      "explanation": "Negation wraps the verb: ne + fonctionne + pas."
+    },
+    {
+      "id": "w02_g08",
+      "type": "reorder",
+      "instruction": "Put the words in the correct order",
+      "words": [
+        "un",
+        "J'",
+        "problème",
+        "ai"
+      ],
+      "correctOrder": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "translation": "I have a problem"
+    },
+    {
+      "id": "w02_g09",
+      "type": "multiple_choice",
+      "question": "Which is correct: 'un email' is replaced in formal French by...",
+      "options": [
+        "un courriel",
+        "une courriel",
+        "un courrielle",
+        "la courriel"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Un courriel' is the official French term for 'email', masculine."
+    },
+    {
+      "id": "w02_g10",
+      "type": "fill_blank",
+      "instruction": "Complete with the correct form of 'avoir'",
+      "sentence": "Le client ___ un ticket ouvert.",
+      "answer": "a",
+      "hint": "Third person singular of 'avoir'",
+      "explanation": "Avoir: j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont"
+    }
+  ],
+  "reading": {
+    "id": "w02_r01",
+    "title": "Une journée au bureau",
+    "text": "Marc travaille dans une entreprise de technologie à Paris. Il arrive au bureau à neuf heures. Il allume son ordinateur et vérifie ses courriels. Aujourd'hui, il a trois tickets à résoudre. Le premier client a un problème avec son mot de passe. Marc n'a pas de solution immédiate, alors il demande de l'aide à son collègue. Ensemble, ils trouvent une solution en dix minutes. Marc envoie un courriel au client pour expliquer la solution. Puis, il a une réunion avec son équipe à onze heures pour discuter d'une mise à jour du logiciel.",
+    "glossary": {
+      "allume": "turns on",
+      "vérifie": "checks",
+      "demande de l'aide": "asks for help",
+      "ensemble": "together",
+      "expliquer": "to explain",
+      "discuter": "to discuss"
+    },
+    "questions": [
+      {
+        "type": "true_false",
+        "statement": "Marc arrive au bureau à huit heures.",
+        "answer": false,
+        "explanation": "Il arrive à neuf heures."
+      },
+      {
+        "type": "true_false",
+        "statement": "Marc résout le problème du mot de passe seul.",
+        "answer": false,
+        "explanation": "Il demande de l'aide à son collègue."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "How many tickets does Marc have to resolve?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "Four"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What is the first client's problem?",
+        "options": [
+          "A broken screen",
+          "A password issue",
+          "A slow server",
+          "A missing email"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What is the meeting at 11am about?",
+        "options": [
+          "A new client",
+          "A software update",
+          "A vacation",
+          "A salary review"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "writing": {
+    "id": "w02_wr01",
+    "type": "guided",
+    "prompt": "Describe your workspace (your desk, computer, what tools you use). Write 5-8 sentences.",
+    "hints": [
+      "J'ai un/une...",
+      "Mon bureau est...",
+      "J'utilise...",
+      "Il y a..."
+    ],
+    "wordBank": [
+      "ordinateur",
+      "écran",
+      "clavier",
+      "souris",
+      "bureau",
+      "logiciel",
+      "ai",
+      "utilise",
+      "grand",
+      "petit"
+    ],
+    "minimumWords": 25,
+    "modelAnswer": "J'ai un ordinateur portable et deux écrans. Mon bureau est près de la fenêtre. J'utilise un clavier mécanique et une souris sans fil. Il y a beaucoup de logiciels ouverts : un navigateur, un email, et une base de données.",
+    "checkpoints": [
+      {
+        "required": "avoir_usage",
+        "regex": "j'ai|il y a",
+        "feedback": "Try to use 'j'ai' or 'il y a' to describe objects."
+      },
+      {
+        "required": "tech_vocab",
+        "regex": "ordinateur|écran|clavier|souris|logiciel",
+        "feedback": "Include at least one piece of tech vocabulary from this week."
+      }
+    ]
+  },
+  "listening": {
+    "id": "w02_l01",
+    "type": "video",
+    "title": "French office & computing vocabulary",
+    "searchHint": "French computer office vocabulary beginner ordinateur logiciel",
+    "videoId": "",
+    "description": "Beginner vocabulary lesson covering the computer, the desk and everyday office words.",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What does 'un logiciel' mean?",
+        "options": [
+          "Hardware",
+          "Software",
+          "A screen",
+          "A password"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What does 'une mise à jour' mean?",
+        "options": [
+          "A meeting",
+          "An update",
+          "An error",
+          "A password"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "true_false",
+        "statement": "'Un mot de passe' means 'a username'.",
+        "answer": false,
+        "explanation": "'Un mot de passe' means 'a password'; username is 'un nom d'utilisateur'."
+      }
+    ]
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "week": 11,
+  "phase": 3,
+  "title": "Communiquer au quotidien",
+  "theme": "Communication",
+  "grammarPoint": "Indirect object pronouns (lui, leur), conditional politeness, relative pronouns (qui/que)",
+  "vocab": [
+    {
+      "id": "w11_01",
+      "word": "téléphoner",
+      "translation": "to call (phone)",
+      "example": "Je vais téléphoner au client.",
+      "exampleTranslation": "I'm going to call the client."
+    },
+    {
+      "id": "w11_02",
+      "word": "appeler",
+      "translation": "to call",
+      "example": "Appelez-moi plus tard.",
+      "exampleTranslation": "Call me later."
+    },
+    {
+      "id": "w11_03",
+      "word": "rappeler",
+      "translation": "to call back",
+      "example": "Je vais vous rappeler.",
+      "exampleTranslation": "I'll call you back."
+    },
+    {
+      "id": "w11_04",
+      "word": "un message",
+      "translation": "a message",
+      "example": "J'ai laissé un message.",
+      "exampleTranslation": "I left a message."
+    },
+    {
+      "id": "w11_05",
+      "word": "un texto",
+      "translation": "a text message",
+      "example": "Envoyez-moi un texto.",
+      "exampleTranslation": "Send me a text."
+    },
+    {
+      "id": "w11_06",
+      "word": "répondre",
+      "translation": "to reply",
+      "example": "Je vais répondre au client.",
+      "exampleTranslation": "I'm going to reply to the client."
+    },
+    {
+      "id": "w11_07",
+      "word": "laisser un message",
+      "translation": "to leave a message",
+      "example": "Vous pouvez laisser un message.",
+      "exampleTranslation": "You can leave a message."
+    },
+    {
+      "id": "w11_08",
+      "word": "raccrocher",
+      "translation": "to hang up",
+      "example": "Il a raccroché.",
+      "exampleTranslation": "He hung up."
+    },
+    {
+      "id": "w11_09",
+      "word": "être en ligne",
+      "translation": "to be online/on the line",
+      "example": "Je suis en ligne.",
+      "exampleTranslation": "I am online / on the line."
+    },
+    {
+      "id": "w11_10",
+      "word": "un rendez-vous",
+      "translation": "an appointment",
+      "example": "J'ai un rendez-vous à quinze heures.",
+      "exampleTranslation": "I have an appointment at 3pm."
+    },
+    {
+      "id": "w11_11",
+      "word": "confirmer",
+      "translation": "to confirm",
+      "example": "Pouvez-vous confirmer ?",
+      "exampleTranslation": "Can you confirm?"
+    },
+    {
+      "id": "w11_12",
+      "word": "annuler",
+      "translation": "to cancel",
+      "example": "J'ai dû annuler la réunion.",
+      "exampleTranslation": "I had to cancel the meeting."
+    },
+    {
+      "id": "w11_13",
+      "word": "reporter",
+      "translation": "to postpone",
+      "example": "Nous avons reporté le rendez-vous.",
+      "exampleTranslation": "We postponed the appointment."
+    },
+    {
+      "id": "w11_14",
+      "word": "disponible",
+      "translation": "available",
+      "example": "Je suis disponible demain.",
+      "exampleTranslation": "I'm available tomorrow."
+    },
+    {
+      "id": "w11_15",
+      "word": "occupé(e)",
+      "translation": "busy",
+      "example": "Il est occupé maintenant.",
+      "exampleTranslation": "He's busy right now."
+    },
+    {
+      "id": "w11_16",
+      "word": "urgent(e)",
+      "translation": "urgent",
+      "example": "C'est très urgent.",
+      "exampleTranslation": "It's very urgent."
+    },
+    {
+      "id": "w11_17",
+      "word": "prévenir",
+      "translation": "to warn/notify",
+      "example": "Je vais vous prévenir.",
+      "exampleTranslation": "I'll let you know."
+    },
+    {
+      "id": "w11_18",
+      "word": "informer",
+      "translation": "to inform",
+      "example": "Je vous informe du problème.",
+      "exampleTranslation": "I'm informing you of the problem."
+    },
+    {
+      "id": "w11_19",
+      "word": "expliquer",
+      "translation": "to explain",
+      "example": "Pouvez-vous expliquer ?",
+      "exampleTranslation": "Can you explain?"
+    },
+    {
+      "id": "w11_20",
+      "word": "décrire",
+      "translation": "to describe",
+      "example": "Décrivez le problème.",
+      "exampleTranslation": "Describe the problem."
+    },
+    {
+      "id": "w11_21",
+      "word": "préciser",
+      "translation": "to specify",
+      "example": "Pouvez-vous préciser ?",
+      "exampleTranslation": "Can you specify?"
+    },
+    {
+      "id": "w11_22",
+      "word": "je voudrais",
+      "translation": "I would like",
+      "example": "Je voudrais de l'aide.",
+      "exampleTranslation": "I would like some help."
+    },
+    {
+      "id": "w11_23",
+      "word": "pourriez-vous",
+      "translation": "could you",
+      "example": "Pourriez-vous m'aider ?",
+      "exampleTranslation": "Could you help me?"
+    },
+    {
+      "id": "w11_24",
+      "word": "malheureusement",
+      "translation": "unfortunately",
+      "example": "Malheureusement, c'est impossible.",
+      "exampleTranslation": "Unfortunately, it's impossible."
+    },
+    {
+      "id": "w11_25",
+      "word": "l'accès",
+      "translation": "access",
+      "example": "J'ai besoin de l'accès administrateur.",
+      "exampleTranslation": "I need administrator access."
+    }
+  ],
+  "grammar": [
+    {
+      "id": "w11_g01",
+      "type": "fill_blank",
+      "instruction": "Replace 'au client' with an indirect object pronoun",
+      "sentence": "Je ___ téléphone.",
+      "answer": "lui",
+      "hint": "Indirect object, singular",
+      "explanation": "'Lui' replaces 'à + person' (singular, masc. or fem.): je lui téléphone."
+    },
+    {
+      "id": "w11_g02",
+      "type": "fill_blank",
+      "instruction": "Replace 'aux clients' with an indirect object pronoun",
+      "sentence": "Je ___ réponds.",
+      "answer": "leur",
+      "hint": "Indirect object, plural",
+      "explanation": "'Leur' replaces 'à + plural people': je leur réponds."
+    },
+    {
+      "id": "w11_g03",
+      "type": "multiple_choice",
+      "question": "Which is the polite conditional form of 'vouloir' (to want)?",
+      "options": [
+        "je veux",
+        "je voudrais",
+        "je voulais",
+        "je veuille"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Je voudrais' (conditional) is the polite way to say 'I would like'."
+    },
+    {
+      "id": "w11_g04",
+      "type": "multiple_choice",
+      "question": "How do you politely ask 'Could you help me?'",
+      "options": [
+        "Vous pouvez m'aider ?",
+        "Pourriez-vous m'aider ?",
+        "Vous m'aidez ?",
+        "Aidez-moi !"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Pourriez-vous' (conditional of pouvoir) is the polite, formal way to ask."
+    },
+    {
+      "id": "w11_g05",
+      "type": "fill_blank",
+      "instruction": "Complete with the relative pronoun 'qui' (subject) or 'que' (object)",
+      "sentence": "C'est le client ___ a appelé hier.",
+      "answer": "qui",
+      "hint": "'qui' is the subject of the next verb",
+      "explanation": "'Qui' replaces the subject of the relative clause (the client WHO called)."
+    },
+    {
+      "id": "w11_g06",
+      "type": "fill_blank",
+      "instruction": "Complete with the relative pronoun",
+      "sentence": "C'est le problème ___ j'ai résolu.",
+      "answer": "que",
+      "hint": "'que' is the object of the next verb",
+      "explanation": "'Que' replaces the object (the problem THAT I resolved)."
+    },
+    {
+      "id": "w11_g07",
+      "type": "reorder",
+      "instruction": "Put the words in the correct order",
+      "words": [
+        "donner",
+        "Pourriez-vous",
+        "accès",
+        "l'",
+        "me"
+      ],
+      "correctOrder": [
+        1,
+        4,
+        0,
+        3,
+        2
+      ],
+      "translation": "Could you give me access?"
+    },
+    {
+      "id": "w11_g08",
+      "type": "multiple_choice",
+      "question": "What does 'malheureusement' mean?",
+      "options": [
+        "Fortunately",
+        "Unfortunately",
+        "Quickly",
+        "Rarely"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Malheureusement' = unfortunately."
+    },
+    {
+      "id": "w11_g09",
+      "type": "fill_blank",
+      "instruction": "Complete with the indirect object pronoun",
+      "sentence": "Je ___ explique le problème (to him).",
+      "answer": "lui",
+      "hint": "indirect object pronoun",
+      "explanation": "'Lui' = to him/her (indirect object)."
+    },
+    {
+      "id": "w11_g10",
+      "type": "multiple_choice",
+      "question": "Which sentence correctly uses 'qui'?",
+      "options": [
+        "Le ticket que je dois résoudre",
+        "Le client qui a un problème",
+        "Le message que j'ai lu",
+        "Le rapport que j'ai écrit"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Qui' is followed directly by a verb (it's the subject): le client QUI A un problème."
+    }
+  ],
+  "reading": {
+    "id": "w11_r01",
+    "title": "Conversation de support technique (chat)",
+    "text": "Client : Bonjour, j'ai un problème urgent avec mon compte.\nSupport : Bonjour ! Je suis désolé d'entendre ça. Pourriez-vous décrire le problème ?\nClient : Je ne peux pas me connecter. Le système me dit que mon mot de passe est incorrect.\nSupport : D'accord, je comprends. Avez-vous essayé de réinitialiser votre mot de passe ?\nClient : Non, pas encore. Comment puis-je faire ça ?\nSupport : Cliquez sur « mot de passe oublié » sur la page de connexion. Vous recevrez un email avec un lien.\nClient : D'accord, je vais essayer maintenant.\nSupport : Parfait. N'hésitez pas à me recontacter si vous avez encore des difficultés.\nClient : Merci beaucoup pour votre aide rapide !",
+    "glossary": {
+      "désolé": "sorry",
+      "se connecter": "to log in",
+      "réinitialiser": "to reset",
+      "un lien": "a link",
+      "n'hésitez pas": "don't hesitate",
+      "recontacter": "to contact again"
+    },
+    "questions": [
+      {
+        "type": "true_false",
+        "statement": "Le client a déjà essayé de réinitialiser son mot de passe.",
+        "answer": false,
+        "explanation": "Le client dit 'Non, pas encore'."
+      },
+      {
+        "type": "true_false",
+        "statement": "Le support envoie un lien par email pour réinitialiser le mot de passe.",
+        "answer": true,
+        "explanation": "Le texte le confirme directement."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What is the client's problem?",
+        "options": [
+          "Broken screen",
+          "Can't log in — incorrect password",
+          "Slow server",
+          "Missing invoice"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Where does the client click to reset the password?",
+        "options": [
+          "Settings menu",
+          "'Mot de passe oublié' on the login page",
+          "Support ticket",
+          "Email inbox"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "How does the client feel at the end?",
+        "options": [
+          "Angry",
+          "Grateful",
+          "Confused",
+          "Indifferent"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "writing": {
+    "id": "w11_wr01",
+    "type": "guided",
+    "prompt": "Write a chat conversation with a French colleague about a technical issue (at least 6 exchanges).",
+    "hints": [
+      "Bonjour, j'ai un problème avec...",
+      "Pourriez-vous...",
+      "Avez-vous essayé...",
+      "Merci beaucoup !"
+    ],
+    "wordBank": [
+      "problème",
+      "pourriez-vous",
+      "essayé",
+      "accès",
+      "mot de passe",
+      "merci",
+      "urgent",
+      "résoudre"
+    ],
+    "minimumWords": 30,
+    "modelAnswer": "Collègue : Bonjour, j'ai un problème urgent avec le serveur. Moi : Bonjour ! Pourriez-vous décrire le problème ? Collègue : Le serveur est en panne depuis ce matin. Moi : Avez-vous essayé de le redémarrer ? Collègue : Pas encore, je vais essayer maintenant. Moi : Parfait, n'hésitez pas à me recontacter si besoin. Collègue : Merci beaucoup pour votre aide !",
+    "checkpoints": [
+      {
+        "required": "polite_request",
+        "regex": "pourriez-vous|je voudrais|pouvez-vous",
+        "feedback": "Use a polite request form (pourriez-vous, je voudrais)."
+      },
+      {
+        "required": "dialogue_format",
+        "regex": ":",
+        "feedback": "Format as a dialogue with speaker labels and colons."
+      }
+    ]
+  },
+  "listening": {
+    "id": "w11_l01",
+    "type": "video",
+    "title": "Podcast Français Facile — Au téléphone",
+    "searchHint": "Podcast Français Facile au téléphone dialogue",
+    "videoId": "",
+    "description": "A scripted phone dialogue with the polite forms you need at work.",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What does 'rappeler' mean?",
+        "options": [
+          "To call for the first time",
+          "To call back",
+          "To hang up",
+          "To text"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "true_false",
+        "statement": "'Je voudrais' is more polite than 'je veux'.",
+        "answer": true,
+        "explanation": "The conditional form 'je voudrais' softens the request, making it more polite."
+      }
+    ]
+  }
+}

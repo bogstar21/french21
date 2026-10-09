@@ -1,0 +1,430 @@
+{
+  "week": 10,
+  "phase": 3,
+  "title": "La comparaison et l'opinion",
+  "theme": "Opinions & comparisons",
+  "grammarPoint": "Comparatives (plus/moins/aussi...que), superlatives, expressing opinions",
+  "vocab": [
+    {
+      "id": "w10_01",
+      "word": "meilleur(e)",
+      "translation": "better",
+      "example": "Ce logiciel est meilleur.",
+      "exampleTranslation": "This software is better."
+    },
+    {
+      "id": "w10_02",
+      "word": "pire",
+      "translation": "worse",
+      "example": "C'est pire qu'avant.",
+      "exampleTranslation": "It's worse than before."
+    },
+    {
+      "id": "w10_03",
+      "word": "mieux",
+      "translation": "better (adverb)",
+      "example": "Ça fonctionne mieux maintenant.",
+      "exampleTranslation": "It works better now."
+    },
+    {
+      "id": "w10_04",
+      "word": "le meilleur",
+      "translation": "the best",
+      "example": "C'est le meilleur outil.",
+      "exampleTranslation": "It's the best tool."
+    },
+    {
+      "id": "w10_05",
+      "word": "le pire",
+      "translation": "the worst",
+      "example": "C'est le pire bug.",
+      "exampleTranslation": "It's the worst bug."
+    },
+    {
+      "id": "w10_06",
+      "word": "penser",
+      "translation": "to think",
+      "example": "Je pense que c'est bien.",
+      "exampleTranslation": "I think it's good."
+    },
+    {
+      "id": "w10_07",
+      "word": "croire",
+      "translation": "to believe",
+      "example": "Je crois que c'est vrai.",
+      "exampleTranslation": "I believe it's true."
+    },
+    {
+      "id": "w10_08",
+      "word": "trouver",
+      "translation": "to find (think)",
+      "example": "Je trouve ça intéressant.",
+      "exampleTranslation": "I find that interesting."
+    },
+    {
+      "id": "w10_09",
+      "word": "préférer",
+      "translation": "to prefer",
+      "example": "Je préfère Linux.",
+      "exampleTranslation": "I prefer Linux."
+    },
+    {
+      "id": "w10_10",
+      "word": "détester",
+      "translation": "to hate",
+      "example": "Je déteste les bugs.",
+      "exampleTranslation": "I hate bugs."
+    },
+    {
+      "id": "w10_11",
+      "word": "adorer",
+      "translation": "to love",
+      "example": "J'adore ce projet.",
+      "exampleTranslation": "I love this project."
+    },
+    {
+      "id": "w10_12",
+      "word": "d'accord",
+      "translation": "agree / OK",
+      "example": "Je suis d'accord avec vous.",
+      "exampleTranslation": "I agree with you."
+    },
+    {
+      "id": "w10_13",
+      "word": "pas d'accord",
+      "translation": "disagree",
+      "example": "Je ne suis pas d'accord.",
+      "exampleTranslation": "I disagree."
+    },
+    {
+      "id": "w10_14",
+      "word": "avoir raison",
+      "translation": "to be right",
+      "example": "Vous avez raison.",
+      "exampleTranslation": "You are right."
+    },
+    {
+      "id": "w10_15",
+      "word": "avoir tort",
+      "translation": "to be wrong",
+      "example": "J'ai eu tort.",
+      "exampleTranslation": "I was wrong."
+    },
+    {
+      "id": "w10_16",
+      "word": "l'avantage",
+      "translation": "the advantage",
+      "example": "L'avantage, c'est la rapidité.",
+      "exampleTranslation": "The advantage is the speed."
+    },
+    {
+      "id": "w10_17",
+      "word": "l'inconvénient",
+      "translation": "the disadvantage",
+      "example": "L'inconvénient, c'est le prix.",
+      "exampleTranslation": "The disadvantage is the price."
+    },
+    {
+      "id": "w10_18",
+      "word": "par rapport à",
+      "translation": "compared to",
+      "example": "Par rapport à l'année dernière.",
+      "exampleTranslation": "Compared to last year."
+    },
+    {
+      "id": "w10_19",
+      "word": "en revanche",
+      "translation": "on the other hand",
+      "example": "En revanche, c'est plus cher.",
+      "exampleTranslation": "On the other hand, it's more expensive."
+    },
+    {
+      "id": "w10_20",
+      "word": "cependant",
+      "translation": "however",
+      "example": "Cependant, il y a un problème.",
+      "exampleTranslation": "However, there is a problem."
+    },
+    {
+      "id": "w10_21",
+      "word": "car",
+      "translation": "because/for",
+      "example": "Je préfère ça car c'est simple.",
+      "exampleTranslation": "I prefer that because it's simple."
+    },
+    {
+      "id": "w10_22",
+      "word": "parce que",
+      "translation": "because",
+      "example": "Parce que c'est gratuit.",
+      "exampleTranslation": "Because it's free."
+    },
+    {
+      "id": "w10_23",
+      "word": "donc",
+      "translation": "so / therefore",
+      "example": "Donc, c'est la meilleure option.",
+      "exampleTranslation": "So, it's the best option."
+    },
+    {
+      "id": "w10_24",
+      "word": "alors",
+      "translation": "so / then",
+      "example": "Alors, qu'est-ce qu'on fait ?",
+      "exampleTranslation": "So, what do we do?"
+    },
+    {
+      "id": "w10_25",
+      "word": "en effet",
+      "translation": "indeed",
+      "example": "En effet, c'est vrai.",
+      "exampleTranslation": "Indeed, that's true."
+    }
+  ],
+  "grammar": [
+    {
+      "id": "w10_g01",
+      "type": "fill_blank",
+      "instruction": "Complete the comparative (more... than)",
+      "sentence": "Odoo est ___ rapide ___ l'ancien système.",
+      "answer": "plus / que",
+      "hint": "plus + adjective + que",
+      "explanation": "Comparative of superiority: plus + adjective + que."
+    },
+    {
+      "id": "w10_g02",
+      "type": "fill_blank",
+      "instruction": "Complete the comparative (less... than)",
+      "sentence": "Ce logiciel est ___ cher ___ l'autre.",
+      "answer": "moins / que",
+      "hint": "moins + adjective + que",
+      "explanation": "Comparative of inferiority: moins + adjective + que."
+    },
+    {
+      "id": "w10_g03",
+      "type": "multiple_choice",
+      "question": "How do you say 'as good as'?",
+      "options": [
+        "plus bon que",
+        "aussi bon que",
+        "moins bon que",
+        "le plus bon"
+      ],
+      "correctIndex": 1,
+      "explanation": "Comparative of equality: aussi + adjective + que."
+    },
+    {
+      "id": "w10_g04",
+      "type": "multiple_choice",
+      "question": "What is the irregular comparative of 'bon' (good)?",
+      "options": [
+        "plus bon",
+        "meilleur",
+        "mieux",
+        "bonnier"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Bon' → 'meilleur' (irregular comparative adjective, not 'plus bon')."
+    },
+    {
+      "id": "w10_g05",
+      "type": "fill_blank",
+      "instruction": "Complete the superlative",
+      "sentence": "C'est ___ meilleur outil de l'équipe.",
+      "answer": "le",
+      "hint": "le/la + plus/meilleur + adjective",
+      "explanation": "Superlative: le/la/les + plus/meilleur + adjective."
+    },
+    {
+      "id": "w10_g06",
+      "type": "multiple_choice",
+      "question": "Which phrase expresses an opinion?",
+      "options": [
+        "Il y a un bug",
+        "À mon avis, c'est excellent",
+        "Le serveur est en panne",
+        "J'ai envoyé l'email"
+      ],
+      "correctIndex": 1,
+      "explanation": "'À mon avis' (in my opinion) introduces a personal opinion."
+    },
+    {
+      "id": "w10_g07",
+      "type": "reorder",
+      "instruction": "Put the words in the correct order",
+      "words": [
+        "que",
+        "meilleur",
+        "Windows",
+        "Linux",
+        "est"
+      ],
+      "correctOrder": [
+        3,
+        4,
+        1,
+        0,
+        2
+      ],
+      "translation": "Linux is better than Windows"
+    },
+    {
+      "id": "w10_g08",
+      "type": "multiple_choice",
+      "question": "Which connector means 'on the other hand'?",
+      "options": [
+        "donc",
+        "parce que",
+        "en revanche",
+        "car"
+      ],
+      "correctIndex": 2,
+      "explanation": "'En revanche' = on the other hand (contrast)."
+    },
+    {
+      "id": "w10_g09",
+      "type": "fill_blank",
+      "instruction": "Complete with 'penser que'",
+      "sentence": "Je ___ que c'est une bonne idée.",
+      "answer": "pense",
+      "hint": "penser, je form",
+      "explanation": "'Je pense que' = I think that."
+    },
+    {
+      "id": "w10_g10",
+      "type": "multiple_choice",
+      "question": "What does 'avoir raison' mean?",
+      "options": [
+        "To be right",
+        "To be wrong",
+        "To have a reason",
+        "To have time"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Avoir raison' = to be right (idiomatic expression with avoir)."
+    }
+  ],
+  "reading": {
+    "id": "w10_r01",
+    "title": "Linux vs Windows vs Mac pour les développeurs",
+    "text": "Quel système d'exploitation est le meilleur pour les développeurs ? Chaque système a ses avantages et ses inconvénients. Linux est souvent préféré par les développeurs car il est gratuit et très personnalisable. En revanche, il peut être plus difficile à utiliser pour les débutants. Windows est plus accessible et compatible avec beaucoup de logiciels, mais certains le trouvent moins stable que Linux. Mac, de son côté, est apprécié pour son interface élégante et sa stabilité, mais il est aussi le plus cher des trois. À mon avis, le meilleur choix dépend des besoins de chaque développeur : Linux pour la liberté, Windows pour la compatibilité, et Mac pour le confort.",
+    "glossary": {
+      "un système d'exploitation": "an operating system",
+      "personnalisable": "customizable",
+      "accessible": "accessible/user-friendly",
+      "stable": "stable",
+      "de son côté": "for its part",
+      "élégante": "elegant",
+      "le confort": "comfort"
+    },
+    "questions": [
+      {
+        "type": "true_false",
+        "statement": "Linux est le système le plus cher.",
+        "answer": false,
+        "explanation": "Mac est décrit comme le plus cher des trois."
+      },
+      {
+        "type": "true_false",
+        "statement": "Windows est très compatible avec beaucoup de logiciels.",
+        "answer": true,
+        "explanation": "Le texte le confirme directement."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Why do developers often prefer Linux?",
+        "options": [
+          "It's the most expensive",
+          "It's free and customizable",
+          "It has the best interface",
+          "It's the easiest for beginners"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What is Mac appreciated for?",
+        "options": [
+          "Low price",
+          "Elegant interface and stability",
+          "Being free",
+          "Being the fastest"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What does the author conclude?",
+        "options": [
+          "Linux is always best",
+          "The best choice depends on each developer's needs",
+          "Windows should never be used",
+          "Mac is objectively worst"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "writing": {
+    "id": "w10_wr01",
+    "type": "guided",
+    "prompt": "Write your opinion comparing two technologies you know (e.g., Odoo vs another ERP, or two tools you use). 10-12 sentences.",
+    "hints": [
+      "À mon avis...",
+      "Je pense que...",
+      "X est meilleur que Y car...",
+      "En revanche..."
+    ],
+    "wordBank": [
+      "meilleur",
+      "pire",
+      "mieux",
+      "avantage",
+      "inconvénient",
+      "penser",
+      "trouver",
+      "par rapport à"
+    ],
+    "minimumWords": 40,
+    "modelAnswer": "À mon avis, Odoo est meilleur que beaucoup d'autres logiciels ERP. Je pense que son interface est plus simple à utiliser par rapport aux systèmes traditionnels. L'avantage principal, c'est que tous les modules sont intégrés. En revanche, certains clients trouvent que la configuration initiale est difficile. Cependant, une fois configuré, le logiciel est très puissant. Je trouve que c'est le meilleur choix pour les petites et moyennes entreprises.",
+    "checkpoints": [
+      {
+        "required": "opinion_marker",
+        "regex": "à mon avis|je pense|je trouve|je crois",
+        "feedback": "Start with an opinion marker (à mon avis, je pense que...)."
+      },
+      {
+        "required": "comparison",
+        "regex": "meilleur|pire|mieux|plus|moins|aussi",
+        "feedback": "Include at least one comparative structure."
+      }
+    ]
+  },
+  "listening": {
+    "id": "w10_l01",
+    "type": "video",
+    "title": "LanguaTalk Slow French — Donner son opinion",
+    "searchHint": "slow French opinion comparaison numérique",
+    "videoId": "",
+    "description": "Slow, deliberate French built around opinions and comparisons.",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What kind of content is this?",
+        "options": [
+          "A children's show",
+          "A debate/discussion",
+          "A cooking show",
+          "A sports broadcast"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "true_false",
+        "statement": "All participants in the debate agree completely.",
+        "answer": false,
+        "explanation": "Debates typically present contrasting opinions."
+      }
+    ]
+  }
+}

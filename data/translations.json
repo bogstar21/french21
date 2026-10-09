@@ -1,0 +1,89 @@
+{
+  "note": "English → French production drills. `accept` lists every answer treated as correct; comparison ignores case, accents and trailing punctuation.",
+  "weeks": {
+    "1": [
+      { "en": "Hello, my name is Bohdan.", "accept": ["Bonjour, je m'appelle Bohdan", "Bonjour je m'appelle Bohdan"], "note": "'Je m'appelle' is literally 'I call myself'." },
+      { "en": "I am Ukrainian.", "accept": ["Je suis ukrainien", "Je suis ukrainienne"], "note": "Nationalities are lowercase as adjectives." },
+      { "en": "How are you? (formal)", "accept": ["Comment allez-vous", "Comment allez vous"], "note": "Formal uses 'vous' and inversion." },
+      { "en": "Thank you very much, madam.", "accept": ["Merci beaucoup, madame", "Merci beaucoup madame"], "note": "'Madame' without a name is normal and polite." },
+      { "en": "I work in technical support.", "accept": ["Je travaille dans le support technique"], "note": "'Dans le' for working inside a field." }
+    ],
+    "2": [
+      { "en": "I have a problem with my computer.", "accept": ["J'ai un problème avec mon ordinateur"], "note": "'Avec' = with." },
+      { "en": "The server does not work.", "accept": ["Le serveur ne fonctionne pas"], "note": "ne … pas wraps the verb." },
+      { "en": "I am sending an email to the client.", "accept": ["J'envoie un courriel au client", "J'envoie un email au client"], "note": "à + le contracts to 'au'." },
+      { "en": "We have a meeting today.", "accept": ["Nous avons une réunion aujourd'hui", "On a une réunion aujourd'hui"], "note": "'On a' is what people actually say." },
+      { "en": "I do not have the password.", "accept": ["Je n'ai pas le mot de passe"], "note": "Definite article stays after negation when the thing is specific." }
+    ],
+    "3": [
+      { "en": "What time is it?", "accept": ["Quelle heure est-il", "Quelle heure il est"], "note": "Inversion is the standard form." },
+      { "en": "The meeting starts at nine o'clock.", "accept": ["La réunion commence à neuf heures"], "note": "'à' + time." },
+      { "en": "On Monday I work from home.", "accept": ["Lundi je travaille à la maison", "Le lundi je travaille à la maison", "Lundi, je travaille à la maison"], "note": "'Le lundi' means every Monday; bare 'lundi' means this one." },
+      { "en": "I speak a little French.", "accept": ["Je parle un peu français", "Je parle un peu le français"], "note": "No article after parler for languages." },
+      { "en": "There are seventy-five tickets.", "accept": ["Il y a soixante-quinze tickets"], "note": "75 = 60 + 15." }
+    ],
+    "4": [
+      { "en": "I wake up at seven o'clock.", "accept": ["Je me réveille à sept heures"], "note": "Reflexive: me + verb." },
+      { "en": "I take the metro to go to work.", "accept": ["Je prends le métro pour aller au travail"], "note": "'pour' + infinitive = in order to." },
+      { "en": "I live near the office.", "accept": ["J'habite près du bureau"], "note": "de + le = du." },
+      { "en": "She finishes her report.", "accept": ["Elle finit son rapport"], "note": "-IR verb, third person: finit." },
+      { "en": "We are waiting for an answer.", "accept": ["Nous attendons une réponse", "On attend une réponse"], "note": "'attendre' already means 'wait for' — no preposition." }
+    ],
+    "5": [
+      { "en": "This product is too expensive.", "accept": ["Ce produit est trop cher"], "note": "'ce' before a masculine consonant start." },
+      { "en": "I would like some water, please.", "accept": ["Je voudrais de l'eau, s'il vous plaît", "Je voudrais de l'eau s'il vous plaît"], "note": "Partitive 'de l'' before a vowel." },
+      { "en": "There are a lot of clients today.", "accept": ["Il y a beaucoup de clients aujourd'hui"], "note": "beaucoup + de, never 'des'." },
+      { "en": "I do not have enough money.", "accept": ["Je n'ai pas assez d'argent"], "note": "assez d' before a vowel." },
+      { "en": "The company is growing.", "accept": ["L'entreprise se développe", "L'entreprise grandit"], "note": "'se développer' is the business-register choice." }
+    ],
+    "6": [
+      { "en": "Yesterday I worked late.", "accept": ["Hier j'ai travaillé tard", "Hier, j'ai travaillé tard"], "note": "-ER participle: travaillé." },
+      { "en": "I have already finished the report.", "accept": ["J'ai déjà fini le rapport"], "note": "'déjà' sits between auxiliary and participle." },
+      { "en": "I did not understand the problem.", "accept": ["Je n'ai pas compris le problème"], "note": "comprendre → compris." },
+      { "en": "We solved the ticket this morning.", "accept": ["Nous avons résolu le ticket ce matin", "On a résolu le ticket ce matin"], "note": "résoudre → résolu." },
+      { "en": "I forgot my password.", "accept": ["J'ai oublié mon mot de passe"], "note": "Classic support sentence — learn it cold." }
+    ],
+    "7": [
+      { "en": "I went to the office yesterday.", "accept": ["Je suis allé au bureau hier", "Je suis allée au bureau hier"], "note": "aller takes être; add -e if you are female." },
+      { "en": "Did you restart the server?", "accept": ["Avez-vous redémarré le serveur", "Est-ce que vous avez redémarré le serveur"], "note": "Inversion or est-ce que both work." },
+      { "en": "Why is the system slow?", "accept": ["Pourquoi le système est lent", "Pourquoi est-ce que le système est lent", "Pourquoi le système est-il lent"], "note": "Question word first in every register." },
+      { "en": "She left early.", "accept": ["Elle est partie tôt"], "note": "partir takes être; participle agrees → partie." },
+      { "en": "How many tickets do you have?", "accept": ["Combien de tickets avez-vous", "Combien de tickets est-ce que vous avez"], "note": "combien de + noun." }
+    ],
+    "8": [
+      { "en": "I am going to check the settings.", "accept": ["Je vais vérifier les paramètres"], "note": "aller + infinitive, infinitive unchanged." },
+      { "en": "We are going to improve the software.", "accept": ["Nous allons améliorer le logiciel", "On va améliorer le logiciel"], "note": "'on va' in speech." },
+      { "en": "Please send the report before Friday.", "accept": ["Envoyez le rapport avant vendredi", "Veuillez envoyer le rapport avant vendredi"], "note": "Imperative drops the pronoun." },
+      { "en": "The ticket? I am resolving it.", "accept": ["Le ticket ? Je le résous", "Le ticket? Je le résous"], "note": "Object pronoun goes before the verb." },
+      { "en": "Do not forget the deadline.", "accept": ["N'oubliez pas le délai"], "note": "Negative imperative keeps ne … pas." }
+    ],
+    "9": [
+      { "en": "Before, I used to work with Excel.", "accept": ["Avant, je travaillais avec Excel", "Avant je travaillais avec Excel"], "note": "Habit in the past = imparfait." },
+      { "en": "At the time, there was no automation.", "accept": ["À l'époque, il n'y avait pas d'automatisation", "À l'époque il n'y avait pas d'automatisation"], "note": "il y a → il y avait." },
+      { "en": "It was difficult at the beginning.", "accept": ["C'était difficile au début"], "note": "c'est → c'était." },
+      { "en": "I was working when the server crashed.", "accept": ["Je travaillais quand le serveur est tombé en panne", "Je travaillais quand le serveur a planté"], "note": "Background imparfait + interrupting passé composé." },
+      { "en": "We were always very busy.", "accept": ["Nous étions toujours très occupés", "On était toujours très occupés"], "note": "être → étions." }
+    ],
+    "10": [
+      { "en": "Odoo is simpler than the old system.", "accept": ["Odoo est plus simple que l'ancien système"], "note": "plus + adjective + que." },
+      { "en": "In my opinion, it is the best solution.", "accept": ["À mon avis, c'est la meilleure solution", "À mon avis c'est la meilleure solution"], "note": "'meilleure' agrees with the feminine 'solution'." },
+      { "en": "It works better now.", "accept": ["Ça fonctionne mieux maintenant", "Cela fonctionne mieux maintenant"], "note": "'mieux' because it describes a verb." },
+      { "en": "The advantage is the price; however, it is slower.", "accept": ["L'avantage, c'est le prix ; cependant, c'est plus lent", "L'avantage c'est le prix cependant c'est plus lent"], "note": "'cependant' for contrast." },
+      { "en": "I think that this version is worse.", "accept": ["Je pense que cette version est pire"], "note": "'pire' is the irregular comparative of 'mauvais'." }
+    ],
+    "11": [
+      { "en": "Could you help me, please?", "accept": ["Pourriez-vous m'aider, s'il vous plaît", "Pourriez-vous m'aider s'il vous plaît"], "note": "Conditional 'pourriez' is the polite register." },
+      { "en": "I would like administrator access.", "accept": ["Je voudrais l'accès administrateur"], "note": "'je voudrais', never 'je veux', with clients." },
+      { "en": "I called him this morning.", "accept": ["Je lui ai téléphoné ce matin", "Je l'ai appelé ce matin"], "note": "téléphoner à → lui; appeler takes a direct object → l'." },
+      { "en": "This is the client who called yesterday.", "accept": ["C'est le client qui a appelé hier"], "note": "'qui' — a verb follows." },
+      { "en": "Unfortunately, I am not available tomorrow.", "accept": ["Malheureusement, je ne suis pas disponible demain", "Malheureusement je ne suis pas disponible demain"], "note": "Soften bad news with 'malheureusement'." }
+    ],
+    "12": [
+      { "en": "I started this course in October.", "accept": ["J'ai commencé ce cours en octobre"], "note": "Months are lowercase and take 'en'." },
+      { "en": "Before, I did not speak French at all.", "accept": ["Avant, je ne parlais pas du tout français", "Avant je ne parlais pas du tout français"], "note": "'du tout' intensifies the negative." },
+      { "en": "Now I understand simple texts.", "accept": ["Maintenant, je comprends des textes simples", "Maintenant je comprends des textes simples"], "note": "Present tense for a current ability." },
+      { "en": "Next year I am going to continue learning.", "accept": ["L'année prochaine, je vais continuer à apprendre", "L'année prochaine je vais continuer à apprendre"], "note": "continuer à + infinitive." },
+      { "en": "Happy New Year and good health!", "accept": ["Bonne année et bonne santé", "Bonne année et bonne santé !"], "note": "The standard French New Year greeting." }
+    ]
+  }
+}
