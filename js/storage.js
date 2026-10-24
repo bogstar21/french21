@@ -14,7 +14,7 @@ const STORAGE_KEY  = "french_progress_v1";
 const SETTINGS_KEY = "french_settings_v1";
 
 function defaultSettings() {
-  return { darkMode: false };
+  return { darkMode: false, planStart: new Date().toISOString().slice(0, 10), planWeeks: 8 };
 }
 
 function defaultProgress() {

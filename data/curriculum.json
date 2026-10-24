@@ -10,331 +10,386 @@
           "id": "pron-1",
           "num": 1,
           "title": "The alphabet",
-          "video": "https://youtu.be/zzGVV5fG6Ec"
+          "video": "https://youtu.be/zzGVV5fG6Ec",
+          "min": 4
         },
         {
           "id": "pron-2",
           "num": 2,
           "title": "The French accent aigu",
-          "video": "https://youtu.be/pLEKDUPjANs"
+          "video": "https://youtu.be/pLEKDUPjANs",
+          "min": 4
         },
         {
           "id": "pron-3",
           "num": 3,
           "title": "The French accent grave",
-          "video": "https://youtu.be/RUOQxWz500g"
+          "video": "https://youtu.be/RUOQxWz500g",
+          "min": 4
         },
         {
           "id": "pron-4",
           "num": 4,
           "title": "Pronunciation of â ê î ô û",
-          "video": "https://youtu.be/i0UjhQBadr0"
+          "video": "https://youtu.be/i0UjhQBadr0",
+          "min": 4
         },
         {
           "id": "pron-5",
           "num": 5,
           "title": "Tréma Ë Ï And Ç Cédille",
-          "video": "https://youtu.be/krOkv7KoZu4"
+          "video": "https://youtu.be/krOkv7KoZu4",
+          "min": 4
         },
         {
           "id": "pron-6",
           "num": 6,
           "title": "How to spell in French",
-          "video": "https://youtu.be/SIUx1OF0zIY"
+          "video": "https://youtu.be/SIUx1OF0zIY",
+          "min": 4
         },
         {
           "id": "pron-7",
           "num": 7,
           "title": "Silent letters",
-          "video": "https://youtu.be/7bjno3LPyfA"
+          "video": "https://youtu.be/7bjno3LPyfA",
+          "min": 4
         },
         {
           "id": "pron-8",
           "num": 8,
           "title": "Contractions / Élision",
-          "video": "https://youtu.be/7LKpZL_lHWU"
+          "video": "https://youtu.be/7LKpZL_lHWU",
+          "min": 4
         },
         {
           "id": "pron-9",
           "num": 9,
           "title": "When to link words in French",
-          "video": "https://youtu.be/SMxkYAoM6zs"
+          "video": "https://youtu.be/SMxkYAoM6zs",
+          "min": 4
         },
         {
           "id": "pron-10",
           "num": 10,
           "title": "Pronunciation of É",
-          "video": "https://youtu.be/dbD-A4SsvwI"
+          "video": "https://youtu.be/dbD-A4SsvwI",
+          "min": 4
         },
         {
           "id": "pron-11",
           "num": 11,
           "title": "Pronunciation of È",
-          "video": "https://youtu.be/67cH_6oWKAQ"
+          "video": "https://youtu.be/67cH_6oWKAQ",
+          "min": 4
         },
         {
           "id": "pron-12",
           "num": 12,
           "title": "Pronunciation of On Om",
-          "video": "https://youtu.be/7JHRPmFwjmA"
+          "video": "https://youtu.be/7JHRPmFwjmA",
+          "min": 4
         },
         {
           "id": "pron-13",
           "num": 13,
           "title": "Pronunciation of An Am En Em",
-          "video": "https://youtu.be/PolfzaLGJns"
+          "video": "https://youtu.be/PolfzaLGJns",
+          "min": 4
         },
         {
           "id": "pron-14",
           "num": 14,
           "title": "Pronunciation of In Im Ain Ein Yn Ym",
-          "video": "https://youtu.be/R6fEqMYl0lg"
+          "video": "https://youtu.be/R6fEqMYl0lg",
+          "min": 4
         },
         {
           "id": "pron-15",
           "num": 15,
           "title": "Pronunciation of Un Um",
-          "video": "https://youtu.be/qJp9nvXTza8"
+          "video": "https://youtu.be/qJp9nvXTza8",
+          "min": 4
         },
         {
           "id": "pron-16",
           "num": 16,
           "title": "Pronunciation of Ien",
-          "video": "https://youtu.be/vRa6kBfSnVk"
+          "video": "https://youtu.be/vRa6kBfSnVk",
+          "min": 4
         },
         {
           "id": "pron-17",
           "num": 17,
           "title": "Pronunciation of Oin",
-          "video": "https://youtu.be/M4vWyXDDeAk"
+          "video": "https://youtu.be/M4vWyXDDeAk",
+          "min": 4
         },
         {
           "id": "pron-18",
           "num": 18,
           "title": "How French vowels change the pronunciation of a word",
-          "video": "https://youtu.be/Upu_dXffWRE"
+          "video": "https://youtu.be/Upu_dXffWRE",
+          "min": 4
         },
         {
           "id": "pron-19",
           "num": 19,
           "title": "Pronunciation of A À Â",
-          "video": "https://youtu.be/pVSE1MihOek"
+          "video": "https://youtu.be/pVSE1MihOek",
+          "min": 4
         },
         {
           "id": "pron-20",
           "num": 20,
           "title": "Pronunciation of E",
-          "video": "https://youtu.be/9XnE0yBimbU"
+          "video": "https://youtu.be/9XnE0yBimbU",
+          "min": 4
         },
         {
           "id": "pron-21",
           "num": 21,
           "title": "Pronunciation of Eu and Œu",
-          "video": "https://youtu.be/k2YxHJAmJG4"
+          "video": "https://youtu.be/k2YxHJAmJG4",
+          "min": 4
         },
         {
           "id": "pron-22",
           "num": 22,
           "title": "Pronunciation of I And Y",
-          "video": "https://youtu.be/2CgN8BTMGGQ"
+          "video": "https://youtu.be/2CgN8BTMGGQ",
+          "min": 4
         },
         {
           "id": "pron-23",
           "num": 23,
           "title": "Pronunciation of O – Ô – Au – Eau",
-          "video": "https://youtu.be/oCkvHe5H3HE"
+          "video": "https://youtu.be/oCkvHe5H3HE",
+          "min": 4
         },
         {
           "id": "pron-24",
           "num": 24,
           "title": "Pronunciation of Oi",
-          "video": "https://youtu.be/UXHpF1T-2Gs"
+          "video": "https://youtu.be/UXHpF1T-2Gs",
+          "min": 4
         },
         {
           "id": "pron-25",
           "num": 25,
           "title": "Pronunciation of U and Ou",
-          "video": "https://youtu.be/a0qPvXdLkXs"
+          "video": "https://youtu.be/a0qPvXdLkXs",
+          "min": 4
         },
         {
           "id": "pron-26",
           "num": 26,
           "title": "Pronunciation of Ui",
-          "video": "https://youtu.be/21uWox_O_00"
+          "video": "https://youtu.be/21uWox_O_00",
+          "min": 4
         },
         {
           "id": "pron-27",
           "num": 27,
           "title": "Pronunciation of Il – Ille",
-          "video": "https://youtu.be/IwWnzxii4rI"
+          "video": "https://youtu.be/IwWnzxii4rI",
+          "min": 4
         },
         {
           "id": "pron-28",
           "num": 28,
           "title": "Pronunciation of Ail – Aille",
-          "video": "https://youtu.be/-F2qAucP5EI"
+          "video": "https://youtu.be/-F2qAucP5EI",
+          "min": 4
         },
         {
           "id": "pron-29",
           "num": 29,
           "title": "Pronunciation of Eil – Eille – Ay",
-          "video": "https://youtu.be/VsnBqibxOjQ"
+          "video": "https://youtu.be/VsnBqibxOjQ",
+          "min": 4
         },
         {
           "id": "pron-30",
           "num": 30,
           "title": "Pronunciation of Ouille",
-          "video": "https://youtu.be/J29bGpIOnIg"
+          "video": "https://youtu.be/J29bGpIOnIg",
+          "min": 4
         },
         {
           "id": "pron-31",
           "num": 31,
           "title": "Pronunciation of Euil – Euille – Œil",
-          "video": "https://youtu.be/luan5gRrHeU"
+          "video": "https://youtu.be/luan5gRrHeU",
+          "min": 4
         },
         {
           "id": "pron-32",
           "num": 32,
           "title": "Pronunciation of B",
-          "video": "https://youtu.be/RASoa8e5ZZ4"
+          "video": "https://youtu.be/RASoa8e5ZZ4",
+          "min": 4
         },
         {
           "id": "pron-33",
           "num": 33,
           "title": "When C is pronounced C / S / G",
-          "video": "https://youtu.be/zk_JgOjOXFc"
+          "video": "https://youtu.be/zk_JgOjOXFc",
+          "min": 4
         },
         {
           "id": "pron-34",
           "num": 34,
           "title": "Pronunciation of Ch",
-          "video": "https://youtu.be/E9tabNjTDas"
+          "video": "https://youtu.be/E9tabNjTDas",
+          "min": 4
         },
         {
           "id": "pron-35",
           "num": 35,
           "title": "Pronunciation of D",
-          "video": "https://youtu.be/rIM_hnutc48"
+          "video": "https://youtu.be/rIM_hnutc48",
+          "min": 4
         },
         {
           "id": "pron-36",
           "num": 36,
           "title": "Pronunciation of F and Ph",
-          "video": "https://youtu.be/P1EdE4aXmlA"
+          "video": "https://youtu.be/P1EdE4aXmlA",
+          "min": 4
         },
         {
           "id": "pron-37",
           "num": 37,
           "title": "Pronunciation of G",
-          "video": "https://youtu.be/jQzYHHAoffk"
+          "video": "https://youtu.be/jQzYHHAoffk",
+          "min": 4
         },
         {
           "id": "pron-38",
           "num": 38,
           "title": "Pronunciation of J",
-          "video": "https://youtu.be/mbfoFj1zOQ4"
+          "video": "https://youtu.be/mbfoFj1zOQ4",
+          "min": 4
         },
         {
           "id": "pron-39",
           "num": 39,
           "title": "H muet and H aspiré",
-          "video": "https://youtu.be/1L8j3mJfsuU"
+          "video": "https://youtu.be/1L8j3mJfsuU",
+          "min": 4
         },
         {
           "id": "pron-40",
           "num": 40,
           "title": "Pronunciation of K and Q",
-          "video": "https://youtu.be/wVmKR0uvAko"
+          "video": "https://youtu.be/wVmKR0uvAko",
+          "min": 4
         },
         {
           "id": "pron-41",
           "num": 41,
           "title": "Pronunciation of L",
-          "video": "https://youtu.be/XseAKnqYFM4"
+          "video": "https://youtu.be/XseAKnqYFM4",
+          "min": 4
         },
         {
           "id": "pron-42",
           "num": 42,
           "title": "Pronunciation of M",
-          "video": "https://youtu.be/JGH4FKHhD6s"
+          "video": "https://youtu.be/JGH4FKHhD6s",
+          "min": 4
         },
         {
           "id": "pron-43",
           "num": 43,
           "title": "Pronunciation of N and Gn",
-          "video": "https://youtu.be/XL7eDWU5d1E"
+          "video": "https://youtu.be/XL7eDWU5d1E",
+          "min": 4
         },
         {
           "id": "pron-44",
           "num": 44,
           "title": "Pronunciation of P",
-          "video": "https://youtu.be/Whz4Z2vTrac"
+          "video": "https://youtu.be/Whz4Z2vTrac",
+          "min": 4
         },
         {
           "id": "pron-45",
           "num": 45,
           "title": "Pronunciation of R",
-          "video": "https://youtu.be/qJagrntKXbY"
+          "video": "https://youtu.be/qJagrntKXbY",
+          "min": 4
         },
         {
           "id": "pron-46",
           "num": 46,
           "title": "Pronunciation of S and Z",
-          "video": "https://youtu.be/N80AlAmYl2s"
+          "video": "https://youtu.be/N80AlAmYl2s",
+          "min": 4
         },
         {
           "id": "pron-47",
           "num": 47,
           "title": "Pronunciation of T – Tien – Tion",
-          "video": "https://youtu.be/7Vu7oOLdKZU"
+          "video": "https://youtu.be/7Vu7oOLdKZU",
+          "min": 4
         },
         {
           "id": "pron-48",
           "num": 48,
           "title": "Pronunciation of V",
-          "video": "https://youtu.be/K68UNUL8arY"
+          "video": "https://youtu.be/K68UNUL8arY",
+          "min": 4
         },
         {
           "id": "pron-49",
           "num": 49,
           "title": "Pronunciation of W",
-          "video": "https://youtu.be/X2H0efIObNs"
+          "video": "https://youtu.be/X2H0efIObNs",
+          "min": 4
         },
         {
           "id": "pron-50",
           "num": 50,
           "title": "Pronunciation of X",
-          "video": "https://youtu.be/rJCYCUnDPSI"
+          "video": "https://youtu.be/rJCYCUnDPSI",
+          "min": 4
         },
         {
           "id": "pron-51",
           "num": 51,
           "title": "25 unusual French pronunciations",
-          "video": "https://youtu.be/9THCmhwHmGg"
+          "video": "https://youtu.be/9THCmhwHmGg",
+          "min": 4
         },
         {
           "id": "pron-52",
           "num": 52,
           "title": "Stress in French",
-          "video": "https://youtu.be/RO6oP8gJBvU"
+          "video": "https://youtu.be/RO6oP8gJBvU",
+          "min": 4
         },
         {
           "id": "pron-53",
           "num": 53,
           "title": "Reading practice – Le printemps",
-          "video": "https://youtu.be/J04D8H0RSGI"
+          "video": "https://youtu.be/J04D8H0RSGI",
+          "min": 4
         },
         {
           "id": "pron-54",
           "num": 54,
           "title": "Reading practice – Ma journée idéale",
-          "video": "https://youtu.be/VuQU_eOdTiA"
+          "video": "https://youtu.be/VuQU_eOdTiA",
+          "min": 4
         },
         {
           "id": "pron-55",
           "num": 55,
           "title": "Reading practice – Le Canada",
-          "video": "https://youtu.be/Lru_Y5NM-5c"
+          "video": "https://youtu.be/Lru_Y5NM-5c",
+          "min": 4
         }
       ]
     },
@@ -348,7 +403,8 @@
           "pattern": "Verbs Ending in -ER",
           "example": "Demander – To ask",
           "ruleUrl": "https://theperfectfrench.com/conjugation/100-regular-verbs-ending-in-er/",
-          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-demander/"
+          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-demander/",
+          "min": 5
         },
         {
           "id": "verbgroup-2",
@@ -356,7 +412,8 @@
           "pattern": "Verbs Ending in -IR",
           "example": "Finir – To finish",
           "ruleUrl": "https://theperfectfrench.com/conjugation/verbs-ending-in-ir/",
-          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-finir/"
+          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-finir/",
+          "min": 5
         },
         {
           "id": "verbgroup-3",
@@ -364,7 +421,8 @@
           "pattern": "Verbs Ending in -RE (incl. all irregular verbs)",
           "example": "Attendre – To wait",
           "ruleUrl": "https://theperfectfrench.com/conjugation/verbs-ending-in-re/",
-          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-attendre/"
+          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-attendre/",
+          "min": 5
         }
       ],
       "irregularVerbs": [
@@ -372,61 +430,71 @@
           "id": "irregular-tre",
           "verb": "Être",
           "meaning": "To be",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-etre/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-etre/",
+          "min": 4
         },
         {
           "id": "irregular-avoir",
           "verb": "Avoir",
           "meaning": "To have",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-avoir/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-avoir/",
+          "min": 4
         },
         {
           "id": "irregular-faire",
           "verb": "Faire",
           "meaning": "To do / To make",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-faire/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-faire/",
+          "min": 4
         },
         {
           "id": "irregular-aller",
           "verb": "Aller",
           "meaning": "To go",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-aller/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-aller/",
+          "min": 4
         },
         {
           "id": "irregular-falloir",
           "verb": "Falloir",
           "meaning": "To be necessary",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-falloir/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-falloir/",
+          "min": 4
         },
         {
           "id": "irregular-mettre",
           "verb": "Mettre",
           "meaning": "To put",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-mettre/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-mettre/",
+          "min": 4
         },
         {
           "id": "irregular-vouloir",
           "verb": "Vouloir",
           "meaning": "To want",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-vouloir/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-vouloir/",
+          "min": 4
         },
         {
           "id": "irregular-pouvoir",
           "verb": "Pouvoir",
           "meaning": "To be able to",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-pouvoir/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-pouvoir/",
+          "min": 4
         },
         {
           "id": "irregular-devoir",
           "verb": "Devoir",
           "meaning": "To have to",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-devoir/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-devoir/",
+          "min": 4
         },
         {
           "id": "irregular-dire",
           "verb": "Dire",
           "meaning": "To tell / To say",
-          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-dire/"
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-dire/",
+          "min": 4
         }
       ],
       "items": [
@@ -437,7 +505,8 @@
           "video": "https://youtu.be/rYVhuQeYTik",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.1–1.2"
+          "exercises": "1.1–1.2",
+          "min": 8
         },
         {
           "id": "gram-2",
@@ -446,7 +515,8 @@
           "video": "https://youtu.be/DSiG8mYiwkI",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": null
+          "exercises": null,
+          "min": 8
         },
         {
           "id": "gram-3",
@@ -455,7 +525,8 @@
           "video": "https://youtu.be/_uhFV3lD_wg",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.3–1.6"
+          "exercises": "1.3–1.6",
+          "min": 8
         },
         {
           "id": "gram-4",
@@ -464,7 +535,8 @@
           "video": "https://youtu.be/TZOvVRVnt9I",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.7–1.11"
+          "exercises": "1.7–1.11",
+          "min": 8
         },
         {
           "id": "gram-5",
@@ -473,7 +545,8 @@
           "video": "https://youtu.be/nyfRpRnyXmw",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.12–1.15"
+          "exercises": "1.12–1.15",
+          "min": 8
         },
         {
           "id": "gram-6",
@@ -482,7 +555,8 @@
           "video": "https://youtu.be/OCs_5X5c0YA",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.16–1.18"
+          "exercises": "1.16–1.18",
+          "min": 8
         },
         {
           "id": "gram-7",
@@ -491,7 +565,8 @@
           "video": "https://youtu.be/9rufc-nQj_M",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.19–1.20"
+          "exercises": "1.19–1.20",
+          "min": 8
         },
         {
           "id": "gram-8",
@@ -500,7 +575,8 @@
           "video": "https://youtu.be/3pCKrfQ07Fw",
           "group": "CONJUGATION",
           "subhead": "The present tense",
-          "exercises": null
+          "exercises": null,
+          "min": 8
         },
         {
           "id": "gram-9",
@@ -509,7 +585,8 @@
           "video": "https://youtu.be/5WiTJJ4N2jQ",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.1–1.4"
+          "exercises": "1.1–1.4",
+          "min": 8
         },
         {
           "id": "gram-10",
@@ -518,7 +595,8 @@
           "video": "https://youtu.be/NWMYu2-9JGw",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.5–1.13"
+          "exercises": "1.5–1.13",
+          "min": 8
         },
         {
           "id": "gram-11",
@@ -527,7 +605,8 @@
           "video": "https://youtu.be/k7dcdWrgJ1s",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.14–1.15"
+          "exercises": "1.14–1.15",
+          "min": 8
         },
         {
           "id": "gram-12",
@@ -536,7 +615,8 @@
           "video": "https://youtu.be/PBoDSaoCtgU",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.16"
+          "exercises": "1.16",
+          "min": 8
         },
         {
           "id": "gram-13",
@@ -545,7 +625,8 @@
           "video": "https://youtu.be/HyLhynKn1EU",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.17–1.18"
+          "exercises": "1.17–1.18",
+          "min": 8
         },
         {
           "id": "gram-14",
@@ -554,7 +635,8 @@
           "video": "https://youtu.be/JFBw0-d1z48",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.19–1.20"
+          "exercises": "1.19–1.20",
+          "min": 8
         },
         {
           "id": "gram-15",
@@ -563,7 +645,8 @@
           "video": "https://youtu.be/wh1G9oaoTBI",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.21–1.22"
+          "exercises": "1.21–1.22",
+          "min": 8
         },
         {
           "id": "gram-16",
@@ -572,7 +655,8 @@
           "video": "https://youtu.be/UiEURtoohCM",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.23–1.24"
+          "exercises": "1.23–1.24",
+          "min": 8
         },
         {
           "id": "gram-17",
@@ -581,7 +665,8 @@
           "video": "https://youtu.be/5-jSzH92sdA",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.25"
+          "exercises": "1.25",
+          "min": 8
         },
         {
           "id": "gram-18",
@@ -590,7 +675,8 @@
           "video": "https://youtu.be/dx_kMl7GFnA",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.26–1.27"
+          "exercises": "1.26–1.27",
+          "min": 8
         },
         {
           "id": "gram-19",
@@ -599,7 +685,8 @@
           "video": "https://youtu.be/IZugiOgPP4o",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.30"
+          "exercises": "1.30",
+          "min": 8
         },
         {
           "id": "gram-20",
@@ -608,7 +695,8 @@
           "video": "https://youtu.be/3uuOdA8TKtA",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.31"
+          "exercises": "1.31",
+          "min": 8
         },
         {
           "id": "gram-21",
@@ -617,7 +705,8 @@
           "video": "https://youtu.be/e-FR0sGT_H0",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.32–1.35"
+          "exercises": "1.32–1.35",
+          "min": 8
         },
         {
           "id": "gram-22",
@@ -626,7 +715,8 @@
           "video": "https://youtu.be/W4-iB-B-WIk",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.36–1.37"
+          "exercises": "1.36–1.37",
+          "min": 8
         },
         {
           "id": "gram-23",
@@ -635,7 +725,8 @@
           "video": "https://youtu.be/2SdjK6S0zn8",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.38"
+          "exercises": "1.38",
+          "min": 8
         },
         {
           "id": "gram-24",
@@ -644,7 +735,8 @@
           "video": "https://youtu.be/MECPqauLXCc",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.39–1.41"
+          "exercises": "1.39–1.41",
+          "min": 8
         },
         {
           "id": "gram-25",
@@ -653,7 +745,8 @@
           "video": "https://youtu.be/VX7P-HKMfus",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.44"
+          "exercises": "1.44",
+          "min": 8
         },
         {
           "id": "gram-26",
@@ -662,7 +755,8 @@
           "video": "https://youtu.be/AwcaupnQGiY",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "1.49–1.54"
+          "exercises": "1.49–1.54",
+          "min": 8
         },
         {
           "id": "gram-27",
@@ -671,7 +765,8 @@
           "video": "https://youtu.be/JbCDNEs6gQY",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.26–1.27"
+          "exercises": "1.26–1.27",
+          "min": 8
         },
         {
           "id": "gram-28",
@@ -680,7 +775,8 @@
           "video": "https://youtu.be/QaVuJI6Mkv0",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.28–1.29"
+          "exercises": "1.28–1.29",
+          "min": 8
         },
         {
           "id": "gram-29",
@@ -689,7 +785,8 @@
           "video": "https://youtu.be/mikQZVl13VY",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.30"
+          "exercises": "1.30",
+          "min": 8
         },
         {
           "id": "gram-30",
@@ -698,7 +795,8 @@
           "video": "https://youtu.be/xAkcc7Eq_iw",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.31–1.33"
+          "exercises": "1.31–1.33",
+          "min": 8
         },
         {
           "id": "gram-31",
@@ -707,7 +805,8 @@
           "video": "https://youtu.be/40ZnnWck0Zk",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.34–1.37"
+          "exercises": "1.34–1.37",
+          "min": 8
         },
         {
           "id": "gram-32",
@@ -716,7 +815,8 @@
           "video": "https://youtu.be/Eu9LgpItHR0",
           "group": "CONJUGATION",
           "subhead": "The passé composé",
-          "exercises": "2.1"
+          "exercises": "2.1",
+          "min": 8
         },
         {
           "id": "gram-33",
@@ -725,7 +825,8 @@
           "video": "https://youtu.be/muVni0GxE48",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "2.2–2.5"
+          "exercises": "2.2–2.5",
+          "min": 8
         },
         {
           "id": "gram-34",
@@ -734,7 +835,8 @@
           "video": "https://youtu.be/iUBHlOT48w0",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "2.6–2.7"
+          "exercises": "2.6–2.7",
+          "min": 8
         },
         {
           "id": "gram-35",
@@ -743,7 +845,8 @@
           "video": "https://youtu.be/53Zl79_stIE",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "2.8–2.9"
+          "exercises": "2.8–2.9",
+          "min": 8
         },
         {
           "id": "gram-36",
@@ -752,7 +855,8 @@
           "video": "https://youtu.be/0X9h1Ql_nMY",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "2.10–2.15"
+          "exercises": "2.10–2.15",
+          "min": 8
         },
         {
           "id": "gram-37",
@@ -761,7 +865,8 @@
           "video": "https://youtu.be/T1m5Vb2tuTo",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "2.16–2.17"
+          "exercises": "2.16–2.17",
+          "min": 8
         },
         {
           "id": "gram-38",
@@ -770,7 +875,8 @@
           "video": "https://youtu.be/PDOCM0Qa7Hw",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "2.18–2.20"
+          "exercises": "2.18–2.20",
+          "min": 8
         },
         {
           "id": "gram-39",
@@ -779,7 +885,8 @@
           "video": "https://youtu.be/nJhG9eFlD8o",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "1.43"
+          "exercises": "1.43",
+          "min": 8
         },
         {
           "id": "gram-40",
@@ -788,7 +895,8 @@
           "video": "https://youtu.be/tfeHqlVtepo",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.1–2.6"
+          "exercises": "2.1–2.6",
+          "min": 8
         },
         {
           "id": "gram-41",
@@ -797,7 +905,8 @@
           "video": "https://youtu.be/0hYbqzB4saQ",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.7–2.12"
+          "exercises": "2.7–2.12",
+          "min": 8
         },
         {
           "id": "gram-42",
@@ -806,7 +915,8 @@
           "video": "https://youtu.be/irC5wFkFVwA",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.13–2.14"
+          "exercises": "2.13–2.14",
+          "min": 8
         },
         {
           "id": "gram-43",
@@ -815,7 +925,8 @@
           "video": "https://youtu.be/DS4n5KH48mQ",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.15"
+          "exercises": "2.15",
+          "min": 8
         },
         {
           "id": "gram-44",
@@ -824,7 +935,8 @@
           "video": "https://youtu.be/ZU8kRRX_vX8",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.16–2.17"
+          "exercises": "2.16–2.17",
+          "min": 8
         },
         {
           "id": "gram-45",
@@ -833,7 +945,8 @@
           "video": "https://youtu.be/FsrTcqek5A4",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.18–2.21"
+          "exercises": "2.18–2.21",
+          "min": 8
         },
         {
           "id": "gram-46",
@@ -842,7 +955,8 @@
           "video": "https://youtu.be/VQ9IqfulXzU",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.22–2.25"
+          "exercises": "2.22–2.25",
+          "min": 8
         },
         {
           "id": "gram-47",
@@ -851,7 +965,8 @@
           "video": "https://youtu.be/tNjotUUUbCU",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.26"
+          "exercises": "2.26",
+          "min": 8
         },
         {
           "id": "gram-48",
@@ -860,7 +975,8 @@
           "video": "https://youtu.be/R0HkCr69YP0",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.27"
+          "exercises": "2.27",
+          "min": 8
         },
         {
           "id": "gram-49",
@@ -869,7 +985,8 @@
           "video": "https://youtu.be/CFSZqYHqnvA",
           "group": "CONJUGATION",
           "subhead": "The imparfait",
-          "exercises": "3.1–3.4"
+          "exercises": "3.1–3.4",
+          "min": 8
         },
         {
           "id": "gram-50",
@@ -878,7 +995,8 @@
           "video": "https://youtu.be/xGjBJBPCtMA",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "3.5–3.10"
+          "exercises": "3.5–3.10",
+          "min": 8
         },
         {
           "id": "gram-51",
@@ -887,7 +1005,8 @@
           "video": "https://youtu.be/CpRgC8zjGlY",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "4.1–4.9"
+          "exercises": "4.1–4.9",
+          "min": 8
         },
         {
           "id": "gram-52",
@@ -896,7 +1015,8 @@
           "video": "https://youtu.be/fZQPc0pd4PU",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "5.1–5.3"
+          "exercises": "5.1–5.3",
+          "min": 8
         },
         {
           "id": "gram-53",
@@ -905,7 +1025,8 @@
           "video": "https://youtu.be/AX7q5imc2jk",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.29–2.31"
+          "exercises": "2.29–2.31",
+          "min": 8
         },
         {
           "id": "gram-54",
@@ -914,7 +1035,8 @@
           "video": "https://youtu.be/7n5OLZQvb4A",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.32"
+          "exercises": "2.32",
+          "min": 8
         },
         {
           "id": "gram-55",
@@ -923,7 +1045,8 @@
           "video": "https://youtu.be/fn8pOg7EjaM",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.33–2.36"
+          "exercises": "2.33–2.36",
+          "min": 8
         },
         {
           "id": "gram-56",
@@ -932,7 +1055,8 @@
           "video": "https://youtu.be/DZlrUNxG_ZA",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "2.37–2.39"
+          "exercises": "2.37–2.39",
+          "min": 8
         },
         {
           "id": "gram-57",
@@ -941,7 +1065,8 @@
           "video": "https://youtu.be/gDfIHfWGN8U",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "3.1–3.5"
+          "exercises": "3.1–3.5",
+          "min": 8
         },
         {
           "id": "gram-58",
@@ -950,7 +1075,8 @@
           "video": "https://youtu.be/LS8MoEdb9zY",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "3.6–3.7"
+          "exercises": "3.6–3.7",
+          "min": 8
         },
         {
           "id": "gram-59",
@@ -959,7 +1085,8 @@
           "video": "https://youtu.be/Ne431tdamsk",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "3.11–3.14"
+          "exercises": "3.11–3.14",
+          "min": 8
         },
         {
           "id": "gram-60",
@@ -968,7 +1095,8 @@
           "video": "https://youtu.be/ocmVjwc32XE",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "3.15"
+          "exercises": "3.15",
+          "min": 8
         },
         {
           "id": "gram-61",
@@ -977,7 +1105,8 @@
           "video": "https://youtu.be/ia3ASXXuAsA",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "6.1–6.8"
+          "exercises": "6.1–6.8",
+          "min": 8
         },
         {
           "id": "gram-62",
@@ -986,7 +1115,8 @@
           "video": "https://youtu.be/UlW3OHHkD5I",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "7.1–7.3"
+          "exercises": "7.1–7.3",
+          "min": 8
         },
         {
           "id": "gram-63",
@@ -995,7 +1125,8 @@
           "video": "https://youtu.be/aIvAR6GVz48",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "4.1–4.5"
+          "exercises": "4.1–4.5",
+          "min": 8
         },
         {
           "id": "gram-64",
@@ -1004,7 +1135,8 @@
           "video": "https://youtu.be/8m2IKjm8k7U",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "4.6–4.9"
+          "exercises": "4.6–4.9",
+          "min": 8
         },
         {
           "id": "gram-65",
@@ -1013,7 +1145,8 @@
           "video": "https://youtu.be/K066-1c-48Q",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "4.10–4.13"
+          "exercises": "4.10–4.13",
+          "min": 8
         },
         {
           "id": "gram-66",
@@ -1022,7 +1155,8 @@
           "video": "https://youtu.be/K066-1c-48Q",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "4.14–4.15"
+          "exercises": "4.14–4.15",
+          "min": 8
         },
         {
           "id": "gram-67",
@@ -1031,7 +1165,8 @@
           "video": "https://youtu.be/lfvXXk6nU_0",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "8.1–8.7"
+          "exercises": "8.1–8.7",
+          "min": 8
         },
         {
           "id": "gram-68",
@@ -1040,7 +1175,8 @@
           "video": "https://youtu.be/MSCraoKtEAs",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "9.1–9.3"
+          "exercises": "9.1–9.3",
+          "min": 8
         },
         {
           "id": "gram-69",
@@ -1049,7 +1185,8 @@
           "video": "https://youtu.be/-4rKgpbywfo",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "9.4–9.8"
+          "exercises": "9.4–9.8",
+          "min": 8
         },
         {
           "id": "gram-70",
@@ -1058,7 +1195,8 @@
           "video": "https://youtu.be/11KUkGmjZ30",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.1–5.4"
+          "exercises": "5.1–5.4",
+          "min": 8
         },
         {
           "id": "gram-71",
@@ -1067,7 +1205,8 @@
           "video": "https://youtu.be/C0aEuTKVQHI",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.5"
+          "exercises": "5.5",
+          "min": 8
         },
         {
           "id": "gram-72",
@@ -1076,7 +1215,8 @@
           "video": "https://youtu.be/VZfyG22gOFk",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.6–5.8"
+          "exercises": "5.6–5.8",
+          "min": 8
         },
         {
           "id": "gram-73",
@@ -1085,7 +1225,8 @@
           "video": "https://youtu.be/Ws8vxSxqAio",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.9–5.10"
+          "exercises": "5.9–5.10",
+          "min": 8
         },
         {
           "id": "gram-74",
@@ -1094,7 +1235,8 @@
           "video": "https://youtu.be/KpIjnPMBck8",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.11"
+          "exercises": "5.11",
+          "min": 8
         },
         {
           "id": "gram-75",
@@ -1103,7 +1245,8 @@
           "video": "https://youtu.be/qDlBFrgIUKI",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.12–5.17"
+          "exercises": "5.12–5.17",
+          "min": 8
         },
         {
           "id": "gram-76",
@@ -1112,7 +1255,8 @@
           "video": "https://youtu.be/lPDiYnYqQ2I",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "5.18–5.22"
+          "exercises": "5.18–5.22",
+          "min": 8
         },
         {
           "id": "gram-77",
@@ -1121,7 +1265,8 @@
           "video": "https://youtu.be/A3X3CQdNhcA",
           "group": "CONJUGATION",
           "subhead": "Infinitive verbs",
-          "exercises": "10.1–10.4"
+          "exercises": "10.1–10.4",
+          "min": 8
         },
         {
           "id": "gram-78",
@@ -1130,7 +1275,8 @@
           "video": "https://youtu.be/w0Rtq0ekNVw",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "10.5–10.10"
+          "exercises": "10.5–10.10",
+          "min": 8
         },
         {
           "id": "gram-79",
@@ -1139,7 +1285,8 @@
           "video": "https://youtu.be/xuycBWC0FNQ",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "10.11–10.14"
+          "exercises": "10.11–10.14",
+          "min": 8
         },
         {
           "id": "gram-80",
@@ -1148,7 +1295,8 @@
           "video": "https://youtu.be/oMrL8Lph9dY",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "6.1–6.2"
+          "exercises": "6.1–6.2",
+          "min": 8
         },
         {
           "id": "gram-81",
@@ -1157,7 +1305,8 @@
           "video": "https://youtu.be/AqF1NyyYytU",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "6.3–6.4"
+          "exercises": "6.3–6.4",
+          "min": 8
         },
         {
           "id": "gram-82",
@@ -1166,7 +1315,8 @@
           "video": "https://youtu.be/s5pGmxfoO4I",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "6.5–6.7"
+          "exercises": "6.5–6.7",
+          "min": 8
         },
         {
           "id": "gram-83",
@@ -1175,7 +1325,8 @@
           "video": "https://youtu.be/zWoYCud79Bw",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "6.8–6.9"
+          "exercises": "6.8–6.9",
+          "min": 8
         },
         {
           "id": "gram-84",
@@ -1184,7 +1335,8 @@
           "video": "https://youtu.be/HIoW_gfFpGA",
           "group": "GRAMMAR",
           "subhead": null,
-          "exercises": "6.12–6.15"
+          "exercises": "6.12–6.15",
+          "min": 8
         },
         {
           "id": "gram-85",
@@ -1193,7 +1345,8 @@
           "video": "https://youtu.be/f6GhTfztmX0",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "11.1–11.4"
+          "exercises": "11.1–11.4",
+          "min": 8
         },
         {
           "id": "gram-86",
@@ -1202,7 +1355,8 @@
           "video": "https://youtu.be/g4RTOqFjfsU",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "11.5–11.15"
+          "exercises": "11.5–11.15",
+          "min": 8
         },
         {
           "id": "gram-87",
@@ -1211,7 +1365,8 @@
           "video": "https://youtu.be/jaDCV37skV0",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "12.1–12.3"
+          "exercises": "12.1–12.3",
+          "min": 8
         },
         {
           "id": "gram-88",
@@ -1220,7 +1375,8 @@
           "video": "https://youtu.be/J1qiW6yK7C4",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "13.1–13.2"
+          "exercises": "13.1–13.2",
+          "min": 8
         },
         {
           "id": "gram-89",
@@ -1229,7 +1385,8 @@
           "video": "https://youtu.be/o-hxMuZwVzI",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "14.1–14.2"
+          "exercises": "14.1–14.2",
+          "min": 8
         },
         {
           "id": "gram-90",
@@ -1238,7 +1395,8 @@
           "video": "https://youtu.be/9drC7kPyJ_Q",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "15.1–15.3"
+          "exercises": "15.1–15.3",
+          "min": 8
         },
         {
           "id": "gram-91",
@@ -1247,7 +1405,8 @@
           "video": "https://youtu.be/fRX5_pP8usM",
           "group": "CONJUGATION",
           "subhead": null,
-          "exercises": "16.1"
+          "exercises": "16.1",
+          "min": 8
         },
         {
           "id": "gram-review-grammar",
@@ -1255,7 +1414,8 @@
           "title": "Review grammar",
           "video": "https://www.youtube.com/watch?v=9q7nx6kzvD0",
           "group": "GRAMMAR",
-          "exercises": "7.1–7.20"
+          "exercises": "7.1–7.20",
+          "min": 20
         },
         {
           "id": "gram-review-conjugation",
@@ -1263,7 +1423,8 @@
           "title": "Review conjugation",
           "video": "https://www.youtube.com/watch?v=XvKutOPD8w8",
           "group": "CONJUGATION",
-          "exercises": "18.1–18.49"
+          "exercises": "18.1–18.49",
+          "min": 20
         }
       ]
     },
@@ -1275,145 +1436,169 @@
           "id": "vocab-1",
           "num": 1,
           "title": "French gender and plural of nouns",
-          "video": "https://youtu.be/pnLcXDMqwSk"
+          "video": "https://youtu.be/pnLcXDMqwSk",
+          "min": 10
         },
         {
           "id": "vocab-2",
           "num": 2,
           "title": "Les personnes",
-          "video": "https://youtu.be/I3-hWqK6P4I"
+          "video": "https://youtu.be/I3-hWqK6P4I",
+          "min": 10
         },
         {
           "id": "vocab-3",
           "num": 3,
           "title": "Les émotions & Les caractéristiques",
-          "video": "https://youtu.be/SaajtWailiw"
+          "video": "https://youtu.be/SaajtWailiw",
+          "min": 10
         },
         {
           "id": "vocab-4",
           "num": 4,
           "title": "Les métiers",
-          "video": "https://youtu.be/C3nQDGEXqpw"
+          "video": "https://youtu.be/C3nQDGEXqpw",
+          "min": 10
         },
         {
           "id": "vocab-5",
           "num": 5,
           "title": "Les pays – Les nationalités – Les langues",
-          "video": "https://youtu.be/pbcwY7btwZU"
+          "video": "https://youtu.be/pbcwY7btwZU",
+          "min": 10
         },
         {
           "id": "vocab-6",
           "num": 6,
           "title": "Les couleurs",
-          "video": "https://youtu.be/SiiG7asg67M"
+          "video": "https://youtu.be/SiiG7asg67M",
+          "min": 10
         },
         {
           "id": "vocab-7",
           "num": 7,
           "title": "Le visage et l'hygiène",
-          "video": "https://youtu.be/_2sIRcmpqTY"
+          "video": "https://youtu.be/_2sIRcmpqTY",
+          "min": 10
         },
         {
           "id": "vocab-8",
           "num": 8,
           "title": "Le corps",
-          "video": "https://youtu.be/0Q33ifHr2F0"
+          "video": "https://youtu.be/0Q33ifHr2F0",
+          "min": 10
         },
         {
           "id": "vocab-9",
           "num": 9,
           "title": "Les vêtements",
-          "video": "https://youtu.be/-YcLWXrx208"
+          "video": "https://youtu.be/-YcLWXrx208",
+          "min": 10
         },
         {
           "id": "vocab-10",
           "num": 10,
           "title": "Les sports",
-          "video": "https://youtu.be/c9hG99fuBiQ"
+          "video": "https://youtu.be/c9hG99fuBiQ",
+          "min": 10
         },
         {
           "id": "vocab-11",
           "num": 11,
           "title": "Les animaux",
-          "video": "https://youtu.be/NYvAxe0pijc"
+          "video": "https://youtu.be/NYvAxe0pijc",
+          "min": 10
         },
         {
           "id": "vocab-12",
           "num": 12,
           "title": "La nature",
-          "video": "https://youtu.be/-h0SdlI9j_M"
+          "video": "https://youtu.be/-h0SdlI9j_M",
+          "min": 10
         },
         {
           "id": "vocab-13",
           "num": 13,
           "title": "Les vacances et les transports",
-          "video": "https://youtu.be/EVHYfT_5wVQ"
+          "video": "https://youtu.be/EVHYfT_5wVQ",
+          "min": 10
         },
         {
           "id": "vocab-14",
           "num": 14,
           "title": "En ville",
-          "video": "https://youtu.be/AZgzt51Fy9Q"
+          "video": "https://youtu.be/AZgzt51Fy9Q",
+          "min": 10
         },
         {
           "id": "vocab-15",
           "num": 15,
           "title": "Le temps",
-          "video": "https://youtu.be/wfjvSp6RP2Q"
+          "video": "https://youtu.be/wfjvSp6RP2Q",
+          "min": 10
         },
         {
           "id": "vocab-16",
           "num": 16,
           "title": "Les passe–temps",
-          "video": "https://youtu.be/UOLZOUQ2qCw"
+          "video": "https://youtu.be/UOLZOUQ2qCw",
+          "min": 10
         },
         {
           "id": "vocab-17",
           "num": 17,
           "title": "La technologie",
-          "video": "https://youtu.be/8oq47pNSqnk"
+          "video": "https://youtu.be/8oq47pNSqnk",
+          "min": 10
         },
         {
           "id": "vocab-18",
           "num": 18,
           "title": "La maison",
-          "video": "https://youtu.be/J4QXQCjZqFY"
+          "video": "https://youtu.be/J4QXQCjZqFY",
+          "min": 10
         },
         {
           "id": "vocab-19",
           "num": 19,
           "title": "La cuisine",
-          "video": "https://youtu.be/JP3sUHzDVYY"
+          "video": "https://youtu.be/JP3sUHzDVYY",
+          "min": 10
         },
         {
           "id": "vocab-20",
           "num": 20,
           "title": "Le temps et les mesures",
-          "video": "https://youtu.be/VHhUnT7bQqU"
+          "video": "https://youtu.be/VHhUnT7bQqU",
+          "min": 10
         },
         {
           "id": "vocab-21",
           "num": 21,
           "title": "Les préfixes",
-          "video": "https://youtu.be/Idck7grkCYY"
+          "video": "https://youtu.be/Idck7grkCYY",
+          "min": 10
         },
         {
           "id": "vocab-22",
           "num": 22,
           "title": "Les suffixes",
-          "video": "https://youtu.be/O8oQOS2bcHI"
+          "video": "https://youtu.be/O8oQOS2bcHI",
+          "min": 10
         },
         {
           "id": "vocab-23",
           "num": 23,
           "title": "Les homophones",
-          "video": "https://youtu.be/NfFSrFISWM0"
+          "video": "https://youtu.be/NfFSrFISWM0",
+          "min": 10
         },
         {
           "id": "vocab-24",
           "num": 24,
           "title": "100 English words commonly used in French",
-          "video": "https://youtu.be/3u7xD4x_QbA"
+          "video": "https://youtu.be/3u7xD4x_QbA",
+          "min": 10
         }
       ]
     },
@@ -1425,157 +1610,183 @@
           "id": "expr-1",
           "num": 1,
           "title": "Avoir",
-          "video": "https://youtu.be/YgMwOKHqa_w"
+          "video": "https://youtu.be/YgMwOKHqa_w",
+          "min": 6
         },
         {
           "id": "expr-2",
           "num": 2,
           "title": "Être",
-          "video": "https://youtu.be/B8aVo7K5vtQ"
+          "video": "https://youtu.be/B8aVo7K5vtQ",
+          "min": 6
         },
         {
           "id": "expr-3",
           "num": 3,
           "title": "Aller",
-          "video": "https://youtu.be/PqRV3IIfVRQ"
+          "video": "https://youtu.be/PqRV3IIfVRQ",
+          "min": 6
         },
         {
           "id": "expr-4",
           "num": 4,
           "title": "Faire",
-          "video": "https://youtu.be/qDcZ6lawlTw"
+          "video": "https://youtu.be/qDcZ6lawlTw",
+          "min": 6
         },
         {
           "id": "expr-5",
           "num": 5,
           "title": "Mettre",
-          "video": "https://youtu.be/eWEkDrwrxq0"
+          "video": "https://youtu.be/eWEkDrwrxq0",
+          "min": 6
         },
         {
           "id": "expr-6",
           "num": 6,
           "title": "Prendre",
-          "video": "https://youtu.be/DGQzw72ljcg"
+          "video": "https://youtu.be/DGQzw72ljcg",
+          "min": 6
         },
         {
           "id": "expr-7",
           "num": 7,
           "title": "L'amour",
-          "video": "https://youtu.be/upA94UM0qMw"
+          "video": "https://youtu.be/upA94UM0qMw",
+          "min": 6
         },
         {
           "id": "expr-8",
           "num": 8,
           "title": "Manger & Boire",
-          "video": "https://youtu.be/A9jMRJb8xKI"
+          "video": "https://youtu.be/A9jMRJb8xKI",
+          "min": 6
         },
         {
           "id": "expr-9",
           "num": 9,
           "title": "Le Temps",
-          "video": "https://youtu.be/hB4Hdmme5wE"
+          "video": "https://youtu.be/hB4Hdmme5wE",
+          "min": 6
         },
         {
           "id": "expr-10",
           "num": 10,
           "title": "L'argent",
-          "video": "https://youtu.be/1H5Iv1HdBug"
+          "video": "https://youtu.be/1H5Iv1HdBug",
+          "min": 6
         },
         {
           "id": "expr-11",
           "num": 11,
           "title": "Le Temps",
-          "video": "https://youtu.be/T25KmYJK8E4"
+          "video": "https://youtu.be/T25KmYJK8E4",
+          "min": 6
         },
         {
           "id": "expr-12",
           "num": 12,
           "title": "Le Travail",
-          "video": "https://youtu.be/jhcffP6Rdyc"
+          "video": "https://youtu.be/jhcffP6Rdyc",
+          "min": 6
         },
         {
           "id": "expr-13",
           "num": 13,
           "title": "Le Sommeil",
-          "video": "https://youtu.be/vdH0pmCsMGQ"
+          "video": "https://youtu.be/vdH0pmCsMGQ",
+          "min": 6
         },
         {
           "id": "expr-14",
           "num": 14,
           "title": "La Santé",
-          "video": "https://youtu.be/BjqM8WrY5uE"
+          "video": "https://youtu.be/BjqM8WrY5uE",
+          "min": 6
         },
         {
           "id": "expr-15",
           "num": 15,
           "title": "Incluant des Aliments",
-          "video": "https://youtu.be/rwY1cA6VzWw"
+          "video": "https://youtu.be/rwY1cA6VzWw",
+          "min": 6
         },
         {
           "id": "expr-16",
           "num": 16,
           "title": "Incluant les Parties du Corps",
-          "video": "https://youtu.be/5haUOt49Cxs"
+          "video": "https://youtu.be/5haUOt49Cxs",
+          "min": 6
         },
         {
           "id": "expr-17",
           "num": 17,
           "title": "Incluant les Animaux",
-          "video": "https://youtu.be/95rINNs3uac"
+          "video": "https://youtu.be/95rINNs3uac",
+          "min": 6
         },
         {
           "id": "expr-18",
           "num": 18,
           "title": "Incluant les Couleurs",
-          "video": "https://youtu.be/I068E3bd-fU"
+          "video": "https://youtu.be/I068E3bd-fU",
+          "min": 6
         },
         {
           "id": "expr-19",
           "num": 19,
           "title": "Les Autres Expressions",
-          "video": "https://youtu.be/NZpWkuG4Bb0"
+          "video": "https://youtu.be/NZpWkuG4Bb0",
+          "min": 6
         },
         {
           "id": "expr-20",
           "num": 20,
           "title": "Other ways to say Oui",
-          "video": "https://youtu.be/D7ylvgV-Oic"
+          "video": "https://youtu.be/D7ylvgV-Oic",
+          "min": 6
         },
         {
           "id": "expr-21",
           "num": 21,
           "title": "Other ways to say Non",
-          "video": "https://youtu.be/s4_4Adwpmxc"
+          "video": "https://youtu.be/s4_4Adwpmxc",
+          "min": 6
         },
         {
           "id": "expr-22",
           "num": 22,
           "title": "Other ways to say Merci",
-          "video": "https://youtu.be/iWgRpYEmm4Q"
+          "video": "https://youtu.be/iWgRpYEmm4Q",
+          "min": 6
         },
         {
           "id": "expr-23",
           "num": 23,
           "title": "Other ways to say Bonjour",
-          "video": "https://youtu.be/eAh7LEfgs0I"
+          "video": "https://youtu.be/eAh7LEfgs0I",
+          "min": 6
         },
         {
           "id": "expr-24",
           "num": 24,
           "title": "Other ways to say Au revoir",
-          "video": "https://youtu.be/93_3fPeMqxc"
+          "video": "https://youtu.be/93_3fPeMqxc",
+          "min": 6
         },
         {
           "id": "expr-25",
           "num": 25,
           "title": "Other ways to say De Rien",
-          "video": "https://youtu.be/eymjKrLXdoI"
+          "video": "https://youtu.be/eymjKrLXdoI",
+          "min": 6
         },
         {
           "id": "expr-26",
           "num": 26,
           "title": "French Filler Words",
-          "video": null
+          "video": null,
+          "min": 6
         }
       ]
     },
@@ -1587,13 +1798,15 @@
           "id": "complex-1",
           "num": 1,
           "title": "Passé Composé vs Imparfait",
-          "video": "https://youtu.be/DdKvg5v9G_0"
+          "video": "https://youtu.be/DdKvg5v9G_0",
+          "min": 25
         },
         {
           "id": "complex-2",
           "num": 2,
           "title": "The French Subjunctive",
-          "video": "https://youtu.be/g2vINYhNRwE"
+          "video": "https://youtu.be/g2vINYhNRwE",
+          "min": 25
         }
       ]
     },
@@ -1620,43 +1833,50 @@
           "id": "story-1",
           "num": 1,
           "title": "La routine matinale de Lucie",
-          "video": "https://youtu.be/9MaeAeOdVkI"
+          "video": "https://youtu.be/9MaeAeOdVkI",
+          "min": 8
         },
         {
           "id": "story-2",
           "num": 2,
           "title": "On visite la tour Eiffel",
-          "video": "https://youtu.be/i4PZrA22YrU"
+          "video": "https://youtu.be/i4PZrA22YrU",
+          "min": 8
         },
         {
           "id": "story-3",
           "num": 3,
           "title": "Une soirée au restaurant",
-          "video": "https://youtu.be/zjAnpYuAOBQ"
+          "video": "https://youtu.be/zjAnpYuAOBQ",
+          "min": 8
         },
         {
           "id": "story-4",
           "num": 4,
           "title": "Un matin d'hiver",
-          "video": "https://youtu.be/jgj_6eUtt_I"
+          "video": "https://youtu.be/jgj_6eUtt_I",
+          "min": 8
         },
         {
           "id": "story-5",
           "num": 5,
           "title": "Le nettoyage de printemps",
-          "video": "https://youtu.be/DVE545P05OA"
+          "video": "https://youtu.be/DVE545P05OA",
+          "min": 8
         },
         {
           "id": "story-6",
           "num": 6,
           "title": "Un week-end en famille",
-          "video": "https://youtu.be/ejjT1hHfOkg"
+          "video": "https://youtu.be/ejjT1hHfOkg",
+          "min": 8
         },
         {
           "id": "story-7",
           "num": 7,
           "title": "Mes traditions de Noël",
-          "video": "https://youtu.be/VUvlkih1tAk"
+          "video": "https://youtu.be/VUvlkih1tAk",
+          "min": 8
         }
       ]
     },
@@ -1669,109 +1889,127 @@
           "id": "speaking-1",
           "num": 1,
           "title": "En retard",
-          "video": "https://youtu.be/uRoCWo4F1FY?si=W6b14oJ_qHRUm-cF"
+          "video": "https://youtu.be/uRoCWo4F1FY?si=W6b14oJ_qHRUm-cF",
+          "min": 5
         },
         {
           "id": "speaking-2",
           "num": 2,
           "title": "Les habitudes",
-          "video": "https://youtu.be/MaDRii8bjq8?si=q_bpMwLEkTVWTlhF"
+          "video": "https://youtu.be/MaDRii8bjq8?si=q_bpMwLEkTVWTlhF",
+          "min": 5
         },
         {
           "id": "speaking-3",
           "num": 3,
           "title": "Apprendre une langue étrangère",
-          "video": "https://youtu.be/7CISRy0Ivnk?si=6nxYdIDKOJz-rOMC"
+          "video": "https://youtu.be/7CISRy0Ivnk?si=6nxYdIDKOJz-rOMC",
+          "min": 5
         },
         {
           "id": "speaking-4",
           "num": 4,
           "title": "L'été",
-          "video": "https://youtu.be/9LRJecPU0aI?si=1VAo3vd4_QclHqcP"
+          "video": "https://youtu.be/9LRJecPU0aI?si=1VAo3vd4_QclHqcP",
+          "min": 5
         },
         {
           "id": "speaking-5",
           "num": 5,
           "title": "Internet",
-          "video": "https://youtu.be/kAdbW46oZCU?si=VwRkhj1A2GrFl5WP"
+          "video": "https://youtu.be/kAdbW46oZCU?si=VwRkhj1A2GrFl5WP",
+          "min": 5
         },
         {
           "id": "speaking-6",
           "num": 6,
           "title": "Faire de l'exercice",
-          "video": "https://youtu.be/7f8ub9K0xzk?si=KrShV03QjYNwRJ9Y"
+          "video": "https://youtu.be/7f8ub9K0xzk?si=KrShV03QjYNwRJ9Y",
+          "min": 5
         },
         {
           "id": "speaking-7",
           "num": 7,
           "title": "On prend le train pour aller à Paris",
-          "video": "https://youtu.be/P7tjW7Xr2gg?si=O504su6s6CZW7LVw"
+          "video": "https://youtu.be/P7tjW7Xr2gg?si=O504su6s6CZW7LVw",
+          "min": 5
         },
         {
           "id": "speaking-8",
           "num": 8,
           "title": "Le temps passe vite",
-          "video": "https://youtu.be/jxPVx6xjQrI?si=DdYSqweZUwUHzG-0"
+          "video": "https://youtu.be/jxPVx6xjQrI?si=DdYSqweZUwUHzG-0",
+          "min": 5
         },
         {
           "id": "speaking-9",
           "num": 9,
           "title": "Le chocolat",
-          "video": "https://youtu.be/BGOsfUw7Y0s?si=cWkfdnEB8Q6cZtqy"
+          "video": "https://youtu.be/BGOsfUw7Y0s?si=cWkfdnEB8Q6cZtqy",
+          "min": 5
         },
         {
           "id": "speaking-10",
           "num": 10,
           "title": "Le pain",
-          "video": "https://youtu.be/fF0gMLTAjmc?si=cDYNXlFGbnfsBZjB"
+          "video": "https://youtu.be/fF0gMLTAjmc?si=cDYNXlFGbnfsBZjB",
+          "min": 5
         },
         {
           "id": "speaking-11",
           "num": 11,
           "title": "Faire du shopping",
-          "video": "https://youtu.be/qpq_Yl2HKUk?si=qmWxhJ4ggySF3PT5"
+          "video": "https://youtu.be/qpq_Yl2HKUk?si=qmWxhJ4ggySF3PT5",
+          "min": 5
         },
         {
           "id": "speaking-12",
           "num": 12,
           "title": "Je suis malade",
-          "video": "https://youtu.be/s74MXlfR03c?si=MSSoP_v8D8SoUH5J"
+          "video": "https://youtu.be/s74MXlfR03c?si=MSSoP_v8D8SoUH5J",
+          "min": 5
         },
         {
           "id": "speaking-13",
           "num": 13,
           "title": "Mon ordinateur est en panne",
-          "video": "https://youtu.be/M3QesXA2qQs?si=f1nFZM2jgfI1orm9"
+          "video": "https://youtu.be/M3QesXA2qQs?si=f1nFZM2jgfI1orm9",
+          "min": 5
         },
         {
           "id": "speaking-14",
           "num": 14,
           "title": "Les Jeux Olympiques",
-          "video": "https://youtu.be/TZdKR6OgTmY?si=8DYbtMiDrJSF3E-e"
+          "video": "https://youtu.be/TZdKR6OgTmY?si=8DYbtMiDrJSF3E-e",
+          "min": 5
         },
         {
           "id": "speaking-15",
           "num": 15,
           "title": "Faire les courses",
-          "video": "https://youtu.be/A60ejcJi3pQ?si=HSlCe5W3xP4iD5hC"
+          "video": "https://youtu.be/A60ejcJi3pQ?si=HSlCe5W3xP4iD5hC",
+          "min": 5
         },
         {
           "id": "speaking-16",
           "num": 16,
           "title": "Le mois d'avril",
-          "video": "https://youtu.be/4UdqMwSJbIo?si=0wkjlq9HsB4Bb7IY"
+          "video": "https://youtu.be/4UdqMwSJbIo?si=0wkjlq9HsB4Bb7IY",
+          "min": 5
         },
         {
           "id": "speaking-17",
           "num": 17,
           "title": "Une journée bien remplie",
-          "video": "https://youtu.be/I-wp0N9rLso?si=3CGGRIIu0pU8VAfF"
+          "video": "https://youtu.be/I-wp0N9rLso?si=3CGGRIIu0pU8VAfF",
+          "min": 5
         },
         {
           "id": "speaking-18",
           "num": 18,
           "title": "Une coupure de courant",
-          "video": "https://youtu.be/Rh7VaeWx_bM?si=ZOCy2hRP4xMwCJfb"
+          "video": "https://youtu.be/Rh7VaeWx_bM?si=ZOCy2hRP4xMwCJfb",
+          "min": 5
         }
       ]
     }

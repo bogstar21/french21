@@ -218,6 +218,50 @@ main { max-width: 900px; margin: 0 auto; padding: var(--s8) var(--s5) var(--s12)
 .hero-track > i { display: block; height: 100%; background: #fff; border-radius: var(--r-full); transition: width .5s var(--ease); }
 
 /* ============================================================
+   Study plan
+   ============================================================ */
+
+.eyebrow {
+  font-size: var(--fs-xs); font-weight: 650; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.status-pill {
+  display: inline-flex; align-items: center; gap: var(--s2);
+  font-size: var(--fs-xs); font-weight: 620;
+  padding: 3px var(--s3); border-radius: var(--r-full); flex: none;
+}
+.status-ahead   { background: var(--success-soft); color: var(--success); }
+.status-ontrack { background: var(--primary-soft); color: var(--primary); }
+.status-behind  { background: var(--warning-soft); color: var(--warning); }
+
+.plan-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-xl); padding: var(--s6); margin-bottom: var(--s6);
+  box-shadow: var(--sh-1);
+}
+.plan-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--s4); margin-bottom: var(--s2); }
+.plan-head h2 { margin: var(--s1) 0 0; }
+.plan-sub { font-size: var(--fs-sm); color: var(--text-muted); margin-bottom: var(--s5); }
+.plan-sub input[type="date"] {
+  font: inherit; font-size: var(--fs-sm); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--r-sm);
+  padding: 2px var(--s2); background: var(--surface-2);
+}
+
+.plan-weeks { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--s3); }
+.plan-week {
+  border: 1px solid var(--border); border-radius: var(--r); padding: var(--s3);
+  background: var(--surface-2);
+}
+.plan-week.current { border-color: var(--primary); background: var(--primary-soft); }
+.plan-week-num { font-size: var(--fs-sm); font-weight: 680; }
+.plan-week-dates { font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--s2); }
+.plan-week-goal { font-size: var(--fs-xs); color: var(--text-2); margin-bottom: var(--s2); }
+.plan-week-bar { height: 5px; border-radius: var(--r-full); background: var(--surface-3); overflow: hidden; margin-bottom: var(--s1); }
+.plan-week-bar > i { display: block; height: 100%; background: var(--success); border-radius: var(--r-full); transition: width .4s var(--ease); }
+.plan-week-count { font-size: var(--fs-xs); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+/* ============================================================
    Search + jump nav
    ============================================================ */
 
@@ -249,6 +293,7 @@ main { max-width: 900px; margin: 0 auto; padding: var(--s8) var(--s5) var(--s12)
   margin-bottom: var(--s4); cursor: pointer; user-select: none;
 }
 .section-head h2 { margin: 0; flex: 1; min-width: 0; }
+.section-time { font-size: var(--fs-xs); color: var(--text-muted); flex: none; white-space: nowrap; }
 .section-chev { color: var(--text-muted); font-size: 18px; transition: transform .2s; flex: none; }
 .section.collapsed .section-chev { transform: rotate(-90deg); }
 .section.collapsed .section-body { display: none; }
@@ -311,6 +356,10 @@ main { max-width: 900px; margin: 0 auto; padding: var(--s8) var(--s5) var(--s12)
   font-size: 10px; font-weight: 600; color: var(--text-muted);
   background: var(--surface-2); padding: 1px 6px; border-radius: var(--r-sm);
   white-space: nowrap;
+}
+.row-min {
+  font-size: 10px; font-weight: 600; color: var(--text-muted);
+  white-space: nowrap; flex: none;
 }
 
 .watch {

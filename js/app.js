@@ -61,6 +61,75 @@ const App = {
   },
 
   /* ============================================================
+     Study plan — splits the curriculum into N weeks of roughly
+     equal estimated study time, and tracks pace against today.
+     ============================================================ */
+
+  renderPlan() {
+    const panel = document.getElementById("plan-panel");
+    if (!panel) return;
+
+    const weeks = store.settings.planWeeks || 8;
+    const startStr = store.settings.planStart || new Date().toISOString().slice(0, 10);
+    const buckets = CourseData.buildPlan(weeks);
+    const totalMin = CourseData.totalMinutes();
+
+    const start = new Date(startStr + "T00:00:00");
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const dayMs = 86400000;
+    const elapsedDays = Math.max(0, Math.round((today - start) / dayMs));
+    const totalDays = weeks * 7;
+    const currentWeek = Math.min(weeks - 1, Math.floor(elapsedDays / 7));
+
+    const minutesDone = CourseData.minutesChecked();
+    const expectedMin = Math.min(totalMin, (totalMin / totalDays) * Math.min(elapsedDays, totalDays));
+    const delta = minutesDone - expectedMin;
+    let status = "ontrack", statusLabel = "On track";
+    if (delta > totalMin * 0.03) { status = "ahead"; statusLabel = "Ahead of schedule"; }
+    else if (delta < -totalMin * 0.03) { status = "behind"; statusLabel = "Behind schedule"; }
+
+    const fmtDate = (d) => d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+    const weekRows = buckets.map((b, i) => {
+      const wStart = new Date(start.getTime() + i * 7 * dayMs);
+      const wEnd = new Date(wStart.getTime() + 6 * dayMs);
+      const done = store.countChecked(b.ids);
+      const pct = b.ids.length ? Math.round((done / b.ids.length) * 100) : 0;
+      const isCurrent = i === currentWeek && elapsedDays < totalDays;
+      const isPast = i < currentWeek;
+      return `
+        <div class="plan-week ${isCurrent ? "current" : ""}">
+          <div class="plan-week-num">${isCurrent ? "→" : ""} Week ${i + 1}</div>
+          <div class="plan-week-dates">${fmtDate(wStart)} – ${fmtDate(wEnd)}</div>
+          <div class="plan-week-goal">${b.ids.length} lessons · ~${this.fmtHours(b.minutes)}</div>
+          <div class="plan-week-bar"><i style="width:${pct}%"></i></div>
+          <div class="plan-week-count">${done}/${b.ids.length}</div>
+        </div>`;
+    }).join("");
+
+    panel.innerHTML = `
+      <div class="plan-card">
+        <div class="plan-head">
+          <div>
+            <div class="eyebrow">Study plan</div>
+            <h2>Finish in ${weeks} weeks</h2>
+          </div>
+          <span class="status-pill status-${status}">${statusLabel}</span>
+        </div>
+        <div class="plan-sub">
+          Starting <input type="date" id="plan-start" value="${startStr}"> ·
+          ~${this.fmtHours(totalMin / weeks)} a week to finish by
+          ${new Date(start.getTime() + totalDays * dayMs).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" })}
+        </div>
+        <div class="plan-weeks">${weekRows}</div>
+      </div>`;
+
+    panel.querySelector("#plan-start").addEventListener("change", (e) => {
+      store.setSetting("planStart", e.target.value || new Date().toISOString().slice(0, 10));
+      this.renderPlan();
+    });
+  },
+
+  /* ============================================================
      Render: full page
      ============================================================ */
 
@@ -68,6 +137,7 @@ const App = {
     const total = CourseData.totalCount();
     const done = this.totalChecked();
     const pct = total ? Math.round((done / total) * 100) : 0;
+    const totalMin = CourseData.totalMinutes();
 
     this.root.innerHTML = `
       <div class="hero">
@@ -77,9 +147,12 @@ const App = {
         <div class="hero-stats">
           <div><div class="hero-stat-value" id="hero-done">${done}</div><div class="hero-stat-label">of ${total} lessons done</div></div>
           <div><div class="hero-stat-value" id="hero-pct">${pct}%</div><div class="hero-stat-label">complete</div></div>
+          <div><div class="hero-stat-value">${this.fmtHours(totalMin)}</div><div class="hero-stat-label">total runtime (est.)</div></div>
         </div>
         <div class="hero-track"><i id="hero-track-fill" style="width:${pct}%"></i></div>
       </div>
+
+      <div id="plan-panel"></div>
 
       <div class="toolbar">
         <input class="search" id="search" placeholder="Search any lesson…" autocomplete="off">
@@ -95,6 +168,13 @@ const App = {
         <span class="small muted">238 lessons · <a href="https://theperfectfrench.com" target="_blank" rel="noopener">theperfectfrench.com</a></span>
         <button class="btn btn-ghost btn-sm" id="settings-btn">⚙ Settings</button>
       </div>`;
+
+    this.renderPlan();
+  },
+
+  fmtHours(min) {
+    const h = Math.floor(min / 60), m = Math.round(min % 60);
+    return h ? `${h}h ${m ? m + "m" : ""}`.trim() : `${m}m`;
   },
 
   renderSection(section) {
@@ -102,6 +182,7 @@ const App = {
     const done = store.countChecked(ids);
     const total = ids.length;
     const pct = total ? Math.round((done / total) * 100) : 0;
+    const minutes = CourseData.minutesForSection(section);
 
     let body = "";
     if (section.note) {
@@ -143,9 +224,10 @@ const App = {
     }
 
     return `
-      <section class="section" id="sec-${section.id}" data-section="${section.id}">
+      <section class="section collapsed" id="sec-${section.id}" data-section="${section.id}">
         <div class="section-head" data-toggle>
           <h2>${UI.esc(section.title)}</h2>
+          <span class="section-time">~${this.fmtHours(minutes)}</span>
           <div class="section-progress">
             <span class="count" data-sec-count>${done}/${total}</span>
             <span data-sec-ring>${this.ringSvg(pct)}</span>
@@ -176,6 +258,7 @@ const App = {
         ${it.num != null ? `<span class="row-num">${it.num}.</span>` : ""}
         <span class="row-title">${UI.esc(it.title)}</span>
         <span class="row-meta">
+          ${it.min ? `<span class="row-min">~${it.min}m</span>` : ""}
           ${it.group ? `<span class="group-tag ${it.group.toLowerCase()}">${it.group === "GRAMMAR" ? "Gr" : "Conj"}</span>` : ""}
           ${it.exercises ? `<span class="row-ex">Ex. ${UI.esc(it.exercises)}</span>` : ""}
         </span>
@@ -193,6 +276,7 @@ const App = {
         <div class="mini-title"><b>${UI.esc(v.group)}</b> — ${UI.esc(v.pattern)}
           <div class="mini-sub">e.g. ${UI.esc(v.example)}</div>
         </div>
+        ${v.min ? `<span class="row-min">~${v.min}m</span>` : ""}
         <div class="links2">
           ${v.ruleUrl ? `<a class="watch watch-sm" href="${UI.esc(v.ruleUrl)}" target="_blank" rel="noopener" data-noToggle title="Rule">▶</a>` : ""}
           ${v.exampleUrl ? `<a class="watch watch-sm" href="${UI.esc(v.exampleUrl)}" target="_blank" rel="noopener" data-noToggle title="Example verb">▶</a>` : ""}
@@ -206,6 +290,7 @@ const App = {
       <div class="mini-row ${on ? "done" : ""}" data-id="${v.id}" data-title="${UI.esc(v.verb.toLowerCase())}">
         <span class="check">${CHECK_SVG}</span>
         <div class="mini-title"><b>${UI.esc(v.verb)}</b> — ${UI.esc(v.meaning)}</div>
+        ${v.min ? `<span class="row-min">~${v.min}m</span>` : ""}
         ${v.video ? `<a class="watch watch-sm" href="${UI.esc(v.video)}" target="_blank" rel="noopener" data-noToggle title="Watch">▶</a>` : ""}
       </div>`;
   },
@@ -216,6 +301,7 @@ const App = {
       <div class="feature-card ${on ? "done" : ""}" data-id="${it.id}" data-title="${UI.esc(it.title.toLowerCase())}">
         <span class="check">${CHECK_SVG}</span>
         <span class="feature-title">${UI.esc(it.title)}</span>
+        ${it.min ? `<span class="row-min">~${it.min}m</span>` : ""}
         ${it.video ? `<a class="btn btn-ghost btn-sm" href="${UI.esc(it.video)}" target="_blank" rel="noopener" data-noToggle>▶ Watch</a>` : ""}
       </div>`;
   },
@@ -258,10 +344,22 @@ const App = {
       row.classList.toggle("hidden", !match);
     });
     this.root.querySelectorAll(".section").forEach((sec) => {
-      if (!q) { sec.classList.remove("collapsed"); return; }
+      if (!q) {
+        // Search cleared: restore whatever collapse state the section was
+        // in before the search (we don't force-expand, since collapsed is
+        // the default), just make sure it isn't left hidden.
+        sec.style.display = "";
+        if (sec.dataset.wasCollapsed !== undefined) {
+          sec.classList.toggle("collapsed", sec.dataset.wasCollapsed === "1");
+          delete sec.dataset.wasCollapsed;
+        }
+        return;
+      }
+      if (sec.dataset.wasCollapsed === undefined) {
+        sec.dataset.wasCollapsed = sec.classList.contains("collapsed") ? "1" : "0";
+      }
       const anyVisible = [...sec.querySelectorAll("[data-title]")].some((r) => !r.classList.contains("hidden"));
       sec.classList.toggle("collapsed", !anyVisible);
-      sec.style.display = anyVisible || !q ? "" : "none";
     });
   },
 
@@ -304,6 +402,8 @@ const App = {
       if (countEl) countEl.textContent = `${d}/${t}`;
       if (ringEl) ringEl.innerHTML = this.ringSvg(p);
     });
+
+    this.renderPlan();
   },
 
   /* ============================================================
