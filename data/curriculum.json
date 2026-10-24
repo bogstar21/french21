@@ -1,0 +1,1779 @@
+{
+  "sections": [
+    {
+      "id": "pronunciation",
+      "title": "French Pronunciation",
+      "note": "The IPA chart referenced in this course is on Wikipedia.",
+      "noteUrl": "https://en.wikipedia.org/wiki/Help:IPA/French",
+      "items": [
+        {
+          "id": "pron-1",
+          "num": 1,
+          "title": "The alphabet",
+          "video": "https://youtu.be/zzGVV5fG6Ec"
+        },
+        {
+          "id": "pron-2",
+          "num": 2,
+          "title": "The French accent aigu",
+          "video": "https://youtu.be/pLEKDUPjANs"
+        },
+        {
+          "id": "pron-3",
+          "num": 3,
+          "title": "The French accent grave",
+          "video": "https://youtu.be/RUOQxWz500g"
+        },
+        {
+          "id": "pron-4",
+          "num": 4,
+          "title": "Pronunciation of â ê î ô û",
+          "video": "https://youtu.be/i0UjhQBadr0"
+        },
+        {
+          "id": "pron-5",
+          "num": 5,
+          "title": "Tréma Ë Ï And Ç Cédille",
+          "video": "https://youtu.be/krOkv7KoZu4"
+        },
+        {
+          "id": "pron-6",
+          "num": 6,
+          "title": "How to spell in French",
+          "video": "https://youtu.be/SIUx1OF0zIY"
+        },
+        {
+          "id": "pron-7",
+          "num": 7,
+          "title": "Silent letters",
+          "video": "https://youtu.be/7bjno3LPyfA"
+        },
+        {
+          "id": "pron-8",
+          "num": 8,
+          "title": "Contractions / Élision",
+          "video": "https://youtu.be/7LKpZL_lHWU"
+        },
+        {
+          "id": "pron-9",
+          "num": 9,
+          "title": "When to link words in French",
+          "video": "https://youtu.be/SMxkYAoM6zs"
+        },
+        {
+          "id": "pron-10",
+          "num": 10,
+          "title": "Pronunciation of É",
+          "video": "https://youtu.be/dbD-A4SsvwI"
+        },
+        {
+          "id": "pron-11",
+          "num": 11,
+          "title": "Pronunciation of È",
+          "video": "https://youtu.be/67cH_6oWKAQ"
+        },
+        {
+          "id": "pron-12",
+          "num": 12,
+          "title": "Pronunciation of On Om",
+          "video": "https://youtu.be/7JHRPmFwjmA"
+        },
+        {
+          "id": "pron-13",
+          "num": 13,
+          "title": "Pronunciation of An Am En Em",
+          "video": "https://youtu.be/PolfzaLGJns"
+        },
+        {
+          "id": "pron-14",
+          "num": 14,
+          "title": "Pronunciation of In Im Ain Ein Yn Ym",
+          "video": "https://youtu.be/R6fEqMYl0lg"
+        },
+        {
+          "id": "pron-15",
+          "num": 15,
+          "title": "Pronunciation of Un Um",
+          "video": "https://youtu.be/qJp9nvXTza8"
+        },
+        {
+          "id": "pron-16",
+          "num": 16,
+          "title": "Pronunciation of Ien",
+          "video": "https://youtu.be/vRa6kBfSnVk"
+        },
+        {
+          "id": "pron-17",
+          "num": 17,
+          "title": "Pronunciation of Oin",
+          "video": "https://youtu.be/M4vWyXDDeAk"
+        },
+        {
+          "id": "pron-18",
+          "num": 18,
+          "title": "How French vowels change the pronunciation of a word",
+          "video": "https://youtu.be/Upu_dXffWRE"
+        },
+        {
+          "id": "pron-19",
+          "num": 19,
+          "title": "Pronunciation of A À Â",
+          "video": "https://youtu.be/pVSE1MihOek"
+        },
+        {
+          "id": "pron-20",
+          "num": 20,
+          "title": "Pronunciation of E",
+          "video": "https://youtu.be/9XnE0yBimbU"
+        },
+        {
+          "id": "pron-21",
+          "num": 21,
+          "title": "Pronunciation of Eu and Œu",
+          "video": "https://youtu.be/k2YxHJAmJG4"
+        },
+        {
+          "id": "pron-22",
+          "num": 22,
+          "title": "Pronunciation of I And Y",
+          "video": "https://youtu.be/2CgN8BTMGGQ"
+        },
+        {
+          "id": "pron-23",
+          "num": 23,
+          "title": "Pronunciation of O – Ô – Au – Eau",
+          "video": "https://youtu.be/oCkvHe5H3HE"
+        },
+        {
+          "id": "pron-24",
+          "num": 24,
+          "title": "Pronunciation of Oi",
+          "video": "https://youtu.be/UXHpF1T-2Gs"
+        },
+        {
+          "id": "pron-25",
+          "num": 25,
+          "title": "Pronunciation of U and Ou",
+          "video": "https://youtu.be/a0qPvXdLkXs"
+        },
+        {
+          "id": "pron-26",
+          "num": 26,
+          "title": "Pronunciation of Ui",
+          "video": "https://youtu.be/21uWox_O_00"
+        },
+        {
+          "id": "pron-27",
+          "num": 27,
+          "title": "Pronunciation of Il – Ille",
+          "video": "https://youtu.be/IwWnzxii4rI"
+        },
+        {
+          "id": "pron-28",
+          "num": 28,
+          "title": "Pronunciation of Ail – Aille",
+          "video": "https://youtu.be/-F2qAucP5EI"
+        },
+        {
+          "id": "pron-29",
+          "num": 29,
+          "title": "Pronunciation of Eil – Eille – Ay",
+          "video": "https://youtu.be/VsnBqibxOjQ"
+        },
+        {
+          "id": "pron-30",
+          "num": 30,
+          "title": "Pronunciation of Ouille",
+          "video": "https://youtu.be/J29bGpIOnIg"
+        },
+        {
+          "id": "pron-31",
+          "num": 31,
+          "title": "Pronunciation of Euil – Euille – Œil",
+          "video": "https://youtu.be/luan5gRrHeU"
+        },
+        {
+          "id": "pron-32",
+          "num": 32,
+          "title": "Pronunciation of B",
+          "video": "https://youtu.be/RASoa8e5ZZ4"
+        },
+        {
+          "id": "pron-33",
+          "num": 33,
+          "title": "When C is pronounced C / S / G",
+          "video": "https://youtu.be/zk_JgOjOXFc"
+        },
+        {
+          "id": "pron-34",
+          "num": 34,
+          "title": "Pronunciation of Ch",
+          "video": "https://youtu.be/E9tabNjTDas"
+        },
+        {
+          "id": "pron-35",
+          "num": 35,
+          "title": "Pronunciation of D",
+          "video": "https://youtu.be/rIM_hnutc48"
+        },
+        {
+          "id": "pron-36",
+          "num": 36,
+          "title": "Pronunciation of F and Ph",
+          "video": "https://youtu.be/P1EdE4aXmlA"
+        },
+        {
+          "id": "pron-37",
+          "num": 37,
+          "title": "Pronunciation of G",
+          "video": "https://youtu.be/jQzYHHAoffk"
+        },
+        {
+          "id": "pron-38",
+          "num": 38,
+          "title": "Pronunciation of J",
+          "video": "https://youtu.be/mbfoFj1zOQ4"
+        },
+        {
+          "id": "pron-39",
+          "num": 39,
+          "title": "H muet and H aspiré",
+          "video": "https://youtu.be/1L8j3mJfsuU"
+        },
+        {
+          "id": "pron-40",
+          "num": 40,
+          "title": "Pronunciation of K and Q",
+          "video": "https://youtu.be/wVmKR0uvAko"
+        },
+        {
+          "id": "pron-41",
+          "num": 41,
+          "title": "Pronunciation of L",
+          "video": "https://youtu.be/XseAKnqYFM4"
+        },
+        {
+          "id": "pron-42",
+          "num": 42,
+          "title": "Pronunciation of M",
+          "video": "https://youtu.be/JGH4FKHhD6s"
+        },
+        {
+          "id": "pron-43",
+          "num": 43,
+          "title": "Pronunciation of N and Gn",
+          "video": "https://youtu.be/XL7eDWU5d1E"
+        },
+        {
+          "id": "pron-44",
+          "num": 44,
+          "title": "Pronunciation of P",
+          "video": "https://youtu.be/Whz4Z2vTrac"
+        },
+        {
+          "id": "pron-45",
+          "num": 45,
+          "title": "Pronunciation of R",
+          "video": "https://youtu.be/qJagrntKXbY"
+        },
+        {
+          "id": "pron-46",
+          "num": 46,
+          "title": "Pronunciation of S and Z",
+          "video": "https://youtu.be/N80AlAmYl2s"
+        },
+        {
+          "id": "pron-47",
+          "num": 47,
+          "title": "Pronunciation of T – Tien – Tion",
+          "video": "https://youtu.be/7Vu7oOLdKZU"
+        },
+        {
+          "id": "pron-48",
+          "num": 48,
+          "title": "Pronunciation of V",
+          "video": "https://youtu.be/K68UNUL8arY"
+        },
+        {
+          "id": "pron-49",
+          "num": 49,
+          "title": "Pronunciation of W",
+          "video": "https://youtu.be/X2H0efIObNs"
+        },
+        {
+          "id": "pron-50",
+          "num": 50,
+          "title": "Pronunciation of X",
+          "video": "https://youtu.be/rJCYCUnDPSI"
+        },
+        {
+          "id": "pron-51",
+          "num": 51,
+          "title": "25 unusual French pronunciations",
+          "video": "https://youtu.be/9THCmhwHmGg"
+        },
+        {
+          "id": "pron-52",
+          "num": 52,
+          "title": "Stress in French",
+          "video": "https://youtu.be/RO6oP8gJBvU"
+        },
+        {
+          "id": "pron-53",
+          "num": 53,
+          "title": "Reading practice – Le printemps",
+          "video": "https://youtu.be/J04D8H0RSGI"
+        },
+        {
+          "id": "pron-54",
+          "num": 54,
+          "title": "Reading practice – Ma journée idéale",
+          "video": "https://youtu.be/VuQU_eOdTiA"
+        },
+        {
+          "id": "pron-55",
+          "num": 55,
+          "title": "Reading practice – Le Canada",
+          "video": "https://youtu.be/Lru_Y5NM-5c"
+        }
+      ]
+    },
+    {
+      "id": "grammar-conjugation",
+      "title": "French Grammar and Conjugation",
+      "verbGroups": [
+        {
+          "id": "verbgroup-1",
+          "group": "1st group",
+          "pattern": "Verbs Ending in -ER",
+          "example": "Demander – To ask",
+          "ruleUrl": "https://theperfectfrench.com/conjugation/100-regular-verbs-ending-in-er/",
+          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-demander/"
+        },
+        {
+          "id": "verbgroup-2",
+          "group": "2nd group",
+          "pattern": "Verbs Ending in -IR",
+          "example": "Finir – To finish",
+          "ruleUrl": "https://theperfectfrench.com/conjugation/verbs-ending-in-ir/",
+          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-finir/"
+        },
+        {
+          "id": "verbgroup-3",
+          "group": "3rd group",
+          "pattern": "Verbs Ending in -RE (incl. all irregular verbs)",
+          "example": "Attendre – To wait",
+          "ruleUrl": "https://theperfectfrench.com/conjugation/verbs-ending-in-re/",
+          "exampleUrl": "https://theperfectfrench.com/french_verbs/conjugation-of-attendre/"
+        }
+      ],
+      "irregularVerbs": [
+        {
+          "id": "irregular-tre",
+          "verb": "Être",
+          "meaning": "To be",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-etre/"
+        },
+        {
+          "id": "irregular-avoir",
+          "verb": "Avoir",
+          "meaning": "To have",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-avoir/"
+        },
+        {
+          "id": "irregular-faire",
+          "verb": "Faire",
+          "meaning": "To do / To make",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-faire/"
+        },
+        {
+          "id": "irregular-aller",
+          "verb": "Aller",
+          "meaning": "To go",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-aller/"
+        },
+        {
+          "id": "irregular-falloir",
+          "verb": "Falloir",
+          "meaning": "To be necessary",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-falloir/"
+        },
+        {
+          "id": "irregular-mettre",
+          "verb": "Mettre",
+          "meaning": "To put",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-mettre/"
+        },
+        {
+          "id": "irregular-vouloir",
+          "verb": "Vouloir",
+          "meaning": "To want",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-vouloir/"
+        },
+        {
+          "id": "irregular-pouvoir",
+          "verb": "Pouvoir",
+          "meaning": "To be able to",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-pouvoir/"
+        },
+        {
+          "id": "irregular-devoir",
+          "verb": "Devoir",
+          "meaning": "To have to",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-devoir/"
+        },
+        {
+          "id": "irregular-dire",
+          "verb": "Dire",
+          "meaning": "To tell / To say",
+          "video": "https://theperfectfrench.com/french_verbs/conjugation-of-dire/"
+        }
+      ],
+      "items": [
+        {
+          "id": "gram-1",
+          "num": 1,
+          "title": "Simple sentence",
+          "video": "https://youtu.be/rYVhuQeYTik",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.1–1.2"
+        },
+        {
+          "id": "gram-2",
+          "num": 2,
+          "title": "Une Une Des – Indefinite articles",
+          "video": "https://youtu.be/DSiG8mYiwkI",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": null
+        },
+        {
+          "id": "gram-3",
+          "num": 3,
+          "title": "Gender of nouns",
+          "video": "https://youtu.be/_uhFV3lD_wg",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.3–1.6"
+        },
+        {
+          "id": "gram-4",
+          "num": 4,
+          "title": "Plural of nouns",
+          "video": "https://youtu.be/TZOvVRVnt9I",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.7–1.11"
+        },
+        {
+          "id": "gram-5",
+          "num": 5,
+          "title": "Subject pronouns",
+          "video": "https://youtu.be/nyfRpRnyXmw",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.12–1.15"
+        },
+        {
+          "id": "gram-6",
+          "num": 6,
+          "title": "Le La Les – Definite articles",
+          "video": "https://youtu.be/OCs_5X5c0YA",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.16–1.18"
+        },
+        {
+          "id": "gram-7",
+          "num": 7,
+          "title": "Du De la Des – Partitive articles",
+          "video": "https://youtu.be/9rufc-nQj_M",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.19–1.20"
+        },
+        {
+          "id": "gram-8",
+          "num": 8,
+          "title": "When to use the present tense",
+          "video": "https://youtu.be/3pCKrfQ07Fw",
+          "group": "CONJUGATION",
+          "subhead": "The present tense",
+          "exercises": null
+        },
+        {
+          "id": "gram-9",
+          "num": 9,
+          "title": "Regular -er verbs",
+          "video": "https://youtu.be/5WiTJJ4N2jQ",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.1–1.4"
+        },
+        {
+          "id": "gram-10",
+          "num": 10,
+          "title": "Irregular -er verbs",
+          "video": "https://youtu.be/NWMYu2-9JGw",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.5–1.13"
+        },
+        {
+          "id": "gram-11",
+          "num": 11,
+          "title": "Regular -ir vebrs",
+          "video": "https://youtu.be/k7dcdWrgJ1s",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.14–1.15"
+        },
+        {
+          "id": "gram-12",
+          "num": 12,
+          "title": "Regular -re verbs",
+          "video": "https://youtu.be/PBoDSaoCtgU",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.16"
+        },
+        {
+          "id": "gram-13",
+          "num": 13,
+          "title": "Être",
+          "video": "https://youtu.be/HyLhynKn1EU",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.17–1.18"
+        },
+        {
+          "id": "gram-14",
+          "num": 14,
+          "title": "Avoir",
+          "video": "https://youtu.be/JFBw0-d1z48",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.19–1.20"
+        },
+        {
+          "id": "gram-15",
+          "num": 15,
+          "title": "Aller",
+          "video": "https://youtu.be/wh1G9oaoTBI",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.21–1.22"
+        },
+        {
+          "id": "gram-16",
+          "num": 16,
+          "title": "Faire",
+          "video": "https://youtu.be/UiEURtoohCM",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.23–1.24"
+        },
+        {
+          "id": "gram-17",
+          "num": 17,
+          "title": "Jouer à / de – Faire de",
+          "video": "https://youtu.be/5-jSzH92sdA",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.25"
+        },
+        {
+          "id": "gram-18",
+          "num": 18,
+          "title": "Prendre",
+          "video": "https://youtu.be/dx_kMl7GFnA",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.26–1.27"
+        },
+        {
+          "id": "gram-19",
+          "num": 19,
+          "title": "Mettre and battre",
+          "video": "https://youtu.be/IZugiOgPP4o",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.30"
+        },
+        {
+          "id": "gram-20",
+          "num": 20,
+          "title": "Venir and tenir",
+          "video": "https://youtu.be/3uuOdA8TKtA",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.31"
+        },
+        {
+          "id": "gram-21",
+          "num": 21,
+          "title": "Irregular -ir verbs – Part 1",
+          "video": "https://youtu.be/e-FR0sGT_H0",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.32–1.35"
+        },
+        {
+          "id": "gram-22",
+          "num": 22,
+          "title": "Irregular -ir verbs – Part 2",
+          "video": "https://youtu.be/W4-iB-B-WIk",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.36–1.37"
+        },
+        {
+          "id": "gram-23",
+          "num": 23,
+          "title": "Devoir – Vouloir – Pouvoir",
+          "video": "https://youtu.be/2SdjK6S0zn8",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.38"
+        },
+        {
+          "id": "gram-24",
+          "num": 24,
+          "title": "Dire – Rire – Valoir",
+          "video": "https://youtu.be/MECPqauLXCc",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.39–1.41"
+        },
+        {
+          "id": "gram-25",
+          "num": 25,
+          "title": "Impersonal verbs",
+          "video": "https://youtu.be/VX7P-HKMfus",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.44"
+        },
+        {
+          "id": "gram-26",
+          "num": 26,
+          "title": "Reflexive verbs",
+          "video": "https://youtu.be/AwcaupnQGiY",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "1.49–1.54"
+        },
+        {
+          "id": "gram-27",
+          "num": 27,
+          "title": "C'est – Ce sont – Il est",
+          "video": "https://youtu.be/JbCDNEs6gQY",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.26–1.27"
+        },
+        {
+          "id": "gram-28",
+          "num": 28,
+          "title": "Ce Cet Cette Ces",
+          "video": "https://youtu.be/QaVuJI6Mkv0",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.28–1.29"
+        },
+        {
+          "id": "gram-29",
+          "num": 29,
+          "title": "Possessive adjectives",
+          "video": "https://youtu.be/mikQZVl13VY",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.30"
+        },
+        {
+          "id": "gram-30",
+          "num": 30,
+          "title": "Count in French",
+          "video": "https://youtu.be/xAkcc7Eq_iw",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.31–1.33"
+        },
+        {
+          "id": "gram-31",
+          "num": 31,
+          "title": "The French negation",
+          "video": "https://youtu.be/40ZnnWck0Zk",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.34–1.37"
+        },
+        {
+          "id": "gram-32",
+          "num": 32,
+          "title": "Build the passé composé",
+          "video": "https://youtu.be/Eu9LgpItHR0",
+          "group": "CONJUGATION",
+          "subhead": "The passé composé",
+          "exercises": "2.1"
+        },
+        {
+          "id": "gram-33",
+          "num": 33,
+          "title": "Passé composé with avoir",
+          "video": "https://youtu.be/muVni0GxE48",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "2.2–2.5"
+        },
+        {
+          "id": "gram-34",
+          "num": 34,
+          "title": "Passé composé with Être",
+          "video": "https://youtu.be/iUBHlOT48w0",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "2.6–2.7"
+        },
+        {
+          "id": "gram-35",
+          "num": 35,
+          "title": "Agreement with avoir",
+          "video": "https://youtu.be/53Zl79_stIE",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "2.8–2.9"
+        },
+        {
+          "id": "gram-36",
+          "num": 36,
+          "title": "When to use the passé composé",
+          "video": "https://youtu.be/0X9h1Ql_nMY",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "2.10–2.15"
+        },
+        {
+          "id": "gram-37",
+          "num": 37,
+          "title": "Passé composé of reflexive verbs",
+          "video": "https://youtu.be/T1m5Vb2tuTo",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "2.16–2.17"
+        },
+        {
+          "id": "gram-38",
+          "num": 38,
+          "title": "Passé composé in negation and questions",
+          "video": "https://youtu.be/PDOCM0Qa7Hw",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "2.18–2.20"
+        },
+        {
+          "id": "gram-39",
+          "num": 39,
+          "title": "Il y a",
+          "video": "https://youtu.be/nJhG9eFlD8o",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "1.43"
+        },
+        {
+          "id": "gram-40",
+          "num": 40,
+          "title": "The preposition à",
+          "video": "https://youtu.be/tfeHqlVtepo",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.1–2.6"
+        },
+        {
+          "id": "gram-41",
+          "num": 41,
+          "title": "The preposition de",
+          "video": "https://youtu.be/0hYbqzB4saQ",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.7–2.12"
+        },
+        {
+          "id": "gram-42",
+          "num": 42,
+          "title": "The preposition en",
+          "video": "https://youtu.be/irC5wFkFVwA",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.13–2.14"
+        },
+        {
+          "id": "gram-43",
+          "num": 43,
+          "title": "Aller and prepositions",
+          "video": "https://youtu.be/DS4n5KH48mQ",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.15"
+        },
+        {
+          "id": "gram-44",
+          "num": 44,
+          "title": "Prepositions of place",
+          "video": "https://youtu.be/ZU8kRRX_vX8",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.16–2.17"
+        },
+        {
+          "id": "gram-45",
+          "num": 45,
+          "title": "Prepositions of time",
+          "video": "https://youtu.be/FsrTcqek5A4",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.18–2.21"
+        },
+        {
+          "id": "gram-46",
+          "num": 46,
+          "title": "Pour and par",
+          "video": "https://youtu.be/VQ9IqfulXzU",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.22–2.25"
+        },
+        {
+          "id": "gram-47",
+          "num": 47,
+          "title": "When not to use an article",
+          "video": "https://youtu.be/tNjotUUUbCU",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.26"
+        },
+        {
+          "id": "gram-48",
+          "num": 48,
+          "title": "Same verb – Different prepositions",
+          "video": "https://youtu.be/R0HkCr69YP0",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.27"
+        },
+        {
+          "id": "gram-49",
+          "num": 49,
+          "title": "How to build the imparfait",
+          "video": "https://youtu.be/CFSZqYHqnvA",
+          "group": "CONJUGATION",
+          "subhead": "The imparfait",
+          "exercises": "3.1–3.4"
+        },
+        {
+          "id": "gram-50",
+          "num": 50,
+          "title": "When to use the imparfait",
+          "video": "https://youtu.be/xGjBJBPCtMA",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "3.5–3.10"
+        },
+        {
+          "id": "gram-51",
+          "num": 51,
+          "title": "Imparfait vs Passé composé",
+          "video": "https://youtu.be/CpRgC8zjGlY",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "4.1–4.9"
+        },
+        {
+          "id": "gram-52",
+          "num": 52,
+          "title": "The recent past",
+          "video": "https://youtu.be/fZQPc0pd4PU",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "5.1–5.3"
+        },
+        {
+          "id": "gram-53",
+          "num": 53,
+          "title": "Yes – No questions",
+          "video": "https://youtu.be/AX7q5imc2jk",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.29–2.31"
+        },
+        {
+          "id": "gram-54",
+          "num": 54,
+          "title": "Quand Comment Pourquoi Où Combien",
+          "video": "https://youtu.be/7n5OLZQvb4A",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.32"
+        },
+        {
+          "id": "gram-55",
+          "num": 55,
+          "title": "Qui Que Quoi",
+          "video": "https://youtu.be/fn8pOg7EjaM",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.33–2.36"
+        },
+        {
+          "id": "gram-56",
+          "num": 56,
+          "title": "Quel and Lequel",
+          "video": "https://youtu.be/DZlrUNxG_ZA",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "2.37–2.39"
+        },
+        {
+          "id": "gram-57",
+          "num": 57,
+          "title": "The French adjectives",
+          "video": "https://youtu.be/gDfIHfWGN8U",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "3.1–3.5"
+        },
+        {
+          "id": "gram-58",
+          "num": 58,
+          "title": "Where to place the adjective",
+          "video": "https://youtu.be/LS8MoEdb9zY",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "3.6–3.7"
+        },
+        {
+          "id": "gram-59",
+          "num": 59,
+          "title": "Comparative & Superlative",
+          "video": "https://youtu.be/Ne431tdamsk",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "3.11–3.14"
+        },
+        {
+          "id": "gram-60",
+          "num": 60,
+          "title": "Indefinite adjectives",
+          "video": "https://youtu.be/ocmVjwc32XE",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "3.15"
+        },
+        {
+          "id": "gram-61",
+          "num": 61,
+          "title": "The future tense",
+          "video": "https://youtu.be/ia3ASXXuAsA",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "6.1–6.8"
+        },
+        {
+          "id": "gram-62",
+          "num": 62,
+          "title": "The near future",
+          "video": "https://youtu.be/UlW3OHHkD5I",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "7.1–7.3"
+        },
+        {
+          "id": "gram-63",
+          "num": 63,
+          "title": "Direct object and DOP",
+          "video": "https://youtu.be/aIvAR6GVz48",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "4.1–4.5"
+        },
+        {
+          "id": "gram-64",
+          "num": 64,
+          "title": "Indirect object and IOP",
+          "video": "https://youtu.be/8m2IKjm8k7U",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "4.6–4.9"
+        },
+        {
+          "id": "gram-65",
+          "num": 65,
+          "title": "Y and EN",
+          "video": "https://youtu.be/K066-1c-48Q",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "4.10–4.13"
+        },
+        {
+          "id": "gram-66",
+          "num": 66,
+          "title": "The pronouns together",
+          "video": "https://youtu.be/K066-1c-48Q",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "4.14–4.15"
+        },
+        {
+          "id": "gram-67",
+          "num": 67,
+          "title": "The conditional",
+          "video": "https://youtu.be/lfvXXk6nU_0",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "8.1–8.7"
+        },
+        {
+          "id": "gram-68",
+          "num": 68,
+          "title": "The imperative",
+          "video": "https://youtu.be/MSCraoKtEAs",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "9.1–9.3"
+        },
+        {
+          "id": "gram-69",
+          "num": 69,
+          "title": "The imperative and pronouns",
+          "video": "https://youtu.be/-4rKgpbywfo",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "9.4–9.8"
+        },
+        {
+          "id": "gram-70",
+          "num": 70,
+          "title": "The emphatic pronouns",
+          "video": "https://youtu.be/11KUkGmjZ30",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.1–5.4"
+        },
+        {
+          "id": "gram-71",
+          "num": 71,
+          "title": "The possessive pronouns",
+          "video": "https://youtu.be/C0aEuTKVQHI",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.5"
+        },
+        {
+          "id": "gram-72",
+          "num": 72,
+          "title": "The demonstrative pronouns",
+          "video": "https://youtu.be/VZfyG22gOFk",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.6–5.8"
+        },
+        {
+          "id": "gram-73",
+          "num": 73,
+          "title": "The indefinite demonstrative pronouns",
+          "video": "https://youtu.be/Ws8vxSxqAio",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.9–5.10"
+        },
+        {
+          "id": "gram-74",
+          "num": 74,
+          "title": "The indefinite pronouns",
+          "video": "https://youtu.be/KpIjnPMBck8",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.11"
+        },
+        {
+          "id": "gram-75",
+          "num": 75,
+          "title": "The relative pronouns",
+          "video": "https://youtu.be/qDlBFrgIUKI",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.12–5.17"
+        },
+        {
+          "id": "gram-76",
+          "num": 76,
+          "title": "Ce qui Ce que Ce dont",
+          "video": "https://youtu.be/lPDiYnYqQ2I",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "5.18–5.22"
+        },
+        {
+          "id": "gram-77",
+          "num": 77,
+          "title": "Infinitive verbs – Part 1",
+          "video": "https://youtu.be/A3X3CQdNhcA",
+          "group": "CONJUGATION",
+          "subhead": "Infinitive verbs",
+          "exercises": "10.1–10.4"
+        },
+        {
+          "id": "gram-78",
+          "num": 78,
+          "title": "Infinitive verbs – Part 2",
+          "video": "https://youtu.be/w0Rtq0ekNVw",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "10.5–10.10"
+        },
+        {
+          "id": "gram-79",
+          "num": 79,
+          "title": "Infinitive verbs – Part 3",
+          "video": "https://youtu.be/xuycBWC0FNQ",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "10.11–10.14"
+        },
+        {
+          "id": "gram-80",
+          "num": 80,
+          "title": "The adverbs",
+          "video": "https://youtu.be/oMrL8Lph9dY",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "6.1–6.2"
+        },
+        {
+          "id": "gram-81",
+          "num": 81,
+          "title": "Where to place the adverbs",
+          "video": "https://youtu.be/AqF1NyyYytU",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "6.3–6.4"
+        },
+        {
+          "id": "gram-82",
+          "num": 82,
+          "title": "Bon vs Bien",
+          "video": "https://youtu.be/s5pGmxfoO4I",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "6.5–6.7"
+        },
+        {
+          "id": "gram-83",
+          "num": 83,
+          "title": "Encore & Toujours",
+          "video": "https://youtu.be/zWoYCud79Bw",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "6.8–6.9"
+        },
+        {
+          "id": "gram-84",
+          "num": 84,
+          "title": "The conjunctions",
+          "video": "https://youtu.be/HIoW_gfFpGA",
+          "group": "GRAMMAR",
+          "subhead": null,
+          "exercises": "6.12–6.15"
+        },
+        {
+          "id": "gram-85",
+          "num": 85,
+          "title": "How to build the subjunctive",
+          "video": "https://youtu.be/f6GhTfztmX0",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "11.1–11.4"
+        },
+        {
+          "id": "gram-86",
+          "num": 86,
+          "title": "When to use the subjunctive",
+          "video": "https://youtu.be/g4RTOqFjfsU",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "11.5–11.15"
+        },
+        {
+          "id": "gram-87",
+          "num": 87,
+          "title": "Plus-que-parfait",
+          "video": "https://youtu.be/jaDCV37skV0",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "12.1–12.3"
+        },
+        {
+          "id": "gram-88",
+          "num": 88,
+          "title": "Futur antérieur",
+          "video": "https://youtu.be/J1qiW6yK7C4",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "13.1–13.2"
+        },
+        {
+          "id": "gram-89",
+          "num": 89,
+          "title": "Conditionnel passé",
+          "video": "https://youtu.be/o-hxMuZwVzI",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "14.1–14.2"
+        },
+        {
+          "id": "gram-90",
+          "num": 90,
+          "title": "Participe passé & gérondif",
+          "video": "https://youtu.be/9drC7kPyJ_Q",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "15.1–15.3"
+        },
+        {
+          "id": "gram-91",
+          "num": 91,
+          "title": "The passive voice",
+          "video": "https://youtu.be/fRX5_pP8usM",
+          "group": "CONJUGATION",
+          "subhead": null,
+          "exercises": "16.1"
+        },
+        {
+          "id": "gram-review-grammar",
+          "num": null,
+          "title": "Review grammar",
+          "video": "https://www.youtube.com/watch?v=9q7nx6kzvD0",
+          "group": "GRAMMAR",
+          "exercises": "7.1–7.20"
+        },
+        {
+          "id": "gram-review-conjugation",
+          "num": null,
+          "title": "Review conjugation",
+          "video": "https://www.youtube.com/watch?v=XvKutOPD8w8",
+          "group": "CONJUGATION",
+          "exercises": "18.1–18.49"
+        }
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "title": "French Vocabulary",
+      "items": [
+        {
+          "id": "vocab-1",
+          "num": 1,
+          "title": "French gender and plural of nouns",
+          "video": "https://youtu.be/pnLcXDMqwSk"
+        },
+        {
+          "id": "vocab-2",
+          "num": 2,
+          "title": "Les personnes",
+          "video": "https://youtu.be/I3-hWqK6P4I"
+        },
+        {
+          "id": "vocab-3",
+          "num": 3,
+          "title": "Les émotions & Les caractéristiques",
+          "video": "https://youtu.be/SaajtWailiw"
+        },
+        {
+          "id": "vocab-4",
+          "num": 4,
+          "title": "Les métiers",
+          "video": "https://youtu.be/C3nQDGEXqpw"
+        },
+        {
+          "id": "vocab-5",
+          "num": 5,
+          "title": "Les pays – Les nationalités – Les langues",
+          "video": "https://youtu.be/pbcwY7btwZU"
+        },
+        {
+          "id": "vocab-6",
+          "num": 6,
+          "title": "Les couleurs",
+          "video": "https://youtu.be/SiiG7asg67M"
+        },
+        {
+          "id": "vocab-7",
+          "num": 7,
+          "title": "Le visage et l'hygiène",
+          "video": "https://youtu.be/_2sIRcmpqTY"
+        },
+        {
+          "id": "vocab-8",
+          "num": 8,
+          "title": "Le corps",
+          "video": "https://youtu.be/0Q33ifHr2F0"
+        },
+        {
+          "id": "vocab-9",
+          "num": 9,
+          "title": "Les vêtements",
+          "video": "https://youtu.be/-YcLWXrx208"
+        },
+        {
+          "id": "vocab-10",
+          "num": 10,
+          "title": "Les sports",
+          "video": "https://youtu.be/c9hG99fuBiQ"
+        },
+        {
+          "id": "vocab-11",
+          "num": 11,
+          "title": "Les animaux",
+          "video": "https://youtu.be/NYvAxe0pijc"
+        },
+        {
+          "id": "vocab-12",
+          "num": 12,
+          "title": "La nature",
+          "video": "https://youtu.be/-h0SdlI9j_M"
+        },
+        {
+          "id": "vocab-13",
+          "num": 13,
+          "title": "Les vacances et les transports",
+          "video": "https://youtu.be/EVHYfT_5wVQ"
+        },
+        {
+          "id": "vocab-14",
+          "num": 14,
+          "title": "En ville",
+          "video": "https://youtu.be/AZgzt51Fy9Q"
+        },
+        {
+          "id": "vocab-15",
+          "num": 15,
+          "title": "Le temps",
+          "video": "https://youtu.be/wfjvSp6RP2Q"
+        },
+        {
+          "id": "vocab-16",
+          "num": 16,
+          "title": "Les passe–temps",
+          "video": "https://youtu.be/UOLZOUQ2qCw"
+        },
+        {
+          "id": "vocab-17",
+          "num": 17,
+          "title": "La technologie",
+          "video": "https://youtu.be/8oq47pNSqnk"
+        },
+        {
+          "id": "vocab-18",
+          "num": 18,
+          "title": "La maison",
+          "video": "https://youtu.be/J4QXQCjZqFY"
+        },
+        {
+          "id": "vocab-19",
+          "num": 19,
+          "title": "La cuisine",
+          "video": "https://youtu.be/JP3sUHzDVYY"
+        },
+        {
+          "id": "vocab-20",
+          "num": 20,
+          "title": "Le temps et les mesures",
+          "video": "https://youtu.be/VHhUnT7bQqU"
+        },
+        {
+          "id": "vocab-21",
+          "num": 21,
+          "title": "Les préfixes",
+          "video": "https://youtu.be/Idck7grkCYY"
+        },
+        {
+          "id": "vocab-22",
+          "num": 22,
+          "title": "Les suffixes",
+          "video": "https://youtu.be/O8oQOS2bcHI"
+        },
+        {
+          "id": "vocab-23",
+          "num": 23,
+          "title": "Les homophones",
+          "video": "https://youtu.be/NfFSrFISWM0"
+        },
+        {
+          "id": "vocab-24",
+          "num": 24,
+          "title": "100 English words commonly used in French",
+          "video": "https://youtu.be/3u7xD4x_QbA"
+        }
+      ]
+    },
+    {
+      "id": "expressions",
+      "title": "French Expressions & Idioms",
+      "items": [
+        {
+          "id": "expr-1",
+          "num": 1,
+          "title": "Avoir",
+          "video": "https://youtu.be/YgMwOKHqa_w"
+        },
+        {
+          "id": "expr-2",
+          "num": 2,
+          "title": "Être",
+          "video": "https://youtu.be/B8aVo7K5vtQ"
+        },
+        {
+          "id": "expr-3",
+          "num": 3,
+          "title": "Aller",
+          "video": "https://youtu.be/PqRV3IIfVRQ"
+        },
+        {
+          "id": "expr-4",
+          "num": 4,
+          "title": "Faire",
+          "video": "https://youtu.be/qDcZ6lawlTw"
+        },
+        {
+          "id": "expr-5",
+          "num": 5,
+          "title": "Mettre",
+          "video": "https://youtu.be/eWEkDrwrxq0"
+        },
+        {
+          "id": "expr-6",
+          "num": 6,
+          "title": "Prendre",
+          "video": "https://youtu.be/DGQzw72ljcg"
+        },
+        {
+          "id": "expr-7",
+          "num": 7,
+          "title": "L'amour",
+          "video": "https://youtu.be/upA94UM0qMw"
+        },
+        {
+          "id": "expr-8",
+          "num": 8,
+          "title": "Manger & Boire",
+          "video": "https://youtu.be/A9jMRJb8xKI"
+        },
+        {
+          "id": "expr-9",
+          "num": 9,
+          "title": "Le Temps",
+          "video": "https://youtu.be/hB4Hdmme5wE"
+        },
+        {
+          "id": "expr-10",
+          "num": 10,
+          "title": "L'argent",
+          "video": "https://youtu.be/1H5Iv1HdBug"
+        },
+        {
+          "id": "expr-11",
+          "num": 11,
+          "title": "Le Temps",
+          "video": "https://youtu.be/T25KmYJK8E4"
+        },
+        {
+          "id": "expr-12",
+          "num": 12,
+          "title": "Le Travail",
+          "video": "https://youtu.be/jhcffP6Rdyc"
+        },
+        {
+          "id": "expr-13",
+          "num": 13,
+          "title": "Le Sommeil",
+          "video": "https://youtu.be/vdH0pmCsMGQ"
+        },
+        {
+          "id": "expr-14",
+          "num": 14,
+          "title": "La Santé",
+          "video": "https://youtu.be/BjqM8WrY5uE"
+        },
+        {
+          "id": "expr-15",
+          "num": 15,
+          "title": "Incluant des Aliments",
+          "video": "https://youtu.be/rwY1cA6VzWw"
+        },
+        {
+          "id": "expr-16",
+          "num": 16,
+          "title": "Incluant les Parties du Corps",
+          "video": "https://youtu.be/5haUOt49Cxs"
+        },
+        {
+          "id": "expr-17",
+          "num": 17,
+          "title": "Incluant les Animaux",
+          "video": "https://youtu.be/95rINNs3uac"
+        },
+        {
+          "id": "expr-18",
+          "num": 18,
+          "title": "Incluant les Couleurs",
+          "video": "https://youtu.be/I068E3bd-fU"
+        },
+        {
+          "id": "expr-19",
+          "num": 19,
+          "title": "Les Autres Expressions",
+          "video": "https://youtu.be/NZpWkuG4Bb0"
+        },
+        {
+          "id": "expr-20",
+          "num": 20,
+          "title": "Other ways to say Oui",
+          "video": "https://youtu.be/D7ylvgV-Oic"
+        },
+        {
+          "id": "expr-21",
+          "num": 21,
+          "title": "Other ways to say Non",
+          "video": "https://youtu.be/s4_4Adwpmxc"
+        },
+        {
+          "id": "expr-22",
+          "num": 22,
+          "title": "Other ways to say Merci",
+          "video": "https://youtu.be/iWgRpYEmm4Q"
+        },
+        {
+          "id": "expr-23",
+          "num": 23,
+          "title": "Other ways to say Bonjour",
+          "video": "https://youtu.be/eAh7LEfgs0I"
+        },
+        {
+          "id": "expr-24",
+          "num": 24,
+          "title": "Other ways to say Au revoir",
+          "video": "https://youtu.be/93_3fPeMqxc"
+        },
+        {
+          "id": "expr-25",
+          "num": 25,
+          "title": "Other ways to say De Rien",
+          "video": "https://youtu.be/eymjKrLXdoI"
+        },
+        {
+          "id": "expr-26",
+          "num": 26,
+          "title": "French Filler Words",
+          "video": null
+        }
+      ]
+    },
+    {
+      "id": "complex-conjugation",
+      "title": "Focus on Complex French Conjugation",
+      "items": [
+        {
+          "id": "complex-1",
+          "num": 1,
+          "title": "Passé Composé vs Imparfait",
+          "video": "https://youtu.be/DdKvg5v9G_0"
+        },
+        {
+          "id": "complex-2",
+          "num": 2,
+          "title": "The French Subjunctive",
+          "video": "https://youtu.be/g2vINYhNRwE"
+        }
+      ]
+    },
+    {
+      "id": "short-stories",
+      "title": "Improve Your Listening & Reading Skills with French Stories",
+      "playlist": "https://www.youtube.com/playlist?list=PL_bt5rj27IIXfpr4LGmL_yAHXDjIujCMZ",
+      "books": [
+        {
+          "title": "French Short Stories (Volume 1)",
+          "url": "https://theperfectfrench.com/french-courses-book/french-short-stories/"
+        },
+        {
+          "title": "French Short Stories (Volume 2)",
+          "url": "https://theperfectfrench.com/french-courses-book/french-short-stories-volume-2/"
+        },
+        {
+          "title": "French Long Stories (Volume 3)",
+          "url": "https://theperfectfrench.com/french-courses-book/french-long-stories/"
+        }
+      ],
+      "items": [
+        {
+          "id": "story-1",
+          "num": 1,
+          "title": "La routine matinale de Lucie",
+          "video": "https://youtu.be/9MaeAeOdVkI"
+        },
+        {
+          "id": "story-2",
+          "num": 2,
+          "title": "On visite la tour Eiffel",
+          "video": "https://youtu.be/i4PZrA22YrU"
+        },
+        {
+          "id": "story-3",
+          "num": 3,
+          "title": "Une soirée au restaurant",
+          "video": "https://youtu.be/zjAnpYuAOBQ"
+        },
+        {
+          "id": "story-4",
+          "num": 4,
+          "title": "Un matin d'hiver",
+          "video": "https://youtu.be/jgj_6eUtt_I"
+        },
+        {
+          "id": "story-5",
+          "num": 5,
+          "title": "Le nettoyage de printemps",
+          "video": "https://youtu.be/DVE545P05OA"
+        },
+        {
+          "id": "story-6",
+          "num": 6,
+          "title": "Un week-end en famille",
+          "video": "https://youtu.be/ejjT1hHfOkg"
+        },
+        {
+          "id": "story-7",
+          "num": 7,
+          "title": "Mes traditions de Noël",
+          "video": "https://youtu.be/VUvlkih1tAk"
+        }
+      ]
+    },
+    {
+      "id": "speaking-practices",
+      "title": "Improve Your French Speaking Skills",
+      "playlist": "https://www.youtube.com/playlist?list=PL_bt5rj27IIX81Ck-yU7P0lFMqBGzgZzA",
+      "items": [
+        {
+          "id": "speaking-1",
+          "num": 1,
+          "title": "En retard",
+          "video": "https://youtu.be/uRoCWo4F1FY?si=W6b14oJ_qHRUm-cF"
+        },
+        {
+          "id": "speaking-2",
+          "num": 2,
+          "title": "Les habitudes",
+          "video": "https://youtu.be/MaDRii8bjq8?si=q_bpMwLEkTVWTlhF"
+        },
+        {
+          "id": "speaking-3",
+          "num": 3,
+          "title": "Apprendre une langue étrangère",
+          "video": "https://youtu.be/7CISRy0Ivnk?si=6nxYdIDKOJz-rOMC"
+        },
+        {
+          "id": "speaking-4",
+          "num": 4,
+          "title": "L'été",
+          "video": "https://youtu.be/9LRJecPU0aI?si=1VAo3vd4_QclHqcP"
+        },
+        {
+          "id": "speaking-5",
+          "num": 5,
+          "title": "Internet",
+          "video": "https://youtu.be/kAdbW46oZCU?si=VwRkhj1A2GrFl5WP"
+        },
+        {
+          "id": "speaking-6",
+          "num": 6,
+          "title": "Faire de l'exercice",
+          "video": "https://youtu.be/7f8ub9K0xzk?si=KrShV03QjYNwRJ9Y"
+        },
+        {
+          "id": "speaking-7",
+          "num": 7,
+          "title": "On prend le train pour aller à Paris",
+          "video": "https://youtu.be/P7tjW7Xr2gg?si=O504su6s6CZW7LVw"
+        },
+        {
+          "id": "speaking-8",
+          "num": 8,
+          "title": "Le temps passe vite",
+          "video": "https://youtu.be/jxPVx6xjQrI?si=DdYSqweZUwUHzG-0"
+        },
+        {
+          "id": "speaking-9",
+          "num": 9,
+          "title": "Le chocolat",
+          "video": "https://youtu.be/BGOsfUw7Y0s?si=cWkfdnEB8Q6cZtqy"
+        },
+        {
+          "id": "speaking-10",
+          "num": 10,
+          "title": "Le pain",
+          "video": "https://youtu.be/fF0gMLTAjmc?si=cDYNXlFGbnfsBZjB"
+        },
+        {
+          "id": "speaking-11",
+          "num": 11,
+          "title": "Faire du shopping",
+          "video": "https://youtu.be/qpq_Yl2HKUk?si=qmWxhJ4ggySF3PT5"
+        },
+        {
+          "id": "speaking-12",
+          "num": 12,
+          "title": "Je suis malade",
+          "video": "https://youtu.be/s74MXlfR03c?si=MSSoP_v8D8SoUH5J"
+        },
+        {
+          "id": "speaking-13",
+          "num": 13,
+          "title": "Mon ordinateur est en panne",
+          "video": "https://youtu.be/M3QesXA2qQs?si=f1nFZM2jgfI1orm9"
+        },
+        {
+          "id": "speaking-14",
+          "num": 14,
+          "title": "Les Jeux Olympiques",
+          "video": "https://youtu.be/TZdKR6OgTmY?si=8DYbtMiDrJSF3E-e"
+        },
+        {
+          "id": "speaking-15",
+          "num": 15,
+          "title": "Faire les courses",
+          "video": "https://youtu.be/A60ejcJi3pQ?si=HSlCe5W3xP4iD5hC"
+        },
+        {
+          "id": "speaking-16",
+          "num": 16,
+          "title": "Le mois d'avril",
+          "video": "https://youtu.be/4UdqMwSJbIo?si=0wkjlq9HsB4Bb7IY"
+        },
+        {
+          "id": "speaking-17",
+          "num": 17,
+          "title": "Une journée bien remplie",
+          "video": "https://youtu.be/I-wp0N9rLso?si=3CGGRIIu0pU8VAfF"
+        },
+        {
+          "id": "speaking-18",
+          "num": 18,
+          "title": "Une coupure de courant",
+          "video": "https://youtu.be/Rh7VaeWx_bM?si=ZOCy2hRP4xMwCJfb"
+        }
+      ]
+    }
+  ]
+}

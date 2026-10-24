@@ -1,48 +1,26 @@
 /* ============================================================
    Progress store — local-first, sync-aware.
 
+   The data model is deliberately tiny: a map of lessonId → whether
+   it's checked, each stamped with when it last changed. That
+   timestamp is what makes cross-device merging safe — see sync.js.
+
    localStorage holds two separate keys:
-     french_course_progress  → the synced study record
-     french_course_settings  → device-local preferences
-   Keeping settings out of the synced blob means dark mode and
-   voice speed stay per-device instead of fighting across phones.
+     french_progress_v1   → the synced checklist state
+     french_settings_v1   → device-local preferences (dark mode)
    ============================================================ */
 
-const STORAGE_KEY   = "french_course_progress_v2";
-const SETTINGS_KEY  = "french_course_settings_v2";
-const CHECKPOINT_KEY = "french_course_checkpoints_v1";
-
-const COURSE_START = "2026-10-09";
-const COURSE_END   = "2026-12-31";
-const TOTAL_WEEKS  = 12;
-const WEEKLY_TARGET_MINUTES = 240; // 4 hours
-
-const SESSION_XP = { grammar: 25, listening: 25, writing: 25, review: 50 };
-
-function today() { return new Date().toISOString().slice(0, 10); }
-function daysBetween(a, b) {
-  return Math.floor((new Date(b + "T00:00:00") - new Date(a + "T00:00:00")) / 86400000);
-}
+const STORAGE_KEY  = "french_progress_v1";
+const SETTINGS_KEY = "french_settings_v1";
 
 function defaultSettings() {
-  return { speechRate: 0.85, darkMode: false, autoSpeak: true };
+  return { darkMode: false };
 }
 
 function defaultProgress() {
   return {
-    user: { createdAt: today(), settings: defaultSettings() },
-    progress: {
-      currentWeek: 1,
-      currentPhase: 1,
-      totalMinutes: 0,
-      xp: 0,
-      streak: { current: 0, longest: 0, lastActiveDate: null },
-      weeks: {},
-      phaseExams: {}
-    },
-    vocabulary: {},
-    achievements: [],
-    activityLog: []
+    user: { settings: defaultSettings() },
+    progress: { checked: {} }
   };
 }
 
@@ -56,7 +34,10 @@ class ProgressStore {
     let data = defaultProgress();
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) data = { ...data, ...JSON.parse(raw) };
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        data.progress = { checked: {}, ...(parsed.progress || {}) };
+      }
     } catch (e) {
       console.warn("Could not read saved progress; starting fresh.", e);
     }
@@ -71,7 +52,7 @@ class ProgressStore {
 
   _save({ sync = true } = {}) {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(this.data));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ progress: this.data.progress }));
       localStorage.setItem(SETTINGS_KEY, JSON.stringify(this.data.user.settings));
     } catch (e) {
       console.warn("Could not persist progress", e);
@@ -100,271 +81,33 @@ class ProgressStore {
     this._save({ sync: false });
   }
 
-  /* ---------------- Activity & streak ---------------- */
+  /* ---------------- Checklist ---------------- */
 
-  recordActivity(minutes, activityIds) {
-    const d = today();
-    this.data.progress.totalMinutes += minutes;
+  isChecked(id) {
+    const e = this.data.progress.checked[id];
+    return !!(e && e.on);
+  }
 
-    const log = this.data.activityLog;
-    const entry = log.find((e) => e.date === d);
-    if (entry) {
-      entry.minutes += minutes;
-      entry.activities = [...new Set([...entry.activities, ...activityIds])];
-    } else {
-      log.push({ date: d, minutes, activities: activityIds });
-    }
-    this._updateStreak(d);
+  setChecked(id, on) {
+    this.data.progress.checked[id] = { on, at: new Date().toISOString() };
     this._save();
   }
 
-  _updateStreak(d) {
-    const s = this.data.progress.streak;
-    if (s.lastActiveDate === d) return;
-    const gap = s.lastActiveDate ? daysBetween(s.lastActiveDate, d) : null;
-    s.current = gap === 1 ? s.current + 1 : 1;
-    s.longest = Math.max(s.longest, s.current);
-    s.lastActiveDate = d;
-    if (s.current >= 7)  this.unlockAchievement("streak_7");
-    if (s.current >= 30) this.unlockAchievement("streak_30");
+  toggle(id) {
+    const on = !this.isChecked(id);
+    this.setChecked(id, on);
+    return on;
   }
 
-  minutesThisWeek() {
-    const now = new Date();
-    const monday = new Date(now);
-    const dow = (now.getDay() + 6) % 7; // Mon = 0
-    monday.setDate(now.getDate() - dow);
-    const from = monday.toISOString().slice(0, 10);
-    return this.data.activityLog
-      .filter((e) => e.date >= from)
-      .reduce((sum, e) => sum + e.minutes, 0);
+  /** Count of checked items among a given list of ids. */
+  countChecked(ids) {
+    return ids.filter((id) => this.isChecked(id)).length;
   }
-
-  /* ---------------- XP & level ---------------- */
-
-  addXP(n) { this.data.progress.xp += n; }
-
-  getLevel() {
-    const xp = this.data.progress.xp;
-    const tiers = [
-      { name: "Débutant",     min: 0,    next: 500 },
-      { name: "Explorateur",  min: 500,  next: 1500 },
-      { name: "Aventurier",   min: 1500, next: 3000 },
-      { name: "Connaisseur",  min: 3000, next: 5000 },
-      { name: "Francophone",  min: 5000, next: null }
-    ];
-    let tier = tiers[0];
-    for (const t of tiers) if (xp >= t.min) tier = t;
-    const span = tier.next ? tier.next - tier.min : 1;
-    return { ...tier, progress: tier.next ? ((xp - tier.min) / span) * 100 : 100 };
-  }
-
-  /* ---------------- Weeks & sessions ---------------- */
-
-  getWeekProgress(n) {
-    return this.data.progress.weeks[n] || { status: "not_started", sessions: {}, quizScore: null };
-  }
-
-  weekPercent(n) {
-    const w = this.getWeekProgress(n);
-    const done = ["grammar", "listening", "writing", "review"]
-      .filter((s) => w.sessions[s]?.completed).length;
-    return (done / 4) * 100;
-  }
-
-  completedWeekCount() {
-    return Object.values(this.data.progress.weeks).filter((w) => w.status === "completed").length;
-  }
-
-  completeSession(weekNum, type, score) {
-    const weeks = this.data.progress.weeks;
-    if (!weeks[weekNum]) weeks[weekNum] = { status: "in_progress", sessions: {}, quizScore: null };
-    const w = weeks[weekNum];
-
-    const prev = w.sessions[type];
-    w.sessions[type] = {
-      completed: true,
-      score: prev?.completed ? Math.max(prev.score || 0, score) : score,
-      completedAt: new Date().toISOString()
-    };
-    if (!prev?.completed) this.addXP(SESSION_XP[type] || 25);
-
-    const allDone = ["grammar", "listening", "writing", "review"]
-      .every((s) => w.sessions[s]?.completed);
-    if (allDone && w.status !== "completed") {
-      w.status = "completed";
-      this.data.progress.currentWeek = Math.min(TOTAL_WEEKS, Math.max(this.data.progress.currentWeek, weekNum + 1));
-      this.unlockAchievement("first_week");
-    }
-    this._save();
-  }
-
-  recordQuizScore(weekNum, score) {
-    const weeks = this.data.progress.weeks;
-    if (!weeks[weekNum]) weeks[weekNum] = { status: "in_progress", sessions: {}, quizScore: null };
-    weeks[weekNum].quizScore = Math.max(weeks[weekNum].quizScore || 0, score);
-    if (score === 100) this.unlockAchievement("perfect_quiz");
-    this._save();
-  }
-
-  recordPhaseExam(phase, score) {
-    const prev = this.data.progress.phaseExams[phase];
-    if (!prev || score > prev.score) {
-      this.data.progress.phaseExams[phase] = { score, completedAt: new Date().toISOString() };
-    }
-    this.addXP(100);
-    if (score >= 65) {
-      this.unlockAchievement("phase_" + phase);
-      if (phase === 3) this.unlockAchievement("a2_level");
-    }
-    this._save();
-  }
-
-  isWeekUnlocked(n) {
-    return n === 1 || n <= this.data.progress.currentWeek;
-  }
-
-  /* ---------------- Pace against the Dec 31 deadline ---------------- */
-
-  pace() {
-    const d = today();
-    const elapsed = Math.max(0, daysBetween(COURSE_START, d));
-    const totalDays = daysBetween(COURSE_START, COURSE_END);
-    const daysLeft = Math.max(0, daysBetween(d, COURSE_END));
-
-    const weeksElapsed = Math.floor(elapsed / 7);
-    const expectedWeek = Math.min(TOTAL_WEEKS, weeksElapsed + 1);
-    const done = this.completedWeekCount();
-    const delta = done - weeksElapsed;
-
-    let status = "ontrack", label = "On track";
-    if (delta >= 1)      { status = "ahead";  label = delta === 1 ? "1 week ahead" : `${delta} weeks ahead`; }
-    else if (delta <= -1) { status = "behind"; label = delta === -1 ? "1 week behind" : `${Math.abs(delta)} weeks behind`; }
-
-    return {
-      elapsed, totalDays, daysLeft,
-      expectedWeek, weeksElapsed,
-      completed: done,
-      percentDone: (done / TOTAL_WEEKS) * 100,
-      percentElapsed: Math.min(100, (elapsed / totalDays) * 100),
-      status, label,
-      started: elapsed >= 0 && d >= COURSE_START,
-      finished: d > COURSE_END
-    };
-  }
-
-  /* ---------------- Vocabulary / SM-2 ---------------- */
-
-  getVocabEntry(id) {
-    return this.data.vocabulary[id] || {
-      level: "new", correctCount: 0, incorrectCount: 0,
-      nextReviewAt: today(), lastReviewedAt: null
-    };
-  }
-
-  reviewVocab(id, correct) {
-    const e = this.getVocabEntry(id);
-    if (correct) {
-      e.correctCount += 1;
-      const days = e.correctCount === 1 ? 1
-                 : e.correctCount === 2 ? 3
-                 : e.correctCount <= 4  ? 7
-                 : 14;
-      e.level = e.correctCount >= 5 ? "mastered" : e.correctCount >= 3 ? "known" : "learning";
-      const next = new Date();
-      next.setDate(next.getDate() + days);
-      e.nextReviewAt = next.toISOString().slice(0, 10);
-    } else {
-      e.incorrectCount += 1;
-      e.correctCount = 0;
-      e.level = "learning";
-      e.nextReviewAt = today();
-    }
-    e.lastReviewedAt = new Date().toISOString();
-    this.data.vocabulary[id] = e;
-
-    const mastered = this.vocabStats().mastered;
-    if (mastered >= 100) this.unlockAchievement("vocab_100");
-    if (mastered >= 300) this.unlockAchievement("vocab_all");
-    this._save();
-  }
-
-  vocabStats() {
-    const v = Object.values(this.data.vocabulary);
-    return {
-      total: v.length,
-      learning: v.filter((x) => x.level === "learning").length,
-      known:    v.filter((x) => x.level === "known").length,
-      mastered: v.filter((x) => x.level === "mastered").length
-    };
-  }
-
-  getDueVocab(ids) {
-    const d = today();
-    return ids.filter((id) => {
-      const e = this.data.vocabulary[id];
-      return !e || e.nextReviewAt <= d;
-    });
-  }
-
-  /* ---------------- Session checkpoints ----------------
-     Saved after every single answer so closing the tab mid-session
-     never costs you the session.
-
-     Deliberately device-local and never synced: a cursor position is
-     only meaningful on the device you left it on, and syncing it would
-     make two devices fight over where you are. Keyed by week:type so a
-     half-finished session in one week survives starting another.      */
-
-  _allCheckpoints() {
-    try { return JSON.parse(localStorage.getItem(CHECKPOINT_KEY)) || {}; }
-    catch { return {}; }
-  }
-
-  checkpointFor(week, type) {
-    const cp = this._allCheckpoints()[`${week}:${type}`];
-    return cp && cp.version === 1 ? cp : null;
-  }
-
-  saveCheckpoint(cp) {
-    try {
-      const all = this._allCheckpoints();
-      all[`${cp.week}:${cp.type}`] = { ...cp, version: 1, savedAt: Date.now() };
-      localStorage.setItem(CHECKPOINT_KEY, JSON.stringify(all));
-    } catch (e) {
-      console.warn("Could not save session checkpoint", e);
-    }
-  }
-
-  clearCheckpoint(week, type) {
-    try {
-      const all = this._allCheckpoints();
-      delete all[`${week}:${type}`];
-      localStorage.setItem(CHECKPOINT_KEY, JSON.stringify(all));
-    } catch { /* nothing to clear */ }
-  }
-
-  /** True if a session has been started but not finished. */
-  hasUnfinished(week, type) {
-    const cp = this.checkpointFor(week, type);
-    return Boolean(cp && (cp.stage > 0 || cp.index > 0 || cp.draft));
-  }
-
-  /* ---------------- Achievements ---------------- */
-
-  unlockAchievement(id) {
-    if (this.data.achievements.some((a) => a.id === id)) return false;
-    this.data.achievements.push({ id, unlockedAt: new Date().toISOString() });
-    return true;
-  }
-
-  hasAchievement(id) { return this.data.achievements.some((a) => a.id === id); }
 
   reset() {
     const settings = this.data.user.settings;
     this.data = defaultProgress();
     this.data.user.settings = settings;
-    try { localStorage.removeItem(CHECKPOINT_KEY); } catch { /* already gone */ }
     this._save();
   }
 }

@@ -62,52 +62,18 @@ Sessions last 90 days per device.
 
 ## How progress is saved
 
-### Within a session — after every answer
+The whole app is one checklist: 238 lessons, each with a checkbox. Clicking one
+writes `{ on: true/false, at: <timestamp> }` to `localStorage` immediately, then
+uploads to the server on a short debounce.
 
-Every flashcard, exercise, drill and quiz question writes a **checkpoint** the moment
-you answer it. Closing the tab, refreshing, or losing your connection costs you
-nothing: reopening the session drops you on the next unanswered item, with your score
-so far intact.
+Pulling in another device's changes (on load, on tab focus, and every 30 seconds)
+merges **per lesson, by timestamp**: whichever device checked or unchecked a given
+lesson *more recently* wins for that lesson. Two people — or two devices — ticking
+different boxes the same day never lose either one's work, because each lesson's
+state is independent of every other lesson's.
 
-This covers:
-
-| | |
-|---|---|
-| Flashcards | resumes on the next card, same order, same direction |
-| Grammar exercises | resumes on the next question |
-| Translation drills | resumes on the next sentence |
-| Composition | your typed draft is restored word for word |
-| Weekly quiz | resumes mid-quiz, same questions |
-| Phase exams | resumes mid-paper — 40 questions are never lost |
-| Multi-stage sessions | resumes in the right stage, keeping earlier stage scores |
-
-A half-finished session shows a **Resume** badge on the week page, and every session
-screen has a **Start over** control if you would rather begin again.
-
-Checkpoints are deliberately **device-local and never synced** — a cursor position is
-only meaningful on the device you left it on, and syncing it would make two devices
-fight over where you are.
-
-### Across devices — a couple of seconds after each answer
-
-Completed work (scores, XP, streak, vocabulary scheduling) uploads on a short debounce
-and downloads when you focus the tab or every 30 seconds.
-
-Conflicts are merged **field by field**, not last-write-wins, so studying on a laptop
-and a phone on the same day never discards either device's work:
-
-| Data | Rule |
-|---|---|
-| XP, minutes, current week | highest value wins |
-| Session results | a completed session beats an incomplete one; then higher score |
-| Quiz & exam scores | best attempt wins |
-| Vocabulary (spaced repetition) | the device that reviewed the word **most recently** owns its schedule |
-| Streak | the record with the later `lastActiveDate` |
-| Achievements | union, earliest unlock kept |
-| Daily activity log | one row per day, **max** minutes — never summed, so the same session logged twice cannot inflate your total |
-
-Dark mode and voice speed stay per-device on purpose; the server strips them from
-anything it is sent.
+Dark mode is the only other piece of state, and it stays per-device on purpose; the
+server strips it from anything it's sent.
 
 ---
 
@@ -122,20 +88,37 @@ anything it is sent.
 - Progress writes go to a temp file and are renamed into place, with the previous
   copy kept as `progress.bak.json`, so an interrupted write cannot corrupt your data.
 
-This is a single shared password protecting French flashcard progress — proportionate
-to what it guards, not a system for sensitive data.
+This is a single shared password protecting a lesson checklist — proportionate to
+what it guards, not a system for sensitive data.
 
 ---
 
 ## Backing up or moving your progress
 
-The whole record is one JSON file on the volume. From a Railway shell:
+The whole record is one small JSON file on the volume. From a Railway shell:
 
 ```bash
 cat $RAILWAY_VOLUME_MOUNT_PATH/progress.json
 ```
 
 Save that somewhere and you have a complete backup.
+
+---
+
+## Updating the curriculum
+
+All content lives in `data/curriculum.json` — one array of sections, each with
+`items` (and, for the grammar section, `verbGroups` and `irregularVerbs` too). Every
+item needs a stable `id`: changing an id orphans whatever check-state is stored
+against the old one, so add new lessons with new ids rather than renumbering
+existing ones.
+
+```json
+{ "id": "pron-1", "num": 1, "title": "The alphabet", "video": "https://youtu.be/…" }
+```
+
+A `video` of `null` renders a disabled, non-clickable ▶ — used for the one lesson in
+the source guide (French Filler Words) that has no published video yet.
 
 ---
 
@@ -148,15 +131,11 @@ french-course/
 ├── index.html
 ├── css/style.css         design tokens and every component
 ├── js/
-│   ├── storage.js        local-first store, SM-2, pace tracking, checkpoints
-│   ├── sync.js           login, upload/download, field-level merge
-│   ├── runner.js         session cursor + per-answer checkpointing
-│   ├── data.js           content loader
-│   ├── app.js            router and views
-│   └── …                 one module per exercise type
+│   ├── storage.js        local-first checklist store (checked-id → {on, at})
+│   ├── sync.js           login, upload/download, per-lesson timestamp merge
+│   ├── data.js           curriculum loader
+│   ├── app.js            renders the single-page checklist, search, modals
+│   └── ui.js             toast + HTML-escaping helper
 └── data/
-    ├── weeks/week01–12.json
-    ├── grammar-reference.json
-    ├── translations.json
-    └── resources.json
+    └── curriculum.json   all 238 lessons, extracted from the source PDF
 ```

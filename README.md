@@ -1,8 +1,9 @@
 # Mon Français
 
-A self-paced French course that runs from zero to **A2 in twelve weeks**, at four hours
-a week. Vocabulary and reading are built around IT, software support and economics
-rather than the usual café-and-croissant material.
+A single-page checklist for **The Perfect French with Dylane** self-study guide (A1
+→ B2): all 238 lessons from the PDF — pronunciation, grammar & conjugation,
+vocabulary, expressions, complex conjugation, short stories and speaking practices —
+each linked straight to its video, each with a checkbox.
 
 No framework, no build step — plain HTML, CSS and JavaScript.
 
@@ -19,53 +20,43 @@ Node built-ins.
 
 | | |
 |---|---|
-| 12 weeks | 3 phases — Foundations, Expansion, A2 Consolidation |
-| 300 words | with example sentences and French text-to-speech |
-| 120 grammar exercises | fill-in-the-blank, multiple choice, sentence reordering |
-| 60 translation drills | English → French, accent- and case-forgiving |
-| 12 reading passages | tap any word for an inline translation |
-| 24 reference cards | conjugation tables and the mistakes to avoid |
-| 3 phase exams | 40 questions each, answers withheld until the end |
+| 55 | pronunciation lessons |
+| 93 | grammar & conjugation lessons (91 numbered + 2 cumulative reviews) |
+| 24 | vocabulary lessons |
+| 26 | expression & idiom lessons |
+| 2 | complex-conjugation deep dives (passé composé vs imparfait, the subjunctive) |
+| 7 | short stories, plus the 3 story books and the YouTube playlist |
+| 18 | speaking practices, plus the playlist |
+| 238 | lessons total, each with its own checkbox |
 
-Progress is tracked with SM-2 spaced repetition, a daily streak, XP levels and pace
-tracking against the course end date.
+Every link was pulled directly out of the source PDF's own hyperlinks — not
+retyped — so the 238 links on this page match the ones in your copy of the guide
+exactly.
 
-## Never lose your place
+## One password, every device
 
-Every answer writes a checkpoint. Refresh the page, close the tab, or drop off the
-network mid-session and you come back to the next unanswered item — including your
-half-written composition, and including a 40-question exam. Unfinished sessions show a
-**Resume** badge, and **Start over** is always one click away.
+Set a password once (see **[SETUP.md](SETUP.md)**) and your checked lessons follow
+you everywhere. Checking a box saves instantly to this browser and uploads within a
+couple of seconds; opening the page on another device and signing in pulls it all
+back.
 
-## Cross-device sync
-
-Set one password and your progress follows you. Progress uploads a second or two after
-each answer and pulls in changes when you focus the tab.
-
-Conflicts are merged field by field rather than last-write-wins, so studying on a
-laptop and a phone on the same day never discards either device's work.
-
-**[SETUP.md](SETUP.md)** has the Railway steps — one variable and one volume.
+Merging is per lesson, by timestamp, so ticking different boxes on your phone and
+your laptop the same day never loses either one.
 
 ## Layout
 
 ```
 server.js              zero-dependency server: static + auth + storage
 index.html
-css/style.css          design tokens and every component
+css/style.css           design tokens and every component
 js/
-  storage.js           local-first store, SM-2, pace tracking, checkpoints
-  sync.js              login, upload/download, field-level merge
-  runner.js            session cursor + per-answer checkpointing
-  data.js              content loader
-  app.js               router and views
-  …                    one module per exercise type
+  storage.js            local-first checklist store
+  sync.js                login, upload/download, per-lesson merge
+  data.js                 curriculum loader
+  app.js                   renders the page, search, modals
+  ui.js                     toast + escaping helper
 data/
-  weeks/week01–12.json vocabulary, grammar, reading, writing, listening
-  grammar-reference.json
-  translations.json
-  resources.json       external sources, tagged by CEFR level
+  curriculum.json        all 238 lessons
 ```
 
-Course content lives entirely in `data/`. Quizzes and exams are assembled from that same
-content at runtime, so the material and the assessment cannot drift apart.
+Source: [The Perfect French with Dylane](https://theperfectfrench.com).

@@ -2,21 +2,22 @@
    Cross-device sync against this app's own server.
 
    Model
-     - Local-first: every write hits localStorage immediately, so
-       the app never blocks on the network and works offline.
+     - Local-first: every checkbox click hits localStorage
+       immediately, so the app never blocks on the network.
      - One password, one shared progress file on the server.
      - Uploads are debounced; downloads happen on load, on tab
        focus, and on a slow poll.
-     - Conflicts are merged field by field by `mergeProgress`
-       rather than last-write-wins, so studying on a laptop and a
-       phone on the same day never discards either one's work.
+     - Merge is per-lesson, by timestamp: whichever device checked
+       or unchecked a lesson *more recently* wins for that lesson.
+       Two devices ticking different boxes the same day never lose
+       either one's work — this is simpler than the old multi-field
+       merge because a checkbox has exactly one piece of state.
 
    If /api/status is unreachable — opened from disk, or from a
-   static host like GitHub Pages — the app silently stays in
-   local-only mode instead of erroring.
+   static host — the app silently stays in local-only mode.
    ============================================================ */
 
-const SYNC_DEBOUNCE_MS = 1500;
+const SYNC_DEBOUNCE_MS = 1200;
 const POLL_MS = 30000;
 
 /* ---------- Merge: pure, no network, unit-testable ---------- */
@@ -25,93 +26,17 @@ function mergeProgress(local, remote) {
   if (!remote) return local;
   if (!local) return remote;
 
-  const out = JSON.parse(JSON.stringify(local));
+  const out = { user: local.user, progress: { checked: {} } };
+  const lc = (local.progress && local.progress.checked) || {};
+  const rc = (remote.progress && remote.progress.checked) || {};
 
-  // Settings stay device-local: dark mode and voice speed are
-  // preferences for *this* screen, not account-wide state.
-
-  const lp = local.progress || {};
-  const rp = remote.progress || {};
-  const op = out.progress;
-
-  op.xp           = Math.max(lp.xp || 0, rp.xp || 0);
-  op.totalMinutes = Math.max(lp.totalMinutes || 0, rp.totalMinutes || 0);
-  op.currentWeek  = Math.max(lp.currentWeek || 1, rp.currentWeek || 1);
-  op.currentPhase = Math.max(lp.currentPhase || 1, rp.currentPhase || 1);
-
-  // Streak: the device that studied most recently holds the truth.
-  const ls = lp.streak || {}, rs = rp.streak || {};
-  const lDate = ls.lastActiveDate || "";
-  const rDate = rs.lastActiveDate || "";
-  op.streak = {
-    ...(rDate > lDate ? rs : ls),
-    longest: Math.max(ls.longest || 0, rs.longest || 0)
-  };
-
-  // Weeks: a completed session beats an incomplete one; when both
-  // are complete the higher score survives.
-  op.weeks = {};
-  const weekKeys = new Set([...Object.keys(lp.weeks || {}), ...Object.keys(rp.weeks || {})]);
-  weekKeys.forEach((k) => {
-    const lw = (lp.weeks || {})[k] || { sessions: {} };
-    const rw = (rp.weeks || {})[k] || { sessions: {} };
-    const sessions = {};
-    const sKeys = new Set([...Object.keys(lw.sessions || {}), ...Object.keys(rw.sessions || {})]);
-    sKeys.forEach((s) => {
-      const a = (lw.sessions || {})[s];
-      const b = (rw.sessions || {})[s];
-      if (!a) { sessions[s] = b; return; }
-      if (!b) { sessions[s] = a; return; }
-      if (a.completed !== b.completed) { sessions[s] = a.completed ? a : b; return; }
-      sessions[s] = (a.score || 0) >= (b.score || 0) ? a : b;
-    });
-    op.weeks[k] = {
-      status: lw.status === "completed" || rw.status === "completed"
-        ? "completed"
-        : (lw.status || rw.status || "not_started"),
-      sessions,
-      quizScore: Math.max(lw.quizScore || 0, rw.quizScore || 0) || null
-    };
+  const ids = new Set([...Object.keys(lc), ...Object.keys(rc)]);
+  ids.forEach((id) => {
+    const a = lc[id], b = rc[id];
+    if (!a) { out.progress.checked[id] = b; return; }
+    if (!b) { out.progress.checked[id] = a; return; }
+    out.progress.checked[id] = (a.at || "") >= (b.at || "") ? a : b;
   });
-
-  // Phase exams: best attempt wins.
-  op.phaseExams = { ...(rp.phaseExams || {}) };
-  Object.entries(lp.phaseExams || {}).forEach(([k, v]) => {
-    const r = op.phaseExams[k];
-    op.phaseExams[k] = !r || (v.score || 0) >= (r.score || 0) ? v : r;
-  });
-
-  // Vocabulary: whichever device reviewed a word last owns its
-  // spaced-repetition state — averaging counts would corrupt the schedule.
-  out.vocabulary = { ...(remote.vocabulary || {}) };
-  Object.entries(local.vocabulary || {}).forEach(([id, lv]) => {
-    const rv = out.vocabulary[id];
-    if (!rv) { out.vocabulary[id] = lv; return; }
-    out.vocabulary[id] = (lv.lastReviewedAt || "") >= (rv.lastReviewedAt || "") ? lv : rv;
-  });
-
-  // Achievements: union, earliest unlock kept.
-  const byId = {};
-  [...(remote.achievements || []), ...(local.achievements || [])].forEach((a) => {
-    const prev = byId[a.id];
-    byId[a.id] = !prev || a.unlockedAt < prev.unlockedAt ? a : prev;
-  });
-  out.achievements = Object.values(byId).sort((a, b) => a.unlockedAt.localeCompare(b.unlockedAt));
-
-  // Activity log: one row per day, max minutes — never summed, since both
-  // devices may have logged the same study session.
-  const byDate = {};
-  [...(remote.activityLog || []), ...(local.activityLog || [])].forEach((e) => {
-    const prev = byDate[e.date];
-    byDate[e.date] = prev
-      ? {
-          date: e.date,
-          minutes: Math.max(prev.minutes, e.minutes),
-          activities: [...new Set([...(prev.activities || []), ...(e.activities || [])])]
-        }
-      : e;
-  });
-  out.activityLog = Object.values(byDate).sort((a, b) => a.date.localeCompare(b.date));
 
   return out;
 }
@@ -120,8 +45,8 @@ function mergeProgress(local, remote) {
 
 const Sync = {
   state: "local",        // local | signed-out | syncing | synced | error
-  available: false,      // server reachable and APP_PASSWORD configured
-  persistent: true,      // server has a volume attached
+  available: false,
+  persistent: true,
   lastError: null,
   _timer: null,
   _poll: null,
@@ -144,7 +69,6 @@ const Sync = {
       if (s.authenticated) { await this.pull(); this._startPolling(); }
       else this._set("signed-out");
     } catch {
-      // No server behind this page — static hosting or a file:// open.
       this.available = false;
       this._set("local");
     }
@@ -169,7 +93,6 @@ const Sync = {
     this._set("signed-out");
   },
 
-  /** Fetch the server copy and merge it into local state. */
   async pull() {
     if (!this.available) return;
     try {
@@ -185,7 +108,6 @@ const Sync = {
         this._applying = true;
         this.store.replaceAll(mergeProgress(this.store.data, data));
         this._applying = false;
-        // The merge may have advanced local state past the server's copy.
         this.push(true);
       } else {
         this.push(true); // first device — seed the file
@@ -197,7 +119,6 @@ const Sync = {
     }
   },
 
-  /** Upload local state, debounced. */
   push(immediate = false) {
     if (!this.available || this._applying) return;
     if (this.state === "signed-out") return;
@@ -206,8 +127,7 @@ const Sync = {
     const run = async () => {
       try {
         this._set("syncing");
-        const payload = JSON.parse(JSON.stringify(this.store.data));
-        delete payload.user.settings; // device-local
+        const payload = { progress: this.store.data.progress, user: {} };
         const r = await fetch("/api/progress", {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -229,8 +149,6 @@ const Sync = {
 
   _startPolling() {
     this._stopPolling();
-    // Pull on a slow timer and whenever the tab regains focus, which is
-    // when you have most likely just put the other device down.
     this._poll = setInterval(() => {
       if (document.visibilityState === "visible") this.pull();
     }, POLL_MS);
