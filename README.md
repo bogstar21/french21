@@ -33,6 +33,22 @@ Every link was pulled directly out of the source PDF's own hyperlinks — not
 retyped — so the 238 links on this page match the ones in your copy of the guide
 exactly.
 
+## Îlots — the Language Islands method
+
+A second page built on Boris Shekhtman's *language islands* idea (from
+*How to Improve Your Foreign Language Immediately*): short passages about your
+own life, memorised cold, so you can produce them instantly instead of
+assembling sentences under pressure.
+
+Eight islands, written around the things that actually come up when you meet
+someone: who you are, your job at Odoo, your family across three countries,
+marathon training, travel and languages — plus the universal ones (surviving a
+conversation, small talk, ordering in a café).
+
+Each island has a passage to memorise and the supporting phrases that let you
+answer follow-ups. Tick a line only when you can say it *without reading it*.
+Island progress is tracked separately from the lesson checklist.
+
 ## One password, every device
 
 Set a password once (see **[SETUP.md](SETUP.md)**) and your checked lessons follow

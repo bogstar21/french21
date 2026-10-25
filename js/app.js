@@ -14,25 +14,92 @@ const App = {
 
     Sync.init(store);
     Sync.onStateChange(() => this.renderSyncChip());
-    store.onChange(() => this.updateProgressDisplays());
+    store.onChange(() => {
+      if (this.view === "islands") Islands.updateProgress(this.root);
+      else if (this.view === "lessons") this.updateProgressDisplays();
+    });
 
     this.renderSyncChip();
     this.root.innerHTML = `<div class="hero"><h1>Loading…</h1></div>`;
 
     try {
-      await CourseData.load();
+      await Promise.all([CourseData.load(), IslandData.load()]);
     } catch (e) {
       this.root.innerHTML = `
         <div class="hero">
-          <h1>Could not load the curriculum</h1>
+          <h1>Could not load the content</h1>
           <p class="hero-sub">Open this page through a web server, not a <code>file://</code> URL — browsers block local JSON otherwise.</p>
         </div>`;
       return;
     }
 
-    this.render();
-    this.bindEvents();
-    this.updateProgressDisplays();
+    // Bound once, against the persistent #root / topbar — re-binding them on
+    // every view switch would stack duplicate handlers.
+    this.bindGlobalEvents();
+
+    window.addEventListener("hashchange", () => {
+      const v = location.hash === "#islands" ? "islands" : location.hash === "#lessons" ? "lessons" : null;
+      if (v && v !== this.view) this.show(v);
+    });
+
+    this.show(location.hash === "#islands" ? "islands" : "lessons");
+  },
+
+  /* ============================================================
+     View switching — two pages, one app
+     ============================================================ */
+
+  view: null,
+
+  show(view) {
+    this.view = view;
+    document.querySelectorAll(".tab").forEach((t) =>
+      t.classList.toggle("active", t.dataset.view === view)
+    );
+
+    if (view === "islands") {
+      Islands.render(this.root);
+      Islands.updateProgress(this.root);
+      this.bindSearch("isl-search");
+    } else {
+      this.render();
+      this.updateProgressDisplays();
+      this.bindSearch("search");
+    }
+    window.scrollTo(0, 0);
+  },
+
+  /** The search box is rebuilt by every render, so binding it per render is safe. */
+  bindSearch(id) {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", (e) => this.filter(e.target.value.trim().toLowerCase()));
+  },
+
+  bindGlobalEvents() {
+    // One delegated handler serves both views — they share the same
+    // data-toggle / data-id / settings-btn contract.
+    this.root.addEventListener("click", (e) => {
+      if (e.target.closest("[data-toggle]")) {
+        e.target.closest(".section").classList.toggle("collapsed");
+        return;
+      }
+      if (e.target.closest("a") || e.target.closest("[data-noToggle]")) return;
+
+      const row = e.target.closest("[data-id]");
+      if (row) store.toggle(row.dataset.id);
+
+      if (e.target.id === "settings-btn") this.settingsModal();
+    });
+
+    document.getElementById("sync-chip").addEventListener("click", () => this.syncModal());
+
+    document.querySelectorAll(".tab").forEach((t) => {
+      t.addEventListener("click", (e) => {
+        e.preventDefault();
+        location.hash = t.dataset.view === "islands" ? "#islands" : "#lessons";
+        if (this.view !== t.dataset.view) this.show(t.dataset.view);
+      });
+    });
   },
 
   applyTheme() {
@@ -310,32 +377,6 @@ const App = {
      Events
      ============================================================ */
 
-  bindEvents() {
-    this.root.addEventListener("click", (e) => {
-      if (e.target.closest("[data-toggle]")) {
-        e.target.closest(".section").classList.toggle("collapsed");
-        return;
-      }
-      if (e.target.closest("[data-noToggle]")) return; // the ▶ watch link itself
-
-      const row = e.target.closest("[data-id]");
-      if (row) this.toggleRow(row);
-
-      if (e.target.id === "settings-btn") this.settingsModal();
-    });
-
-    document.getElementById("search").addEventListener("input", (e) => {
-      this.filter(e.target.value.trim().toLowerCase());
-    });
-
-    document.getElementById("sync-chip").addEventListener("click", () => this.syncModal());
-  },
-
-  toggleRow(row) {
-    const id = row.dataset.id;
-    store.toggle(id);
-    // updateProgressDisplays (triggered by store.onChange) refreshes this row too.
-  },
 
   filter(q) {
     const rows = this.root.querySelectorAll("[data-title]");

@@ -1,0 +1,402 @@
+{
+  "method": "Language Islands (Boris Shekhtman). An island is a short passage about your own life that you memorise cold. In a real conversation you can launch into it without thinking, which buys you fluency on the topics that come up every single time you meet someone new.",
+  "howTo": [
+    "Learn the passage first — out loud, until it comes without effort.",
+    "Then learn the phrases around it. They let you answer follow-up questions and swap details in and out.",
+    "Record yourself saying the passage and compare it to how it sounds in your head.",
+    "Tick a line only when you can say it without reading it."
+  ],
+  "islands": [
+    {
+      "id": "presentation",
+      "icon": "👋",
+      "title": "Me présenter",
+      "titleEn": "Introducing myself",
+      "why": "The single most useful island. Every new person you meet asks these exact questions, in this exact order.",
+      "monologue": {
+        "id": "isl-pres-mono",
+        "lines": [
+          { "fr": "Bonjour ! Je m'appelle Bogdan.", "en": "Hello! My name is Bogdan." },
+          { "fr": "J'ai vingt-cinq ans.", "en": "I'm twenty-five.", "lit": "I have twenty-five years." },
+          { "fr": "Je suis né en Ukraine, mais j'habite en Espagne depuis longtemps.", "en": "I was born in Ukraine, but I've lived in Spain for a long time." },
+          { "fr": "En fait, j'ai passé la moitié de ma vie ici.", "en": "In fact, I've spent half my life here." },
+          { "fr": "Je suis ukrainien et espagnol.", "en": "I'm Ukrainian and Spanish." },
+          { "fr": "J'habite à Valence et je travaille chez Odoo, une entreprise de technologie.", "en": "I live in Valencia and I work at Odoo, a technology company." },
+          { "fr": "J'ai étudié l'économie à l'université.", "en": "I studied economics at university." },
+          { "fr": "J'aime voyager et apprendre des langues.", "en": "I like travelling and learning languages." },
+          { "fr": "En ce moment, j'apprends le français. Je suis débutant, alors je parle lentement !", "en": "Right now I'm learning French. I'm a beginner, so I speak slowly!" }
+        ]
+      },
+      "groups": [
+        {
+          "title": "Name and age",
+          "phrases": [
+            { "id": "isl-pres-01", "fr": "Je m'appelle Bogdan.", "en": "My name is Bogdan." },
+            { "id": "isl-pres-02", "fr": "Et vous, comment vous appelez-vous ?", "en": "And you, what's your name?" },
+            { "id": "isl-pres-03", "fr": "J'ai vingt-cinq ans.", "en": "I'm twenty-five.", "lit": "I have 25 years — French uses 'have' for age, never 'be'." },
+            { "id": "isl-pres-04", "fr": "Enchanté !", "en": "Nice to meet you!" }
+          ]
+        },
+        {
+          "title": "Where I'm from",
+          "phrases": [
+            { "id": "isl-pres-05", "fr": "Je suis né en Ukraine.", "en": "I was born in Ukraine." },
+            { "id": "isl-pres-06", "fr": "Je suis ukrainien et espagnol.", "en": "I'm Ukrainian and Spanish.", "lit": "Nationalities are lowercase when they describe you." },
+            { "id": "isl-pres-07", "fr": "J'habite en Espagne depuis longtemps.", "en": "I've lived in Spain for a long time.", "lit": "French uses the present tense with 'depuis' — not the past." },
+            { "id": "isl-pres-08", "fr": "J'ai passé la moitié de ma vie ici.", "en": "I've spent half my life here." },
+            { "id": "isl-pres-09", "fr": "J'habite à Valence, en Espagne.", "en": "I live in Valencia, Spain." }
+          ]
+        },
+        {
+          "title": "What I do",
+          "phrases": [
+            { "id": "isl-pres-10", "fr": "Je travaille chez Odoo.", "en": "I work at Odoo.", "lit": "'chez' + a company name = 'at'." },
+            { "id": "isl-pres-11", "fr": "J'ai étudié l'économie à l'université.", "en": "I studied economics at university." },
+            { "id": "isl-pres-12", "fr": "J'apprends le français depuis peu.", "en": "I've been learning French for a short while." },
+            { "id": "isl-pres-13", "fr": "Je suis débutant, alors je parle lentement.", "en": "I'm a beginner, so I speak slowly." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travail",
+      "icon": "💼",
+      "title": "Mon travail",
+      "titleEn": "My work",
+      "why": "The second question everyone asks. Yours needs a plain-language answer — most people have no idea what an ERP is.",
+      "monologue": {
+        "id": "isl-trav-mono",
+        "lines": [
+          { "fr": "Je travaille chez Odoo. C'est une grande entreprise de technologie à Valence.", "en": "I work at Odoo. It's a big technology company in Valencia." },
+          { "fr": "Je suis analyste au support technique.", "en": "I'm a support analyst." },
+          { "fr": "Nous vendons un logiciel de gestion à des entreprises partout dans le monde.", "en": "We sell management software to companies all over the world." },
+          { "fr": "Mon travail, c'est d'aider les clients quand ils ont un problème.", "en": "My job is helping customers when they have a problem." },
+          { "fr": "Je réponds à leurs questions, je cherche la solution et je leur explique.", "en": "I answer their questions, I find the solution and I explain it to them." },
+          { "fr": "J'ai commencé il y a deux mois seulement, donc c'est encore nouveau pour moi.", "en": "I only started two months ago, so it's still new to me." },
+          { "fr": "J'aime beaucoup ce travail parce que j'utilise toutes mes compétences.", "en": "I really like this job because I use all my skills." }
+        ]
+      },
+      "groups": [
+        {
+          "title": "The basics",
+          "phrases": [
+            { "id": "isl-trav-01", "fr": "Je travaille dans le support technique.", "en": "I work in technical support." },
+            { "id": "isl-trav-02", "fr": "Je suis analyste support.", "en": "I'm a support analyst." },
+            { "id": "isl-trav-03", "fr": "C'est une entreprise de logiciels.", "en": "It's a software company." },
+            { "id": "isl-trav-04", "fr": "Nos clients sont des entreprises, pas des particuliers.", "en": "Our customers are companies, not individuals." },
+            { "id": "isl-trav-05", "fr": "J'ai commencé il y a deux mois.", "en": "I started two months ago." }
+          ]
+        },
+        {
+          "title": "Explaining it simply",
+          "phrases": [
+            { "id": "isl-trav-06", "fr": "C'est un logiciel qui gère toute l'entreprise.", "en": "It's software that runs the whole company." },
+            { "id": "isl-trav-07", "fr": "Par exemple : les ventes, la comptabilité, le stock.", "en": "For example: sales, accounting, inventory." },
+            { "id": "isl-trav-08", "fr": "Quand quelque chose ne marche pas, le client m'écrit.", "en": "When something doesn't work, the customer writes to me." },
+            { "id": "isl-trav-09", "fr": "Je cherche d'où vient le problème.", "en": "I look for where the problem comes from." },
+            { "id": "isl-trav-10", "fr": "Parfois c'est un bug, parfois c'est une mauvaise configuration.", "en": "Sometimes it's a bug, sometimes it's a bad configuration." }
+          ]
+        },
+        {
+          "title": "How I feel about it",
+          "phrases": [
+            { "id": "isl-trav-11", "fr": "J'aime beaucoup mon travail.", "en": "I really like my job." },
+            { "id": "isl-trav-12", "fr": "J'utilise la technique, l'économie et les langues.", "en": "I use technology, economics and languages." },
+            { "id": "isl-trav-13", "fr": "C'est encore nouveau, donc j'apprends beaucoup.", "en": "It's still new, so I'm learning a lot." },
+            { "id": "isl-trav-14", "fr": "Chaque jour est différent.", "en": "Every day is different." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "famille",
+      "icon": "🏡",
+      "title": "Ma famille",
+      "titleEn": "My family",
+      "why": "Comes up fast once small talk warms up — and yours is spread across three countries, which is genuinely interesting to people.",
+      "monologue": {
+        "id": "isl-fam-mono",
+        "lines": [
+          { "fr": "Ma famille est un peu partout.", "en": "My family is all over the place." },
+          { "fr": "Ma copine est mexicaine.", "en": "My girlfriend is Mexican." },
+          { "fr": "Ici en Espagne, j'ai ma grand-mère et ma sœur.", "en": "Here in Spain, I have my grandmother and my sister." },
+          { "fr": "Elles habitent près de Valence, en dehors de la ville.", "en": "They live near Valencia, outside the city." },
+          { "fr": "Mon père habite en Ukraine.", "en": "My father lives in Ukraine." },
+          { "fr": "J'ai aussi un chien. Il s'appelle Naui.", "en": "I also have a dog. His name is Naui." },
+          { "fr": "J'adore passer du temps avec lui : on va se promener et il court avec moi.", "en": "I love spending time with him: we go for walks and he runs with me." }
+        ]
+      },
+      "groups": [
+        {
+          "title": "The people",
+          "phrases": [
+            { "id": "isl-fam-01", "fr": "Ma copine est mexicaine.", "en": "My girlfriend is Mexican." },
+            { "id": "isl-fam-02", "fr": "J'ai une sœur.", "en": "I have a sister." },
+            { "id": "isl-fam-03", "fr": "Ma grand-mère habite près de Valence.", "en": "My grandmother lives near Valencia." },
+            { "id": "isl-fam-04", "fr": "Elles habitent en dehors de la ville, à la campagne.", "en": "They live outside the city, in the countryside." },
+            { "id": "isl-fam-05", "fr": "Mon père habite toujours en Ukraine.", "en": "My father still lives in Ukraine." },
+            { "id": "isl-fam-06", "fr": "Ma famille est entre l'Espagne, l'Ukraine et le Mexique.", "en": "My family is spread between Spain, Ukraine and Mexico." }
+          ]
+        },
+        {
+          "title": "My dog",
+          "phrases": [
+            { "id": "isl-fam-07", "fr": "J'ai un chien qui s'appelle Naui.", "en": "I have a dog called Naui." },
+            { "id": "isl-fam-08", "fr": "Je le promène tous les jours.", "en": "I walk him every day." },
+            { "id": "isl-fam-09", "fr": "Il court avec moi le matin.", "en": "He runs with me in the morning." },
+            { "id": "isl-fam-10", "fr": "C'est mon meilleur partenaire d'entraînement !", "en": "He's my best training partner!" }
+          ]
+        },
+        {
+          "title": "Talking about them",
+          "phrases": [
+            { "id": "isl-fam-11", "fr": "On se voit le week-end.", "en": "We see each other at the weekend." },
+            { "id": "isl-fam-12", "fr": "J'appelle mon père une fois par semaine.", "en": "I call my father once a week." },
+            { "id": "isl-fam-13", "fr": "Et vous, vous avez des frères et sœurs ?", "en": "And you, do you have any brothers or sisters?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sport",
+      "icon": "🏃",
+      "title": "Le sport et la course",
+      "titleEn": "Sport and running",
+      "why": "Your strongest island — you have a marathon in five weeks, which is a story people will actually ask follow-up questions about.",
+      "monologue": {
+        "id": "isl-sport-mono",
+        "lines": [
+          { "fr": "Je fais beaucoup de sport. En ce moment, je cours.", "en": "I do a lot of sport. Right now, I'm running." },
+          { "fr": "Je prépare mon premier marathon.", "en": "I'm preparing for my first marathon." },
+          { "fr": "C'est le vingt-neuf novembre, à Florence, en Italie.", "en": "It's on the twenty-ninth of November, in Florence, Italy." },
+          { "fr": "Je cours trois fois par semaine.", "en": "I run three times a week." },
+          { "fr": "Je fais entre quarante et cinquante kilomètres par semaine.", "en": "I do between forty and fifty kilometres a week." },
+          { "fr": "J'aime aussi la salle de sport et le CrossFit.", "en": "I also like the gym and CrossFit." },
+          { "fr": "Après le marathon, je vais recommencer le CrossFit.", "en": "After the marathon, I'm going to start CrossFit again." }
+        ]
+      },
+      "groups": [
+        {
+          "title": "The marathon",
+          "phrases": [
+            { "id": "isl-sport-01", "fr": "Je prépare mon premier marathon.", "en": "I'm training for my first marathon." },
+            { "id": "isl-sport-02", "fr": "C'est à Florence, le vingt-neuf novembre.", "en": "It's in Florence, on the 29th of November." },
+            { "id": "isl-sport-03", "fr": "C'est dans cinq semaines !", "en": "It's in five weeks!" },
+            { "id": "isl-sport-04", "fr": "Je suis un peu nerveux, mais surtout impatient.", "en": "I'm a bit nervous, but mostly excited." },
+            { "id": "isl-sport-05", "fr": "C'est mon premier, donc je veux juste finir.", "en": "It's my first, so I just want to finish." }
+          ]
+        },
+        {
+          "title": "My training",
+          "phrases": [
+            { "id": "isl-sport-06", "fr": "Je cours trois fois par semaine.", "en": "I run three times a week." },
+            { "id": "isl-sport-07", "fr": "Entre quarante et cinquante kilomètres par semaine.", "en": "Between forty and fifty kilometres a week." },
+            { "id": "isl-sport-08", "fr": "Je cours le matin, avant le travail.", "en": "I run in the morning, before work." },
+            { "id": "isl-sport-09", "fr": "Le dimanche, je fais ma sortie longue.", "en": "On Sundays, I do my long run." },
+            { "id": "isl-sport-10", "fr": "Parfois je cours avec mon chien.", "en": "Sometimes I run with my dog." }
+          ]
+        },
+        {
+          "title": "Other sport",
+          "phrases": [
+            { "id": "isl-sport-11", "fr": "J'aime aussi le CrossFit.", "en": "I also like CrossFit." },
+            { "id": "isl-sport-12", "fr": "Je vais à la salle de sport.", "en": "I go to the gym." },
+            { "id": "isl-sport-13", "fr": "Après le marathon, je vais reprendre le CrossFit.", "en": "After the marathon, I'm going to take up CrossFit again." },
+            { "id": "isl-sport-14", "fr": "Le sport, c'est important pour moi.", "en": "Sport is important to me." },
+            { "id": "isl-sport-15", "fr": "Et vous, vous faites du sport ?", "en": "And you, do you do any sport?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voyages",
+      "icon": "✈️",
+      "title": "Les voyages et les langues",
+      "titleEn": "Travel and languages",
+      "why": "Your natural bridge topic — and the one that explains why you're sitting there speaking French to someone in the first place.",
+      "monologue": {
+        "id": "isl-voy-mono",
+        "lines": [
+          { "fr": "J'adore voyager.", "en": "I love travelling." },
+          { "fr": "J'aime découvrir de nouveaux pays et rencontrer des gens.", "en": "I like discovering new countries and meeting people." },
+          { "fr": "J'aime aussi beaucoup apprendre des langues.", "en": "I also really like learning languages." },
+          { "fr": "Je parle ukrainien, russe, espagnol et anglais.", "en": "I speak Ukrainian, Russian, Spanish and English." },
+          { "fr": "Et maintenant, j'apprends le français.", "en": "And now, I'm learning French." },
+          { "fr": "Je trouve que les langues ouvrent beaucoup de portes.", "en": "I find that languages open a lot of doors." }
+        ]
+      },
+      "groups": [
+        {
+          "title": "Travel",
+          "phrases": [
+            { "id": "isl-voy-01", "fr": "J'adore voyager.", "en": "I love travelling." },
+            { "id": "isl-voy-02", "fr": "J'aime découvrir de nouveaux pays.", "en": "I like discovering new countries." },
+            { "id": "isl-voy-03", "fr": "Je voyage dès que je peux.", "en": "I travel whenever I can." },
+            { "id": "isl-voy-04", "fr": "Le mois prochain, je vais en Italie pour le marathon.", "en": "Next month, I'm going to Italy for the marathon." },
+            { "id": "isl-voy-05", "fr": "Quel est votre pays préféré ?", "en": "What's your favourite country?" }
+          ]
+        },
+        {
+          "title": "Languages",
+          "phrases": [
+            { "id": "isl-voy-06", "fr": "Je parle quatre langues.", "en": "I speak four languages." },
+            { "id": "isl-voy-07", "fr": "Je parle ukrainien, russe, espagnol et anglais.", "en": "I speak Ukrainian, Russian, Spanish and English." },
+            { "id": "isl-voy-08", "fr": "J'apprends le français en ce moment.", "en": "I'm learning French at the moment." },
+            { "id": "isl-voy-09", "fr": "J'ai commencé il y a peu de temps.", "en": "I started a short time ago." },
+            { "id": "isl-voy-10", "fr": "J'étudie tous les jours, un peu.", "en": "I study every day, a little." },
+            { "id": "isl-voy-11", "fr": "Le plus difficile, c'est la prononciation.", "en": "The hardest part is the pronunciation." },
+            { "id": "isl-voy-12", "fr": "L'espagnol m'aide beaucoup pour le français.", "en": "Spanish helps me a lot with French." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debrouiller",
+      "icon": "🆘",
+      "title": "Se débrouiller",
+      "titleEn": "Surviving the conversation",
+      "why": "Learn this island FIRST. It's what keeps a conversation alive when you don't understand — without it, you freeze and switch to English.",
+      "monologue": {
+        "id": "isl-deb-mono",
+        "lines": [
+          { "fr": "Excusez-moi, je ne parle pas très bien français.", "en": "Excuse me, I don't speak French very well." },
+          { "fr": "Je suis débutant — j'apprends depuis peu.", "en": "I'm a beginner — I've been learning for a short while." },
+          { "fr": "Est-ce que vous pouvez parler plus lentement, s'il vous plaît ?", "en": "Could you speak more slowly, please?" },
+          { "fr": "Je comprends mieux quand on parle doucement.", "en": "I understand better when people speak slowly." },
+          { "fr": "Merci de votre patience !", "en": "Thank you for your patience!" }
+        ]
+      },
+      "groups": [
+        {
+          "title": "When you don't understand",
+          "phrases": [
+            { "id": "isl-deb-01", "fr": "Je ne comprends pas.", "en": "I don't understand." },
+            { "id": "isl-deb-02", "fr": "Pardon ? Vous pouvez répéter ?", "en": "Sorry? Can you repeat that?" },
+            { "id": "isl-deb-03", "fr": "Plus lentement, s'il vous plaît.", "en": "More slowly, please." },
+            { "id": "isl-deb-04", "fr": "Qu'est-ce que ça veut dire ?", "en": "What does that mean?" },
+            { "id": "isl-deb-05", "fr": "Comment on dit « … » en français ?", "en": "How do you say '…' in French?" },
+            { "id": "isl-deb-06", "fr": "Vous pouvez l'écrire, s'il vous plaît ?", "en": "Could you write it down, please?" }
+          ]
+        },
+        {
+          "title": "Buying yourself time",
+          "phrases": [
+            { "id": "isl-deb-07", "fr": "Attendez, je réfléchis…", "en": "Wait, I'm thinking…" },
+            { "id": "isl-deb-08", "fr": "Comment dire…", "en": "How to put it…" },
+            { "id": "isl-deb-09", "fr": "C'est une bonne question !", "en": "That's a good question!" },
+            { "id": "isl-deb-10", "fr": "Je ne connais pas le mot en français.", "en": "I don't know the word in French." }
+          ]
+        },
+        {
+          "title": "Being honest about your level",
+          "phrases": [
+            { "id": "isl-deb-11", "fr": "Je ne parle pas très bien français.", "en": "I don't speak French very well." },
+            { "id": "isl-deb-12", "fr": "Je suis débutant.", "en": "I'm a beginner." },
+            { "id": "isl-deb-13", "fr": "J'apprends, soyez patient !", "en": "I'm learning, be patient!" },
+            { "id": "isl-deb-14", "fr": "Corrigez-moi, s'il vous plaît.", "en": "Please correct me." },
+            { "id": "isl-deb-15", "fr": "On peut continuer en français, j'aimerais pratiquer.", "en": "We can keep going in French, I'd like to practise." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banalites",
+      "icon": "☕",
+      "title": "Les banalités",
+      "titleEn": "Small talk",
+      "why": "The glue between islands. These are the lines that fill the first thirty seconds and the last thirty seconds of every conversation.",
+      "monologue": {
+        "id": "isl-ban-mono",
+        "lines": [
+          { "fr": "Bonjour ! Comment allez-vous ?", "en": "Hello! How are you?" },
+          { "fr": "Moi, ça va très bien, merci.", "en": "I'm very well, thanks." },
+          { "fr": "Il fait beau aujourd'hui, non ?", "en": "The weather's nice today, isn't it?" },
+          { "fr": "Vous avez passé un bon week-end ?", "en": "Did you have a good weekend?" },
+          { "fr": "Bon, je dois y aller. C'était un plaisir !", "en": "Right, I have to go. It was a pleasure!" },
+          { "fr": "À bientôt, bonne journée !", "en": "See you soon, have a good day!" }
+        ]
+      },
+      "groups": [
+        {
+          "title": "Opening",
+          "phrases": [
+            { "id": "isl-ban-01", "fr": "Bonjour !", "en": "Hello! (daytime)" },
+            { "id": "isl-ban-02", "fr": "Bonsoir !", "en": "Good evening!" },
+            { "id": "isl-ban-03", "fr": "Comment allez-vous ?", "en": "How are you? (formal)" },
+            { "id": "isl-ban-04", "fr": "Ça va ?", "en": "How's it going? (informal)" },
+            { "id": "isl-ban-05", "fr": "Ça va bien, merci. Et vous ?", "en": "I'm good, thanks. And you?" }
+          ]
+        },
+        {
+          "title": "Filling the gap",
+          "phrases": [
+            { "id": "isl-ban-06", "fr": "Il fait beau aujourd'hui.", "en": "The weather's nice today." },
+            { "id": "isl-ban-07", "fr": "Il fait froid, non ?", "en": "It's cold, isn't it?" },
+            { "id": "isl-ban-08", "fr": "Vous avez passé un bon week-end ?", "en": "Did you have a good weekend?" },
+            { "id": "isl-ban-09", "fr": "Vous habitez ici depuis longtemps ?", "en": "Have you lived here long?" },
+            { "id": "isl-ban-10", "fr": "C'est la première fois que je viens ici.", "en": "It's my first time here." }
+          ]
+        },
+        {
+          "title": "Closing",
+          "phrases": [
+            { "id": "isl-ban-11", "fr": "Bon, je dois y aller.", "en": "Right, I have to go." },
+            { "id": "isl-ban-12", "fr": "C'était un plaisir !", "en": "It was a pleasure!" },
+            { "id": "isl-ban-13", "fr": "À bientôt !", "en": "See you soon!" },
+            { "id": "isl-ban-14", "fr": "Bonne journée !", "en": "Have a good day!" },
+            { "id": "isl-ban-15", "fr": "On se revoit bientôt, j'espère.", "en": "I hope we'll see each other again soon." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "icon": "🥐",
+      "title": "Au café et au restaurant",
+      "titleEn": "Café and restaurant",
+      "why": "The most predictable script in the language. Memorise it once and you'll never be stuck ordering again.",
+      "monologue": {
+        "id": "isl-cafe-mono",
+        "lines": [
+          { "fr": "Bonjour ! Une table pour deux, s'il vous plaît.", "en": "Hello! A table for two, please." },
+          { "fr": "Qu'est-ce que vous recommandez ?", "en": "What do you recommend?" },
+          { "fr": "Je vais prendre ça, s'il vous plaît.", "en": "I'll have that, please." },
+          { "fr": "Et une bouteille d'eau, s'il vous plaît.", "en": "And a bottle of water, please." },
+          { "fr": "C'était très bon, merci !", "en": "That was very good, thank you!" },
+          { "fr": "L'addition, s'il vous plaît.", "en": "The bill, please." }
+        ]
+      },
+      "groups": [
+        {
+          "title": "Ordering",
+          "phrases": [
+            { "id": "isl-cafe-01", "fr": "Une table pour deux, s'il vous plaît.", "en": "A table for two, please." },
+            { "id": "isl-cafe-02", "fr": "Je voudrais un café, s'il vous plaît.", "en": "I'd like a coffee, please.", "lit": "'Je voudrais' is the polite form — never say 'je veux' to a waiter." },
+            { "id": "isl-cafe-03", "fr": "Je vais prendre le menu du jour.", "en": "I'll have the set menu of the day." },
+            { "id": "isl-cafe-04", "fr": "Qu'est-ce que vous recommandez ?", "en": "What do you recommend?" },
+            { "id": "isl-cafe-05", "fr": "C'est quoi exactement ?", "en": "What exactly is that?" },
+            { "id": "isl-cafe-06", "fr": "Une bouteille d'eau, s'il vous plaît.", "en": "A bottle of water, please." }
+          ]
+        },
+        {
+          "title": "During the meal",
+          "phrases": [
+            { "id": "isl-cafe-07", "fr": "C'est délicieux !", "en": "It's delicious!" },
+            { "id": "isl-cafe-08", "fr": "Je n'ai pas commandé ça.", "en": "I didn't order this." },
+            { "id": "isl-cafe-09", "fr": "Excusez-moi !", "en": "Excuse me! (to get attention)" },
+            { "id": "isl-cafe-10", "fr": "Encore un peu de pain, s'il vous plaît.", "en": "A bit more bread, please." }
+          ]
+        },
+        {
+          "title": "Paying",
+          "phrases": [
+            { "id": "isl-cafe-11", "fr": "L'addition, s'il vous plaît.", "en": "The bill, please." },
+            { "id": "isl-cafe-12", "fr": "Je peux payer par carte ?", "en": "Can I pay by card?" },
+            { "id": "isl-cafe-13", "fr": "On partage ?", "en": "Shall we split it?" },
+            { "id": "isl-cafe-14", "fr": "C'était très bon, merci !", "en": "It was very good, thank you!" }
+          ]
+        }
+      ]
+    }
+  ]
+}

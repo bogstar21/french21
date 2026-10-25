@@ -218,6 +218,70 @@ main { max-width: 900px; margin: 0 auto; padding: var(--s8) var(--s5) var(--s12)
 .hero-track > i { display: block; height: 100%; background: #fff; border-radius: var(--r-full); transition: width .5s var(--ease); }
 
 /* ============================================================
+   Tabs (Cours / Îlots)
+   ============================================================ */
+
+.tabs { display: flex; gap: var(--s1); flex: none; background: var(--surface-2); padding: 3px; border-radius: var(--r); }
+.tab {
+  font-size: var(--fs-sm); font-weight: 580; text-decoration: none;
+  padding: 5px var(--s4); border-radius: var(--r-sm);
+  color: var(--text-muted); transition: all .14s; white-space: nowrap;
+}
+.tab:hover { color: var(--text); }
+.tab.active { background: var(--surface); color: var(--text); box-shadow: var(--sh-1); }
+
+/* ============================================================
+   Islands
+   ============================================================ */
+
+.hero-islands { background: linear-gradient(145deg, #2F5D50 0%, #41806E 100%); }
+
+.howto {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--r); padding: var(--s3) var(--s5); margin-bottom: var(--s5);
+  font-size: var(--fs-sm);
+}
+.howto summary { cursor: pointer; font-weight: 600; color: var(--text-2); }
+.howto ol { margin: var(--s3) 0 0; padding-left: var(--s5); color: var(--text-muted); }
+.howto li { margin-bottom: var(--s2); }
+
+.island-icon { font-size: 22px; flex: none; }
+.island-sub { display: block; font-size: var(--fs-xs); font-weight: 500; color: var(--text-muted); letter-spacing: 0; }
+.island-why { font-size: var(--fs-sm); color: var(--text-muted); margin-bottom: var(--s5); }
+
+.mono-card {
+  border: 1px solid var(--border); border-radius: var(--r-lg);
+  background: var(--surface); padding: var(--s5); margin-bottom: var(--s6);
+  cursor: pointer; transition: border-color .15s, background .15s;
+}
+.mono-card:hover { border-color: var(--border-strong); }
+.mono-card.done { border-color: var(--success); background: var(--success-soft); }
+.mono-head { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s4); }
+.mono-label { font-size: var(--fs-xs); font-weight: 680; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.mono-hint { font-size: var(--fs-xs); color: var(--text-muted); margin-left: auto; }
+.mono-lines { display: grid; gap: var(--s3); }
+.mono-line { padding-left: var(--s4); border-left: 2px solid var(--border); }
+.mono-card.done .mono-line { border-left-color: var(--success); }
+.mono-line .fr { font-family: var(--font-read); font-size: var(--fs-md); line-height: 1.5; }
+.mono-line .en { font-size: var(--fs-sm); color: var(--text-muted); }
+.mono-line .lit { font-size: var(--fs-xs); color: var(--accent); margin-top: 2px; }
+
+.row.phrase { align-items: flex-start; padding: var(--s3); }
+.phrase-body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.phrase-fr { font-family: var(--font-read); font-size: var(--fs-md); line-height: 1.4; }
+.row.phrase.done .phrase-fr { text-decoration: line-through; text-decoration-color: var(--border-strong); }
+.phrase-en { font-size: var(--fs-sm); color: var(--text-muted); }
+.phrase-lit { font-size: var(--fs-xs); color: var(--accent); margin-top: 2px; }
+
+@media (max-width: 640px) {
+  .tabs { padding: 2px; }
+  .tab { padding: 4px var(--s3); font-size: var(--fs-xs); }
+  .mono-hint { display: none; }
+  /* The tabs need the room; the hero already shows progress prominently. */
+  .topbar-progress { display: none; }
+}
+
+/* ============================================================
    Study plan
    ============================================================ */
 
