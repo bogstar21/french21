@@ -220,7 +220,13 @@ async function serveStatic(req, res, urlPath) {
     res.writeHead(200, {
       "Content-Type": MIME[ext] || "application/octet-stream",
       "Content-Length": body.length,
-      "Cache-Control": ext === ".html" ? "no-cache" : "public, max-age=300",
+      // no-cache = "you may store it, but revalidate before reuse". Everything
+      // here is small and there is no build step putting hashes in filenames,
+      // so a stale cache would otherwise serve old code for minutes after a
+      // deploy. Fonts and images are the exception — those never change.
+      "Cache-Control": [".png", ".ico", ".svg", ".woff2"].includes(ext)
+        ? "public, max-age=86400"
+        : "no-cache",
       "X-Content-Type-Options": "nosniff"
     });
     res.end(body);

@@ -85,6 +85,14 @@ const App = {
       }
       if (e.target.closest("a") || e.target.closest("[data-noToggle]")) return;
 
+      const reset = e.target.closest("[data-reset-island]");
+      if (reset) {
+        const ids = IslandData.phraseIds(reset.dataset.resetIsland);
+        store.setManyChecked(ids, false);
+        UI.toast("Hidden again — ready for another round");
+        return;
+      }
+
       const row = e.target.closest("[data-id]");
       if (row) store.toggle(row.dataset.id);
 

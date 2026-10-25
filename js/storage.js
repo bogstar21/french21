@@ -99,6 +99,13 @@ class ProgressStore {
     return on;
   }
 
+  /** Set many ids at once, with a single save/sync at the end. */
+  setManyChecked(ids, on) {
+    const at = new Date().toISOString();
+    ids.forEach((id) => { this.data.progress.checked[id] = { on, at }; });
+    this._save();
+  }
+
   /** Count of checked items among a given list of ids. */
   countChecked(ids) {
     return ids.filter((id) => this.isChecked(id)).length;

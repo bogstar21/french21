@@ -266,12 +266,50 @@ main { max-width: 900px; margin: 0 auto; padding: var(--s8) var(--s5) var(--s12)
 .mono-line .en { font-size: var(--fs-sm); color: var(--text-muted); }
 .mono-line .lit { font-size: var(--fs-xs); color: var(--accent); margin-top: 2px; }
 
+/* --- Self-test rows: English is the prompt, French is the hidden answer --- */
+
+.practice-bar {
+  display: flex; align-items: center; gap: var(--s3);
+  padding: var(--s3) var(--s4); margin-bottom: var(--s4);
+  background: var(--surface-2); border-radius: var(--r);
+}
+.practice-hint { font-size: var(--fs-sm); color: var(--text-muted); flex: 1; min-width: 0; }
+
 .row.phrase { align-items: flex-start; padding: var(--s3); }
 .phrase-body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-.phrase-fr { font-family: var(--font-read); font-size: var(--fs-md); line-height: 1.4; }
-.row.phrase.done .phrase-fr { text-decoration: line-through; text-decoration-color: var(--border-strong); }
-.phrase-en { font-size: var(--fs-sm); color: var(--text-muted); }
-.phrase-lit { font-size: var(--fs-xs); color: var(--accent); margin-top: 2px; }
+
+.phrase-prompt { font-size: var(--fs-base); line-height: 1.45; transition: color .15s, font-size .15s; }
+
+/* The answer is collapsed to nothing until the row is revealed. A single
+   grid child is essential — with two, `grid-template-rows: 0fr` collapses
+   only the first row and the second still takes up space. */
+.phrase-answer {
+  display: grid; grid-template-rows: 0fr;
+  opacity: 0; transition: grid-template-rows .22s var(--ease), opacity .18s, margin .22s var(--ease);
+  margin-top: 0;
+}
+.phrase-answer-inner { overflow: hidden; display: block; }
+.row.phrase.done .phrase-answer { grid-template-rows: 1fr; opacity: 1; margin-top: 3px; }
+
+/* Once revealed, the French takes the lead and the English drops back. */
+.row.phrase.done .phrase-prompt { font-size: var(--fs-sm); color: var(--text-muted); order: 2; margin-top: 2px; }
+.row.phrase.done .phrase-answer { order: 1; }
+
+.phrase-fr {
+  display: block; font-family: var(--font-read);
+  font-size: var(--fs-md); line-height: 1.4; color: var(--success);
+}
+.phrase-lit { display: block; font-size: var(--fs-xs); color: var(--accent); margin-top: 2px; }
+
+.reveal-hint {
+  font-size: var(--fs-xs); color: var(--text-muted); flex: none;
+  opacity: 0; transition: opacity .15s; white-space: nowrap;
+}
+.row.phrase:hover .reveal-hint { opacity: .8; }
+.row.phrase.done .reveal-hint { display: none; }
+
+/* A revealed row shouldn't look "finished" — it's an answer, not a completed task. */
+.row.phrase.done { opacity: 1; }
 
 @media (max-width: 640px) {
   .tabs { padding: 2px; }

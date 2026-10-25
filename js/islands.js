@@ -36,6 +36,13 @@ const IslandData = {
     return this.islands.flatMap((i) => this.idsForIsland(i));
   },
 
+  /** Just the phrases — used to reset an island for another practice round. */
+  phraseIds(islandId) {
+    const isl = this.islands.find((i) => i.id === islandId);
+    if (!isl) return [];
+    return (isl.groups || []).flatMap((g) => g.phrases.map((p) => p.id));
+  },
+
   totalCount() { return this.allIds().length; }
 };
 
@@ -119,6 +126,11 @@ const Islands = {
             </div>
           </div>
 
+          <div class="practice-bar">
+            <span class="practice-hint">Read the English, say it in French, then tap to check yourself.</span>
+            <button class="btn btn-ghost btn-sm" data-reset-island="${isl.id}">↺ Hide all</button>
+          </div>
+
           ${(isl.groups || []).map((g) => `
             <div class="subhead">${UI.esc(g.title)}</div>
             <div class="list">
@@ -128,6 +140,11 @@ const Islands = {
       </section>`;
   },
 
+  /**
+   * Self-test row: the English is the prompt, the French is the answer and
+   * stays hidden until you tap. Say it in your head first, then reveal and
+   * check whether you were right.
+   */
   renderPhrase(p) {
     const on = store.isChecked(p.id);
     return `
@@ -135,10 +152,13 @@ const Islands = {
            data-title="${UI.esc((p.fr + " " + p.en).toLowerCase())}">
         <span class="check">${CHECK_SVG}</span>
         <span class="phrase-body">
-          <span class="phrase-fr">${UI.esc(p.fr)}</span>
-          <span class="phrase-en">${UI.esc(p.en)}</span>
-          ${p.lit ? `<span class="phrase-lit">${UI.esc(p.lit)}</span>` : ""}
+          <span class="phrase-prompt">${UI.esc(p.en)}</span>
+          <span class="phrase-answer"><span class="phrase-answer-inner">
+            <span class="phrase-fr">${UI.esc(p.fr)}</span>
+            ${p.lit ? `<span class="phrase-lit">${UI.esc(p.lit)}</span>` : ""}
+          </span></span>
         </span>
+        <span class="reveal-hint">tap to reveal</span>
       </div>`;
   },
 
